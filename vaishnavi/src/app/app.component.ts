@@ -8,5 +8,49 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'practice';
 
-  name_test: String = "";
+  // structural directive practice
+  answer=['a'];
+
+  elements =[
+    {id:1, name:'vnnn'},
+    {id:2, name:'kkk'},
+    {id:3, name:'aaaa'},
+  ];
+
+  onAdd(){
+    this.elements.push({id:4 , name:'last'});
+  }
+
+  onRemove(element){
+    let num1 = this.elements.indexOf(element);
+    this.elements.splice(num1,1);
+  }
+
+  // attribute directive practice
+ highlightColor = 'black';
+ defaultstyle = false;
+  highlight(color:string){
+    this.highlightColor = color;
+  }
+  
+
+  styleChange(){
+    this.defaultstyle = !this.defaultstyle;
+  }
+
+// practice task
+
+nums=[1,2,3,4,5,6];
+colorCode='green'
+
+checkeven(){
+
+}
+
+checkOdd(){
+
+}
+
+
+
 }
