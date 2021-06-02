@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'practice';
-
-  name_test: String = "";
+export class AppComponent  {
+  title = 'test-frontend';
+ 
+  
 }
