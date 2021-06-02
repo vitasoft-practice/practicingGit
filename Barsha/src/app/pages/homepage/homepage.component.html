@@ -1,0 +1,40 @@
+
+ <div class="header">
+    <img style="width: 100%;" src="assets/images/headerbg.png" class="bg-image" />
+    <div class="title">
+         <h1>Welcome Aboard SASS Beginner</h1>
+         <br/>
+         <p class=" w-50">Sometimes the total size of your grid might be less than the size of its grid container. This could happen if all of your grid items are sized with non-flexible units like px. </p>
+         <br/><br/>
+         <button class="h-btn">Get Started</button>
+    </div>
+</div>
+
+<!-- header ends -->
+
+<!-- posts -->
+<h1 class="text-center">POSTS</h1>
+     <br/>
+     
+<div class="outer-container">
+     
+    <div class="col" *ngFor = "let name of names">
+        <app-post-card [name] ="name"></app-post-card>
+         
+    </div>
+
+    <br/><br/>
+    <form>
+        <h3>Add your ideas</h3>
+        <br/>
+        <label for="postTitle">Title:</label>
+        <input type="text" name="postTitle" id="postTitle" #newtitle>
+
+        <br/>
+
+        <label for="descr">Description:</label>
+        <input type='textarea' rows="5" cols="50" name="descr" id="descr" #newdescr > 
+        <br/><br/>
+        <button (click)="addIdea(newtitle, newdescr)">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+<div class="card">
+    <img src="assets/images/cardimage.png" style="width: 100%;" alt="card image">
+    <div class="card-body">
+        <h5>Author {{name}}</h5>
+        <br/>
+        <p>Sometimes the total size of your grid might be less than the size of its grid container. This could happen if all of your grid items are sized with non-flexible units like px. </p>
+       <br/><br/><button class="card-button" (click)="show()">Read More</button>  
+       <br/><br/>
+       <p [hidden]='ishidden'> Visible now</p>   
+    </div>
+</div>
