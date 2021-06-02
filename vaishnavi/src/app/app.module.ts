@@ -3,21 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import { UserItemComponent } from './pages/user-item/user-item.component';
-import { PostCardComponent } from './pages/post-card/post-card.component';
+import { NewcompComponent } from './newcomp/newcomp.component' ;
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
-    UserItemComponent,
-    PostCardComponent,
-    
+    NewcompComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
