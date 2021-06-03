@@ -43,14 +43,22 @@ export class AppComponent {
 nums=[1,2,3,4,5,6];
 colorCode='green'
 
-checkeven(){
+// /////////////////////////////////
+currentItem ='vaishnavi'
+save = false
 
+items =[
+  {id:1, name:'vnnn'},
+  {id:2, name:'kkk'},
+  {id:3, name:'aaaa'},
+];
+
+getValue(e){
+  return (e.target as HTMLInputElement).value;
 }
-
-checkOdd(){
-
+upperCase(e){
+  this.currentItem = e.toUpperCase();
 }
-
 
 
 }

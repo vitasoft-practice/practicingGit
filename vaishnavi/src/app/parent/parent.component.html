@@ -1,0 +1,10 @@
+<div>
+    <p>Parent Component</p>
+    <input type="text" [(ngModel)] ="cnameInParent">
+    <p>Here is message from Child component: {{mgsFromChild}}</p>
+</div>
+<hr>
+<app-child 
+    [cname]= "cnameInParent" 
+    (sendMessageEmitter)="receiveMessage($event)"
+></app-child>

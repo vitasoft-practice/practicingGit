@@ -7,3 +7,16 @@
 .yellow{
     color: yellow;
 }
+
+app-test-comp{
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+
+}
+
+div.first{
+    background-color: yellowgreen;
+    position: sticky;
+    z-index: 1;
+}
