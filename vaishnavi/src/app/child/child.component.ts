@@ -17,6 +17,8 @@ export class ChildComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('hellooo');
+    
   }
 
 

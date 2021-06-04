@@ -1,12 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable, Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'practice';
+
+  constructor(){
+    const test$ = new Observable(Subscriber => {
+      console.log('first');
+      Subscriber.next('1');
+    });
+
+    test$.subscribe(x =>{
+      console.log('second-',x);
+      
+    });
+  }
+
+  ngOnInit():void{
+    console.log('whatever..');
+    
+  }
+
 
   // structural directive practice
   answer=['a'];

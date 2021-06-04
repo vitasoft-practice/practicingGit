@@ -100,9 +100,9 @@
         <input type="text" [(ngModel)] ="input">
     </div>
 </fieldset> -->
+<!-- ---------------------------------------------- -->
 
-
-<p>Current item name: {{currentItem}}</p>
+<!-- <p>Current item name: {{currentItem}}</p>
   <p>
     <label for="without">data binding without NgModel:</label>
     <input [value]="currentItem" (input)="currentItem=getValue($event)" id="without">
@@ -120,19 +120,19 @@
 
   <div>
       <p>this is ng if using...{{save ? "yeahhh" : "nopee" }}</p>
-  </div>
-
+  </div> -->
+<!-- --------------XXXXXX --------------- -->
   <!-- <div *ngFor="let item of items; trackBy: trackByItems">
     ({{item.id}}) {{item.name}}
   </div> -->
-
-  <label *ngFor="let num of nums">
+<!-- ------------------------------------------------- -->
+  <!-- <label *ngFor="let num of nums">
     <div><input type="radio" name="items" [(ngModel)]="currentItem" [value]="num">{{num}}
     </div>
-  </label>
+  </label> -->
 
 
   <!-- --------parent child component --------- -->
-<hr>
+
 <app-parent></app-parent>
 
