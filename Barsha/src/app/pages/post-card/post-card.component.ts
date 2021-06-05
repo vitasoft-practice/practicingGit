@@ -1,5 +1,6 @@
 import { Component, OnInit , Input  } from '@angular/core';
 
+
 @Component({
   selector: 'app-post-card',
   templateUrl: './post-card.component.html',
@@ -7,7 +8,9 @@ import { Component, OnInit , Input  } from '@angular/core';
 })
 export class PostCardComponent implements OnInit {
   @Input() name : string;
+ 
   likes:number;
+  
   dislikes:number;
   ishidden: Boolean =true ;
   show(): void{
