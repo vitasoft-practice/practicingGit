@@ -1,0 +1,15 @@
+<div>
+    <p>Parent Component</p>
+    <input type="text" [(ngModel)] ="cnameInParent">
+    <p>Here is message from Child component: {{mgsFromChild}}</p>
+</div>
+
+<div>
+    <h2 *ngIf ="show">hooks checking</h2>
+    <button (click) ="toggle()">check</button>
+</div>
+<hr>
+<app-child 
+    [cname]= "cnameInParent" 
+    (sendMessageEmitter)="receiveMessage($event)"
+></app-child>

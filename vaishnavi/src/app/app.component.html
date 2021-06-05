@@ -1,5 +1,138 @@
-<div *ngIf ="fruit" class="name"{{fruit.name}} [(ngModel)]="name_test"></div>
+<!-- *ngIf practice ---------------->
+<!-- <div *ngIf="answer.length > 0;then correctans else wrongans"></div>
+<ng-template #correctans>
+    This is correct:)
+</ng-template>
+<ng-template #wrongans>
+    This is wrong!!!!
+</ng-template> -->
+
+<!-- *ngswitchcase practice ---------------------------->
+
+<!-- <ul class="nav navpills">
+    <li><a  (click)="answer='a'"></a>1</li>  <br>
+    <li><a (click)= "answer='b'"></a> 2</li><br>
+     <li (click)= "answer='c'">3</li> 
+</ul> 
+<div (click)="answer='a'">1st ele</div>
+
+<div (click)="answer='b'">lastst ele</div>
+
+<div [ngSwitch]="answer"> 
+    <div *ngSwitchCase="'a'">1st one</div>
+    <div *ngSwitchCase="'b'">2st one</div>
+   
+    <div *ngSWitchDefault>something</div>
+</div> -->
+
+<!-- *ngFor practice ----------------------------------->
+<!-- <button (click)=onAdd()>add</button>
+<ul *ngFor="let element of elements">
+   {{element.id}} {{element.name}}
+    <button (click)=onRemove(element)>remove</button>
+</ul> -->
 
 
-<app-newcomp></app-newcomp>
-<router-outlet></router-outlet>
+<!-- atribute directives practice ------------------>
+
+<!-- ngclass------------------------------------------->
+
+<!-- <div>
+    <p [ngClass]="{
+       'red' : highlightColor === 'red',
+       'green': highlightColor ==='green',
+       'yellow': highlightColor ==='yellow'
+    }">this is ngclass practise</p>
+</div>
+<div>
+    <button (click)="highlight('red')">red</button>
+    <button (click)="highlight('green')">green</button>
+    <button (click)="highlight('yellow')">yellow</button>
+</div> -->
+
+<!-- ngstyle --------------------------->
+
+<!-- <div>
+    <p [ngStyle]="{
+        color : defaultstyle ? 'red' : 'green'
+    }">this is ngstyle practice</p>
+</div>
+<div>
+    <button (click) = "styleChange()">change</button>
+</div> -->
+<!-- ----------------------------------------------------------- -->
+
+<!-- directive project -->
+<!-- <div *ngFor = "let num of nums;let i=index">
+    <ul >
+       {{num}}<span></span>
+    </ul> -->
+
+    <!-- <div ng-repeat="num in nums">
+        <div  ng-if="$index % 3 == 0" [ngStyle]="{
+            color : defaultstyle ? 'red' : 'green'
+        }"></div>
+        <div >
+            {{nums}}
+        </div>
+    </div>
+
+    <div>
+        <button (click) = "styleChange()">even</button> -->
+        <!-- <button (click)="checkOdd()">odd</button> -->
+    <!-- </div> -->
+<!-- </div> -->
+
+
+<!-- <router-outlet></router-outlet> -->
+
+<!-- <div class="comp">
+    <app-test-comp color="orange">123</app-test-comp>
+</div><br>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.</p><br><br>
+<div class="first">
+    <p>This is not component....</p>
+</div> -->
+<!-- ------------------------------------------ -->
+<!-- <fieldset>
+    <div>
+        <input type="text" value="{{input}}">
+        <input type="text" [(ngModel)] ="input">
+    </div>
+</fieldset> -->
+<!-- ---------------------------------------------- -->
+
+<!-- <p>Current item name: {{currentItem}}</p>
+  <p>
+    <label for="without">data binding without NgModel:</label>
+    <input [value]="currentItem" (input)="currentItem=getValue($event)" id="without">
+  </p>
+
+  <p>
+    <label for="example-change">using -- (ngModelChange)="..=$event":</label>
+    <input [ngModel]="currentItem" (ngModelChange)="currentItem=$event" id="example-change">
+  </p>
+
+  <p>
+    <label for="example-change">using -- (ngModelChange)="...toupperclass:</label>
+    <input [ngModel]="currentItem" (ngModelChange)="upperCase($event)" id="example-change">
+  </p>
+
+  <div>
+      <p>this is ng if using...{{save ? "yeahhh" : "nopee" }}</p>
+  </div> -->
+<!-- --------------XXXXXX --------------- -->
+  <!-- <div *ngFor="let item of items; trackBy: trackByItems">
+    ({{item.id}}) {{item.name}}
+  </div> -->
+<!-- ------------------------------------------------- -->
+  <!-- <label *ngFor="let num of nums">
+    <div><input type="radio" name="items" [(ngModel)]="currentItem" [value]="num">{{num}}
+    </div>
+  </label> -->
+
+
+  <!-- --------parent child component --------- -->
+
+<app-parent></app-parent>
+
