@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subscriber } from 'rxjs';
+import { interval, Observable, of, pipe, Subscriber } from 'rxjs';
+import { map, first, filter, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -19,10 +20,38 @@ export class AppComponent implements OnInit {
       console.log('second-',x);
       
     });
+    test$.subscribe(x => console.log('Observer got a next value: ' + x));
+
+    // pipe operators
+    const numbers$ = interval(1000).pipe(take(7));
+    numbers$.subscribe(v =>{
+      console.log(v);
+      
+    });
+
+    // creation operators
+
+    const off$ = of(1,2,3,4,5,6,7).pipe(filter(f => f%2 ==0),map(m=> m*10));
+
+    off$.subscribe(sub =>{
+      console.log(sub);
+      
+    });
+
+
+    // operators
+    // of(1, 2, 3)
+    //   .pipe(map((x) => x * x *2))
+    //   // .pipe(first())
+    //   .subscribe((v) => console.log(`value is : ${v}`));
+
   }
 
   ngOnInit():void{
-    console.log('whatever..');
+    // console.log('whatever..');
+
+    
+
     
   }
 
