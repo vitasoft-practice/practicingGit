@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { UserItemComponent } from './pages/user-item/user-item.component';
 import { PostCardComponent } from './pages/post-card/post-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DemoFormComponent } from './pages/demo-form/demo-form.component';
 
 @NgModule({
   declarations: [
@@ -13,11 +15,12 @@ import { PostCardComponent } from './pages/post-card/post-card.component';
     HomepageComponent,
     UserItemComponent,
     PostCardComponent,
-    
+    DemoFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

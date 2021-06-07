@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+
+
+interface formdata {
+  name:string;
+  sub:string;
+}
 
 @Component({
   selector: 'app-demo-form',
@@ -6,10 +13,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./demo-form.component.scss']
 })
 export class DemoFormComponent implements OnInit {
-  // addIdea(newtitle :HTMLInputElement, descr :HTMLInputElement) :boolean{
-  //   console.log(`${newtitle.value} and ${descr.value}`);
-  //   return false;
-  // }
+ 
+  formData:formdata[] =[];
+   
+  profileForm = new FormGroup({
+    name : new FormControl(''),
+    sub : new FormControl(''),
+  });
+  
   ishidden: Boolean ;
   show(): void{
    
@@ -19,13 +30,17 @@ export class DemoFormComponent implements OnInit {
   }
   constructor() { 
     this.ishidden = true;
+    // this.formData=[];
   }
 
   ngOnInit(): void {
   }
 
-  onSubmit(form :any): void {
-    console.log('You submitted values',form)
-  }
+ onSubmit(){
+  //  this.formData.push(this.profileForm.value);
+  this.formData.push(this.profileForm.value);
+   console.log(this.formData);
+   
+ }
 
 }
