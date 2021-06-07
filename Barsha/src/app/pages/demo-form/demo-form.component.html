@@ -1,4 +1,5 @@
-<form #f="ngForm" (ngSubmit) = "onSubmit(f.value)">
+<!-- <form #f="ngForm" (ngSubmit) = "onSubmit(f.value)">
+
     <h3>Add your ideas</h3>
     <br/>
     <label for="name">Name:</label>
@@ -11,4 +12,14 @@
     <br/><br/>
     <button type="submit">Submit</button>
     
+</form> -->
+<form [formGroup] = "profileForm" (ngSubmit) = "onSubmit()">
+    {{ profileForm.value | json }}
+    <label>Name</label>
+    <input type="text" formControlName ="name" />
+    <br/>
+    <label>Topic of Expertise</label>
+    <input type="text" formControlName ="sub" />
+    <br/><br/>
+    <button type="submit">Add</button>
 </form>
