@@ -45,12 +45,10 @@
         </label>
       </div>
     <br/><br/>
-    <button type="submit">Add</button>
+    <button type="submit" [disabled] = "profileForm.invalid">Add</button>
 </form>
 
-    <div *ngIf = "profileForm.invalid">
-       Invalid Details
-    </div>
+   
 
 <table>
     <tr>
@@ -60,7 +58,7 @@
      <div  *ngFor = 'let data of formData'>
         
     
-        <app-authortable [name] = "data.name" [sub] ="data.sub" ></app-authortable>
+        <app-authortable [name] = "data.name" [sub] ="data.sub" [addr] ="data.address.city" ></app-authortable>
     </div>
     
 </table>
