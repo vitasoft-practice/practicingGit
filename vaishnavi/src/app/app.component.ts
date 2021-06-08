@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, Observable, of, pipe, Subscriber } from 'rxjs';
+import { combineLatest, concat, forkJoin, fromEvent, interval, Observable, of, pipe, Subscriber  } from 'rxjs';
 import { map, first, filter, take } from 'rxjs/operators';
 
 @Component({
@@ -22,21 +22,22 @@ export class AppComponent implements OnInit {
     });
     test$.subscribe(x => console.log('Observer got a next value: ' + x));
 
-    // pipe operators
-    const numbers$ = interval(1000).pipe(take(7));
-    numbers$.subscribe(v =>{
-      console.log(v);
+    // -------------------pipe operators
+    // const numbers$ = interval(1000).pipe(take(7));
+    // numbers$.subscribe(v =>{
+    //   console.log(v);
       
-    });
+    // });
 
-    // creation operators
+    // --------------creation operators-------
 
-    const off$ = of(1,2,3,4,5,6,7).pipe(filter(f => f%2 ==0),map(m=> m*10));
+    // const off$ = of(1,2,3,4,5,6,7).pipe(filter(f => f%2 ==0),map(m=> m*10));
 
-    off$.subscribe(sub =>{
-      console.log(sub);
+    // off$.subscribe(sub =>{
+    //   console.log(sub);
+
       
-    });
+    // });
 
 
     // operators
@@ -45,15 +46,28 @@ export class AppComponent implements OnInit {
     //   // .pipe(first())
     //   .subscribe((v) => console.log(`value is : ${v}`));
 
+    // -------------join creation operators-----------//
+    const t1 = interval(1000).pipe(take(10));
+    const t2 = interval(3000).pipe(take(10));
+    // const newval = combineLatest (t1,t2);
+    // const newval = concat(t1,t2);
+    const newval = forkJoin(t1,t2);
+    newval.subscribe(x =>{
+      console.log(x);
+      
+    });
   }
 
   ngOnInit():void{
-    // console.log('whatever..');
+    // console.log('whatever...');
+// --------------------------   creation operator   --------------------------
+    const some = fromEvent(<HTMLElement>document.getElementById('test'),'click')
+    some.subscribe(s=>{
+      console.log('I am clicked');
+    });    
 
-    
-
-    
   }
+
 
 
   // structural directive practice
