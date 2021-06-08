@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup , FormBuilder, Form } from '@angular/forms';
+import { FormControl, FormGroup , FormBuilder, Validators } from '@angular/forms';
 
 interface address{
   street:string;
@@ -36,8 +36,8 @@ export class DemoFormComponent implements OnInit {
   //   })
   // });
  profileForm = this.fb.group({
-      name: [''],
-      sub: [''],
+      name: ['', Validators.required],
+      sub: ['' , Validators.required],
       address: this.fb.group({
         street: [''],
         city: [''],
