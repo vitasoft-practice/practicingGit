@@ -14,7 +14,7 @@
     
 </form> -->
 <form [formGroup] = "profileForm" (ngSubmit) = "onSubmit()">
-    {{ profileForm.value | json }}
+    {{ profileForm?.value | json }}
     <label>Name</label>
     <input type="text" formControlName ="name" />
     <br/>

@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup , FormBuilder, Form } from '@angular/forms';
 
-
-interface formdata {
-  name:string;
-  sub:string;
+interface address{
   street:string;
   city:string;
   state:string;
   zip:number;
+}
+
+interface formdata {
+  name:string;
+  sub:string;
+  address:address;
+ 
 }
 
 @Component({
@@ -17,7 +21,7 @@ interface formdata {
   styleUrls: ['./demo-form.component.scss']
 })
 export class DemoFormComponent implements OnInit {
- 
+  // profileForm?:FormGroup;
   formData:formdata[] =[];
    
   // profileForm = new FormGroup({
@@ -31,16 +35,16 @@ export class DemoFormComponent implements OnInit {
   //     zip: new FormControl('')
   //   })
   // });
-  profileForm = this.fb.group({
-    name: [''],
-    sub: [''],
-    address: this.fb.group({
-      street: [''],
-      city: [''],
-      state: [''],
-      zip: ['']
-    }),
-  });
+ profileForm = this.fb.group({
+      name: [''],
+      sub: [''],
+      address: this.fb.group({
+        street: [''],
+        city: [''],
+        state: [''],
+        zip: ['']
+      }),
+    });
 
   
   ishidden: Boolean ;
@@ -56,12 +60,24 @@ export class DemoFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.profileForm = this.fb.group({
+    //   name: [''],
+    //   sub: [''],
+    //   address: this.fb.group({
+    //     street: [''],
+    //     city: [''],
+    //     state: [''],
+    //     zip: ['']
+    //   }),
+    // });
   }
 
  onSubmit(){
   //  this.formData.push(this.profileForm.value);
   this.formData.push(this.profileForm.value);
-   console.log(this.profileForm.value.address);
+   console.log(this.profileForm?.value);
+   console.log(this.formData)
+  //  console.log(this.profileForm.value);
    
  }
 
