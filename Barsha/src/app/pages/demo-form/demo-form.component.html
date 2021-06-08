@@ -20,6 +20,30 @@
     <br/>
     <label>Topic of Expertise</label>
     <input type="text" formControlName ="sub" />
+
+    <div formGroupName="address">
+        <h3>Address</h3>
+      
+        <label>
+          Street:
+          <input type="text" formControlName="street">
+        </label>
+      
+        <label>
+          City:
+          <input type="text" formControlName="city">
+        </label>
+        
+        <label>
+          State:
+          <input type="text" formControlName="state">
+        </label>
+      
+        <label>
+          Zip Code:
+          <input type="text" formControlName="zip">
+        </label>
+      </div>
     <br/><br/>
     <button type="submit">Add</button>
 </form>
@@ -29,8 +53,9 @@
         <td> <thead>Topic of Expertise</thead></td> 
      </tr>
      <div *ngFor = 'let data of formData'>
+        
     
-        <app-authortable [name] = "data.name" [sub] ="data.sub"></app-authortable>
+        <app-authortable [name] = "data.name" [sub] ="data.sub" ></app-authortable>
     </div>
     
 </table>
