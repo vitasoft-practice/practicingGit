@@ -23,3 +23,15 @@
     <br/><br/>
     <button type="submit">Add</button>
 </form>
+<table>
+    <tr>
+        <td> <thead>Author</thead></td>
+        <td> <thead>Topic of Expertise</thead></td> 
+     </tr>
+     <div *ngFor = 'let data of formData'>
+    
+        <app-authortable [name] = "data.name" [sub] ="data.sub"></app-authortable>
+    </div>
+    
+</table>
+

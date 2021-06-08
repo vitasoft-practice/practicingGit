@@ -8,6 +8,7 @@ import { UserItemComponent } from './pages/user-item/user-item.component';
 import { PostCardComponent } from './pages/post-card/post-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoFormComponent } from './pages/demo-form/demo-form.component';
+import { AuthortableComponent } from './pages/authortable/authortable.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DemoFormComponent } from './pages/demo-form/demo-form.component';
     HomepageComponent,
     UserItemComponent,
     PostCardComponent,
-    DemoFormComponent
+    DemoFormComponent,
+    AuthortableComponent
   ],
   imports: [
     BrowserModule,
