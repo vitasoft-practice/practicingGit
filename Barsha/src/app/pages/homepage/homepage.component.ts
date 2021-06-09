@@ -9,21 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomepageComponent implements OnInit {
 
   names :string[];
-  ishidden: Boolean ;
-  show(): void{
-   
-    // console.log("clicked");
-    this.ishidden=false;
-    
-  }
-
-  addIdea(postTitle :HTMLInputElement, descr :HTMLInputElement) :boolean{
-    console.log(`${postTitle.value} and ${descr.value}`);
-    return false;
-  }
+  
+  curdate = Date.now();
+ 
   constructor(){
     this.names = ['Barsha' , 'Carlos' , 'Henry' , 'Natalie'];
-    this.ishidden = true;
    
   }
 

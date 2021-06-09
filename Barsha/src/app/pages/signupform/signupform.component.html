@@ -1,0 +1,20 @@
+<form [formGroup] = 'signupForm'>
+    <label>Name</label>:<br/>
+    <input type="text" formControlName="name" />
+    <span *ngIf = "!signupForm.valid"> NAme is required</span> <br/>
+    <label>Email</label>:<br/>
+    <input type="text" formControlName="email" />
+    <span *ngIf = "!signupForm.valid "> Enter valid email address</span> <br/>
+    <br/>
+    <div formGroupName ="address">
+
+        <label>City</label>:<br/>
+        <input type="text" formControlName="city" /> <br/>
+        <label>State</label>:<br/>
+        <input type="text" formControlName="state" /> <br/>
+        <label>Zip</label>:<br/>
+        <input type="number" formControlName="zip" /> <br/>
+
+    </div>
+   
+</form>
