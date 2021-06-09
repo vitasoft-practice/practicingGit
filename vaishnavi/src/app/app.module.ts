@@ -8,6 +8,7 @@ import { TestCompComponent } from './test-comp/test-comp.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { HighlightPipe } from './highlight.pipe';
 // import { NewcompComponent } from './newcomp/newcomp.component' ;
 // import { FormsModule } from '@angular/forms';
 
@@ -18,6 +19,7 @@ import { ContactsComponent } from './contacts/contacts.component';
     ParentComponent,
     ChildComponent,
     ContactsComponent,
+    HighlightPipe,
     // NewcompComponent
   ],
   imports: [

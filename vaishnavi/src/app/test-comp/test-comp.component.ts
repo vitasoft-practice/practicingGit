@@ -9,6 +9,17 @@ export class TestCompComponent implements OnInit {
 
   constructor() { }
 
+  pipes = {
+    fname:'vaish',
+    lname:'mano',
+    dob:'10/19/1999',
+    salary:'1000.57'
+  }
+
+  place ={
+    city:'chennai'
+  }
+
   ngOnInit(): void {
   }
 

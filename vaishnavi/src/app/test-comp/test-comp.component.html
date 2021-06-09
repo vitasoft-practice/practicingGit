@@ -1,1 +1,30 @@
-<p>test-comp works!</p>
+<h3>Pipes learning section</h3>
+
+<div>
+    {{pipes.fname | uppercase}}
+</div>
+<div>
+    {{pipes.lname | lowercase}}
+</div>
+<div>
+    {{pipes.dob | date:'longDate'}}
+</div>
+<div>
+    {{pipes.salary | currency:'INR':'code':'4.0-1'}}
+</div>
+<div>
+    {{pipes | json}}
+</div>
+
+<hr>
+<h3>chaining pipes</h3>
+<div>
+    {{pipes.dob | date:'longDate' | uppercase}}
+</div>
+
+<div>
+    {{place.city | highlight:place.city}}
+</div>
+
+
+

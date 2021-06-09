@@ -73,6 +73,9 @@ export class AppComponent implements OnInit {
   // structural directive practice
   answer=['a'];
 
+  place ={
+    city:'chennai'
+  }
   elements =[
     {id:1, name:'vnnn'},
     {id:2, name:'kkk'},
