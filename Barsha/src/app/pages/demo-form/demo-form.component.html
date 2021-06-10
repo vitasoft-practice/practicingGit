@@ -17,6 +17,8 @@
     {{ profileForm?.value | json }}
     <label>Name</label>
     <input type="text" formControlName ="name" />
+   
+    <!-- <span *ngIf = "name.hasError('required')"> Please fill in the name</span> -->
     <br/>
     <label>Topic of Expertise</label>
     <input type="text" formControlName ="sub" />

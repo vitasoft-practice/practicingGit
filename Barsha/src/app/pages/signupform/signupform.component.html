@@ -1,10 +1,11 @@
 <form [formGroup] = 'signupForm'>
     <label>Name</label>:<br/>
-    <input type="text" formControlName="name" />
-    <span *ngIf = "!signupForm.valid"> NAme is required</span> <br/>
+    <input type="text" formControlName = "name" />
+    <!-- {{name.value}} -->
+    <!-- <span *ngIf = "name.errors?.required"> NAme is required</span> <br/> -->
     <label>Email</label>:<br/>
     <input type="text" formControlName="email" />
-    <span *ngIf = "!signupForm.valid "> Enter valid email address</span> <br/>
+    <!-- <span *ngIf = "!signupForm.valid "> Enter valid email address</span> <br/> -->
     <br/>
     <div formGroupName ="address">
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder , Validators, AbstractControl} from "@angular/forms";
+import {FormBuilder , Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-signupform',
@@ -17,6 +17,10 @@ export class SignupformComponent implements OnInit {
       zip:['']
     })
   })
+
+  // get name(){
+  //   this.signupForm.value.name;
+  // }
   constructor( private fb:FormBuilder ) { }
 
   ngOnInit(): void {

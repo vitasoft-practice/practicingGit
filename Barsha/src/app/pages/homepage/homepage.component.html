@@ -25,6 +25,13 @@
     </div>
 
     <br/><br/>
+
+    <h1>Courses</h1>
+
+    <div class ="col" *ngFor ="let course of courses">
+      
+        <app-courses [course] ="course" ></app-courses>
+    </div>
     <app-demo-form></app-demo-form>
     <!-- <form>
         <h3>Add your ideas</h3>

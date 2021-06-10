@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoFormComponent } from './pages/demo-form/demo-form.component';
 import { AuthortableComponent } from './pages/authortable/authortable.component';
 import { SignupformComponent } from './pages/signupform/signupform.component';
+import { CoursesComponent } from './pages/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { SignupformComponent } from './pages/signupform/signupform.component';
     PostCardComponent,
     DemoFormComponent,
     AuthortableComponent,
-    SignupformComponent
+    SignupformComponent,
+    CoursesComponent,
+    
   ],
   imports: [
     BrowserModule,
