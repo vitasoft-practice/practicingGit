@@ -8,6 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RouteComponent implements OnInit {
 
+  // paramQuery='';
+  // constructor(private activatedRoute: ActivatedRoute) { 
+  //   this.activatedRoute.params.subscribe(s =>{
+  //     this.paramQuery = s.id;
+  //   })
+  // }
   parama ='';
   paramb ='';
   paramc ='';

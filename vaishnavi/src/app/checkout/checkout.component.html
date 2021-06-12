@@ -1,25 +1,27 @@
 <h2> CHECKOUT FORM</h2>
 
 <div>
-    <form [formGroup] ="checkoutForm" (ngSubmit) ="postData()">
+    <form [formGroup] ="checkouForm2" (ngSubmit) ="postData();">
+        <!-- {{checkouForm2.value | json}} -->
         <div>
             <label>Name  :</label>
-            <input type = "type" name="passwordFeild" fromControlName ="name">
+            <input type = "text"  formControlName ="name">
         </div>
 
         <div>
             <label>Email address  :</label>
-            <input type = "email" name="emailFeild" fromControlName ="email">
+            <input type = "email" name="emailFeild" formControlName ="email">
             <!-- <small *ngIf="signInForm.touched && !signInForm.valid">Please fill this with correct email</small> -->
         </div>
         
         <div>
-            <input type = "checkbox" name="checkFeild" fromControlName ="check">
+            <input type = "checkbox" name="checkFeild" formControlName ="check">
             <label>Agree to terms</label>
         </div>
+   
 
         <div>
-            <button value="postData()" type="submit">checkout</button>
+            <button type="submit">checkout</button>
         </div>
         
     </form>

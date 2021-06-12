@@ -23,8 +23,8 @@ const routes: Routes = [
     { path:'comp', component: TestCompComponent}
 ]},
   
-  // { path:'route/:id', component: RouteComponent}
-  { path:'route', component: RouteComponent},
+  { path:'route/:id', component: RouteComponent},
+  // { path:'route', component: RouteComponent},
   { path: 'watch', loadChildren: () => import('./testwatch/testwatch.module').then(m => m.TestwatchModule) },
   { path:'**', component: PagenotfoundComponent}
  

@@ -9,24 +9,37 @@ import { FormGroup, FormControl,FormBuilder} from '@angular/forms';
 })
 export class CheckoutComponent implements OnInit {
 
-  checkoutForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) {
-    this.checkoutForm = formBuilder.group({
-      name: new FormControl(),
-      email: new FormControl(),
-      check: new FormControl()
-    });
-    
-    this.checkoutForm.markAsDirty()
-   }
+  // checkoutForm: FormGroup;
+  constructor(private formBuilder: FormBuilder) {}
+
+  checkouForm2 = new FormGroup({
+    name: new FormControl(''),
+    email:new FormControl(''),
+    check: new FormControl('')
+  })
+
+   
 
    postData(){
-     console.log(this.checkoutForm);
-     console.log(this.checkoutForm.value);
+     console.log(this.checkouForm2);
+     console.log(this.checkouForm2.value);
      
-   }
+   };
 
   ngOnInit(): void {
+
+  //   this.checkoutForm = this.formBuilder.group({
+  //   name:[''],
+  //   email:[''],
+  //   check: ['']
+  // });
+
+
+    // this.checkoutForm = new FormGroup({
+    //   name: new FormControl(""),
+    //   email: new FormControl(""),
+    //   check: new FormControl("")
+    // });
   }
 
 }
