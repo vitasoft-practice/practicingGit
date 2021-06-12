@@ -11,6 +11,7 @@ import { DemoFormComponent } from './pages/demo-form/demo-form.component';
 import { AuthortableComponent } from './pages/authortable/authortable.component';
 import { SignupformComponent } from './pages/signupform/signupform.component';
 import { CoursesComponent } from './pages/courses/courses.component';
+import { CourseDetailComponent } from './pages/course-detail/course-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CoursesComponent } from './pages/courses/courses.component';
     AuthortableComponent,
     SignupformComponent,
     CoursesComponent,
+    CourseDetailComponent,
     
   ],
   imports: [

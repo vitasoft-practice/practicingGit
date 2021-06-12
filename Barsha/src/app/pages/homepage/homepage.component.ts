@@ -19,7 +19,7 @@ export class HomepageComponent implements OnInit {
    
   }
 
-  courses= this.ps.courses;
+  
  
   ngOnInit(): void {
     
