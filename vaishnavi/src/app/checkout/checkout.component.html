@@ -1,0 +1,26 @@
+<h2> CHECKOUT FORM</h2>
+
+<div>
+    <form [formGroup] ="checkoutForm" (ngSubmit) ="postData()">
+        <div>
+            <label>Name  :</label>
+            <input type = "type" name="passwordFeild" fromControlName ="name">
+        </div>
+
+        <div>
+            <label>Email address  :</label>
+            <input type = "email" name="emailFeild" fromControlName ="email">
+            <!-- <small *ngIf="signInForm.touched && !signInForm.valid">Please fill this with correct email</small> -->
+        </div>
+        
+        <div>
+            <input type = "checkbox" name="checkFeild" fromControlName ="check">
+            <label>Agree to terms</label>
+        </div>
+
+        <div>
+            <button value="postData()" type="submit">checkout</button>
+        </div>
+        
+    </form>
+</div>

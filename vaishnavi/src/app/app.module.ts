@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module'; //routing import
 import { AppComponent } from './app.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
@@ -15,6 +17,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeComponent } from './home/home.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { SigninComponent } from './signin/signin.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 // import { NewcompComponent } from './newcomp/newcomp.component' ;
 // import { FormsModule } from '@angular/forms';
 
@@ -31,12 +34,15 @@ import { SigninComponent } from './signin/signin.component';
     HomeComponent,
     AdminHomeComponent,
     SigninComponent,
+    CheckoutComponent,
     // NewcompComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
+
   
   ],
   providers: [
