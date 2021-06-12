@@ -1,0 +1,29 @@
+<h1>Sign-In</h1>
+<div>
+<form #signInForm ="ngForm" (ngSubmit)="loginUser(signInForm);">
+    <div>
+        <label>Email address  :</label>
+        <input type = "email" name="emailFeild" ngModel required #signInForm="ngModel">
+        <small *ngIf="signInForm.touched && !signInForm.valid">Please fill this with correct email</small>
+    </div>
+    <div>
+        <label>password  :</label>
+        <input type = "password" name="passwordFeild" ngModel required>
+    </div>
+    <div>
+        <input type = "checkbox" name="checkFeild" ngModel required>
+        <label>Agree to terms</label>
+    </div>
+    <div>
+        <button [disabled]="!signInForm.valid" type="submit">Submit</button>
+    </div>
+    
+</form>
+
+<div>
+    <p>Signin successfull..!!!!!<br><br>
+    ur email is :  {{email}}
+    <br>
+    ur password is : {{password}}</p>
+</div>
+</div>

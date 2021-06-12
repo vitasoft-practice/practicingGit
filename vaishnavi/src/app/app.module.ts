@@ -14,6 +14,7 @@ import { RouteComponent } from './route/route.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeComponent } from './home/home.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { SigninComponent } from './signin/signin.component';
 // import { NewcompComponent } from './newcomp/newcomp.component' ;
 // import { FormsModule } from '@angular/forms';
 
@@ -29,6 +30,7 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
     PagenotfoundComponent,
     HomeComponent,
     AdminHomeComponent,
+    SigninComponent,
     // NewcompComponent
   ],
   imports: [
