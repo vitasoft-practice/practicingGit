@@ -1,17 +1,24 @@
 <h2> CHECKOUT FORM</h2>
 
 <div>
-    <form [formGroup] ="checkouForm2" (ngSubmit) ="postData();">
+    <form [formGroup] ="checkoutForm" (ngSubmit) ="postData();">
         <!-- {{checkouForm2.value | json}} -->
         <div>
             <label>Name  :</label>
-            <input type = "text"  formControlName ="name">
+            <input type = "text"  formControlName ="name" >
+            <!-- <span class="text-danger"
+            *ngIf="(checkoutForm.name.touched || submitted) && checkoutForm.name.errors?.required">
+            Name is required
+        </span> -->
         </div>
 
         <div>
             <label>Email address  :</label>
-            <input type = "email" name="emailFeild" formControlName ="email">
-            <!-- <small *ngIf="signInForm.touched && !signInForm.valid">Please fill this with correct email</small> -->
+            <input type = "email" name="email" formControlName ="email" value="email"> 
+            <!-- <span *ngIf="checkoutForm.get('email').touched && checkoutForm.get('email').hasError('required')">Please fill this with correct email</span> -->
+            
+            
+            <!-- <span *ngIf="email.invalid" >Enter correct email</span> -->
         </div>
         
         <div>
@@ -21,8 +28,11 @@
    
 
         <div>
-            <button type="submit">checkout</button>
+            <button type="submit" [disabled]="!checkoutForm.valid">checkout</button>
         </div>
         
     </form>
 </div>
+
+
+<!-- *ngIf="checkoutForm.get('email').touched && checkoutForm.get('email').hasError('required')" -->
