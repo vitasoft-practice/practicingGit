@@ -1,0 +1,65 @@
+@import "./variable";
+@import "./mixin.scss";
+
+.main-todo {
+    text-align: center;
+    margin: 80px auto;
+    width: 50%;
+
+    & h1 {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 20px auto;
+    }
+}
+
+.todo-list {
+    list-style: none;
+    margin-top: 20px;
+
+    & li {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        background-color: $bgColor;
+        margin: 10px auto;
+        text-align: left;
+        padding: 5px 8px;
+    }
+    & .crxicon {
+        color: rgb(25, 100, 25);
+        float: left;
+        margin-right: 10px;
+    }
+    & .delicon {
+        color: rgb(192, 23, 23);
+        float: right;
+    }
+}
+
+.main-todo-form {
+    position: relative;
+
+    & .input-text {
+        width: 50%;
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid green;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    & .add-btn {
+        background-color: $bgBtnColor;
+        color: #fff;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        font-size: 22px;
+        border: none;
+        position: absolute;
+        // top: 0;
+        // right: 0;
+    }
+}

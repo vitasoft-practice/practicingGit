@@ -4,15 +4,16 @@ import './App.css';
 import FirstComponent from './components/FirstComponent';
 import ObjectState from './components/ObjectState'
 import "./style.scss"
+import './components/todo.scss'
 import Todo from './components/Todo';
-import TodoForm from './components/TodoForm';
+
 
 function App() {
   return (
     <div className="App">
       {/* <FirstComponent /> */}
       {/* <ObjectState /> */}
-      <TodoForm />
+      <Todo />
   
      
     </div>
