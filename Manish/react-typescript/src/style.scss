@@ -1,0 +1,61 @@
+// 1.variables
+// 2.operators
+// 3.nesting
+// 4.mixin --->any properties which is used many times
+// 5.parameter
+// 6.partials --> create different file and import exm-> make page of variable,mixin etc . and by using @import
+//exm-->
+//1.defined --> also pass multiple argument whenever some prop of that element are different
+
+
+// @mixin flexProp {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+// }
+
+// 2.used
+// @include flexprop
+
+@import "./components/mixin";
+@import "./components/variable";
+
+.main-wrraper {
+    background-color: $bgColor;
+    padding: 50px 0;
+    @include flexProp;
+
+    & h4 {
+        color: red;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            background-color: #fff;
+        }
+    }
+}
+
+.author {
+    &-title {
+        font-size: $sizeL;
+    }
+    &-count {
+        font-size: $sizeM;
+    }
+    &-btn {
+        font-size: $sizeS;
+        background-color: $bgBtnColor;
+        transition: .3s all;
+
+        &:hover {
+            background-color: $textColor;
+            color: #fff;
+            
+        }
+    }
+}
