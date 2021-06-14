@@ -18,9 +18,14 @@ export class SignupformComponent implements OnInit {
     })
   })
 
-  // get name(){
-  //   this.signupForm.value.name;
-  // }
+  onSubmit(){
+    console.log(this.signupForm.value)
+   console.log( this.signupForm.get('name'));
+  }
+  getData()
+  {
+    name= this.signupForm.get('name')?.hasError('required');
+  }
   constructor( private fb:FormBuilder ) { }
 
   ngOnInit(): void {

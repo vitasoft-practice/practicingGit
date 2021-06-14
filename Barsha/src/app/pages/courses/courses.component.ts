@@ -12,12 +12,12 @@ export class CoursesComponent implements OnInit {
   
   price = this.ps.coursePrice();
   courses = this.ps.courses; 
-  value ="";
+
   constructor(private ps: PriceServiceService, private route: ActivatedRoute) {
-    this.route.params.subscribe(s => 
+    this.route.paramMap.subscribe(param => 
       {
-        this.value = s.id;
-        console.log(s.id);
+       
+        console.log(param);
       });
     
    }

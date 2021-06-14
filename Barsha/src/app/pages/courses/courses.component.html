@@ -1,7 +1,7 @@
 
 <div *ngFor ="let course of courses " >
     <div class="card" >
-        <a routerLink ="['/courses' , course]">
+        <a routerLink ="course">
             <h5 >course : {{course}}</h5></a>
         <img src="assets/images/cardimage.png" style="width: 100%;" alt="card image">
         <div class="card-body">
@@ -12,7 +12,7 @@
            <br/><br/>
           <p>price : {{price}}</p>
 
-          <p>{{value}}</p>
+         
         </div>
     </div>
 </div>
