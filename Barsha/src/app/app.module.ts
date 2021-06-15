@@ -12,6 +12,7 @@ import { AuthortableComponent } from './pages/authortable/authortable.component'
 import { SignupformComponent } from './pages/signupform/signupform.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { CourseDetailComponent } from './pages/course-detail/course-detail.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CourseDetailComponent } from './pages/course-detail/course-detail.compo
     SignupformComponent,
     CoursesComponent,
     CourseDetailComponent,
+    PageNotFoundComponent,
     
   ],
   imports: [

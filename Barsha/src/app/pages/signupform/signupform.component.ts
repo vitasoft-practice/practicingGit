@@ -14,18 +14,19 @@ export class SignupformComponent implements OnInit {
     address:this.fb.group({
       city:[''],
       state:[''],
-      zip:['']
+      zip:['', Validators.maxLength(6)]
     })
   })
 
   onSubmit(){
     console.log(this.signupForm.value)
    console.log( this.signupForm.get('name'));
+   console.log(this.signupForm.get('name')?.hasError('required'));
   }
-  getData()
-  {
-    name= this.signupForm.get('name')?.hasError('required');
-  }
+  // getData()
+  // {
+  //   namecheck this.signupForm.get('name')?.hasError('required');
+  // }
   constructor( private fb:FormBuilder ) { }
 
   ngOnInit(): void {

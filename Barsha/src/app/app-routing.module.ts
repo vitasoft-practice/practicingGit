@@ -4,13 +4,15 @@ import { CourseDetailComponent } from './pages/course-detail/course-detail.compo
 import { CoursesComponent } from './pages/courses/courses.component';
 import { DemoFormComponent } from './pages/demo-form/demo-form.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SignupformComponent } from './pages/signupform/signupform.component';
 
 const routes: Routes = [
   {path:'' , component:HomepageComponent},
   {path:'demo-form' , component:DemoFormComponent},
   {path : 'signup', component: SignupformComponent},
-  {path: 'courses/:id', component : CoursesComponent}
+  {path: 'courses/:id', component : CoursesComponent},
+  {path: "**" , component:PageNotFoundComponent}
   // {path :'coursesdetail/:id' , component :CourseDetailComponent}
 ];
 
