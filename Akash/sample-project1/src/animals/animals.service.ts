@@ -13,7 +13,7 @@ export class AnimalsService {
         @InjectModel('Animal') private readonly AnimalModel : Model<Animal>,
     ){}
 
-    async addNewAnimal (name: string, category: string, age : Number){
+    async addAnimal (name: string, category: string, age : Number){
         const newAnimal = new this.AnimalModel({
             name,
             category,

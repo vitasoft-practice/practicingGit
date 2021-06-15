@@ -1,3 +1,4 @@
+
 import { Body, Controller, Post, Get, Patch, Param, Delete, } from '@nestjs/common';
 import { AnimalsService } from './animals.service';
 
@@ -12,7 +13,7 @@ export class AnimalsController {
         @Body('category') category : string,
         @Body('age') age : number,
     ){
-        const genid = await this.AnimalsService.addNewAnimal(name,category,age);
+        const genid = await this.AnimalsService.addAnimal(name,category,age);
         return {id : genid};
     }
 

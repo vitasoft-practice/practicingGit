@@ -6,7 +6,7 @@ import { AnimalsModule } from './animals/animals.module';
 import { MongooseModule } from '@nestjs/mongoose'
 
 @Module({
-  imports: [AnimalsModule ,MongooseModule.forRoot('mongodb+srv://akash:akash@cluster0.cylwt.mongodb.net/Animals-Database?retryWrites=true&w=majority')],
+  imports: [AnimalsModule ,MongooseModule.forRoot('mongodb://127.0.0.1:27017/Animals')],
   controllers: [AppController],
   providers: [AppService],
 })
