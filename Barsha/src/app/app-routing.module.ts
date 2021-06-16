@@ -12,6 +12,8 @@ const routes: Routes = [
   {path:'demo-form' , component:DemoFormComponent},
   {path : 'signup', component: SignupformComponent},
   {path: 'courses/:id', component : CoursesComponent},
+  { path: 'a', loadChildren: () => import('./modulea/modulea.module').then(m => m.ModuleaModule) },
+  { path: 'b', loadChildren: () => import('./moduleb/moduleb.module').then(m => m.ModulebModule) },
   {path: "**" , component:PageNotFoundComponent}
   // {path :'coursesdetail/:id' , component :CourseDetailComponent}
 ];
