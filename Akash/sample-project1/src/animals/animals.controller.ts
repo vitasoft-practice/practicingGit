@@ -13,7 +13,7 @@ export class AnimalsController {
         @Body('category') category : string,
         @Body('age') age : number,
     ){
-        const genid = await this.AnimalsService.addAnimal(name,category,age);
+        const genid = await this.AnimalsService.addNewAnimal(name,category,age);
         return {id : genid};
     }
 

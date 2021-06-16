@@ -7,10 +7,8 @@ describe('AnimalsController', () => {
 
   const mockAnimalService ={
 
-    addAnimal : jest.fn(addservice =>{
-      return{
-        id : Date.now(),
-      }
+    addNewAnimal : jest.fn(addservice =>{
+      return(addservice.id)
     } )
   }
 
@@ -18,8 +16,7 @@ describe('AnimalsController', () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [AnimalsController],
       providers:[AnimalsService]
-    }).overrideProvider(AnimalsService)
-    .useValue(mockAnimalService)
+    })
     .compile();
 
     controller = module.get<AnimalsController>(AnimalsController);
@@ -33,7 +30,11 @@ describe('AnimalsController', () => {
     expect(controller.addAnimal( 'tom' ,'dog', 1));
   });
 
-  expect(mockAnimalService.addAnimal).toHaveBeenCalled();
+  expect(mockAnimalService.addNewAnimal).toHaveBeenCalled();
  
+  it('Get all animals', ()=>{
+
+    expect(controller.getAllAnimals())
+  });
 });
  

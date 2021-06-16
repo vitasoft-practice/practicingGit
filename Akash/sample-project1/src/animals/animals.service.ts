@@ -1,7 +1,6 @@
 import { Injectable , NotFoundException} from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
-import { type } from "os";
 import { resourceLimits } from "worker_threads";
 import { Animal } from "./animals.model";
 
@@ -13,7 +12,7 @@ export class AnimalsService {
         @InjectModel('Animal') private readonly AnimalModel : Model<Animal>,
     ){}
 
-    async addAnimal (name: string, category: string, age : Number){
+    async addNewAnimal (name: string, category: string, age : Number){
         const newAnimal = new this.AnimalModel({
             name,
             category,
