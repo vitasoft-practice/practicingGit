@@ -16,13 +16,21 @@ const TodoLists = () => {
 
             return [...prevVal, data]
         })
+        // setUnderLine((preval) => {
+        //     return [...preval,false]
+        // })
         setData(" ")
     }
-    const cutLines = () => {
+    const cutLines = (id:number) => {
+        // setUnderLine((preval) => {
+        //     return preval.filter((cur,index) => {
+        //         return index!==id
+        //     })
+        // })
         setUnderLine(!underLine)
 
     }
-    const deleteItems = (id: any) => {
+    const deleteItems = (id: number) => {
         setList((prevVal) => {
             return prevVal.filter((cur, index) => {
                 return index !== id
@@ -35,18 +43,23 @@ const TodoLists = () => {
             <TodoForm changeHandle={handleChange} onclicks={showData} Value={data} />
 
             <ul className="todo-list">
+
+
                 {
                     list.map((curItem, index) => {
                         return (
                             <>
 
+                                <li key={index} style={{ textDecoration: underLine ? "line-through" : "none" }}>
 
-                                <li key={index} style={{ textDecoration: underLine ? 'line-through' : 'none' }}>
+                                    <ClearIcon className="crxicon" onClick={()=>cutLines(index)} />
 
-                                    <ClearIcon className="crxicon" onClick={cutLines} />
+                                    {/* <span onClick={cutLines}>
+                                        <ClearIcon className="crxicon" />
+                                    </span> */}
 
                                     {curItem}
-                                    
+
                                     <DeleteIcon className="delicon" onClick={() => deleteItems(index)} />
                                 </li>
 

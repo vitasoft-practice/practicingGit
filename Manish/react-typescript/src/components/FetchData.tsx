@@ -27,11 +27,12 @@ const FetchData = () => {
 
     return (
         <>
-            hello FetchData
+            <h2>Data Form Api</h2>
             {
                 person.map((cur) => {
                     return (
                         <>
+
                             <span>{cur.id}</span>
                             <span>{cur.first_name}</span>
                             <li>{cur.email}</li>
