@@ -4,7 +4,7 @@ const Next = () => {
     const username = router.query.username;
     return(
         <div>
-            <h1>{username}</h1>
+            <h1>Hello!, {username}</h1>
         </div>
     )
 }
