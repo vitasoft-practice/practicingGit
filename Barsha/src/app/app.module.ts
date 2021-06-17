@@ -13,6 +13,10 @@ import { SignupformComponent } from './pages/signupform/signupform.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { CourseDetailComponent } from './pages/course-detail/course-detail.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { StoreModule } from '@ngrx/store';
+import * as fromState from './reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { UserEffects } from './user.effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +35,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     BrowserModule,
     AppRoutingModule,FormsModule,
     ReactiveFormsModule,
+    StoreModule.forFeature(fromState.stateFeatureKey, fromState.reducers, { metaReducers: fromState.metaReducers }),
+    EffectsModule.forFeature([UserEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent]

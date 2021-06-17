@@ -18,6 +18,8 @@ export class SignupformComponent implements OnInit {
     })
   })
 
+ 
+
   onSubmit(){
     console.log(this.signupForm.value)
    console.log( this.signupForm.get('name'));
@@ -27,7 +29,13 @@ export class SignupformComponent implements OnInit {
   // {
   //   namecheck this.signupForm.get('name')?.hasError('required');
   // }
-  constructor( private fb:FormBuilder ) { }
+  constructor( private fb:FormBuilder ) {
+    this.signupForm.valueChanges.subscribe(
+      (form:any) =>{
+        console.log(form);
+      }
+    );
+   }
 
   ngOnInit(): void {
 
