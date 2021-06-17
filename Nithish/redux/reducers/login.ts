@@ -1,14 +1,20 @@
 import { DefaultRootState } from "react-redux";
 import { AnyAction } from "redux";
+import { ActionType } from "../actions/actions";
 
-const isLogged = (state = false, action : AnyAction)=>{
+const initialState = false;
+type Action = {
+    type: string
+}
+
+const LoginReducers = (state: boolean = initialState, action : Action)=>{
     switch(action.type){
-        case 'SIGN_IN':
+        case ActionType.SIGN_IN:
             return !state;
-        case 'SIGN_OUT':
+        case ActionType.SIGN_OUT:
             return !state;
         default:
             return state;
     }
 }
-export default isLogged;
+export default LoginReducers;

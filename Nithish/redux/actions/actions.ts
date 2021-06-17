@@ -1,11 +1,5 @@
-const logIn = ()=>{
-    return {
-        type: 'SIGN_IN'
-    }
+
+export enum ActionType{
+    SIGN_IN =  "SIGN_IN",
+    SIGN_OUT = "SIGN_OUT"
 }
-const logOut = () =>{
-    return {
-        type: 'SIGN_OUT'
-    }
-}
-export {logIn, logOut};

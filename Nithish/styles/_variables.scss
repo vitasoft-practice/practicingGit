@@ -1,0 +1,59 @@
+$primary-color: #F5F7B2;
+
+@mixin move-up{
+    transition: all .1s;
+    transform: translateY(-5px);
+}
+
+@mixin zoom-In{
+    transform: scale(1.05);
+}
+
+@mixin  BaseComponent($background,$state,$textColor) {
+    padding: 15px 15px;
+    font-size: 16px;
+    min-width: 300px;
+    background-color: $background;
+    color: $textColor;
+    margin: 5px;
+    // border: 1px solid #ccc;
+    border: none;
+    transition: box-shadow .1s;
+    border-radius: 3px;
+   @include push($state);
+}
+
+@mixin push($state){
+    @keyframes push {
+        50%{
+            transform: scale(.9);
+        }
+        100%{
+            transform:  scale(1);
+        }
+    }
+    @if($state == 'hover'){
+        &:hover{
+            animation-name: push;
+            animation-duration: .2s;
+            animation-timing-function: linear;
+        }
+    }
+    @if($state == 'focus'){
+        &:focus{
+            animation-name: push;
+            animation-duration: .2s;
+            animation-timing-function: linear;
+        }
+    }
+    @if(state == 'active'){
+        &:active{
+            animation-name: push;
+            animation-duration: .2s;
+            animation-timing-function: linear;
+        }
+    }
+}   
+
+   
+   
