@@ -3,10 +3,19 @@ import form from '../styles/form.module.scss';
 import button from '../styles/button.module.scss';
 import inputInterface from '../interfaces/inputInterface';
 import { FC, useContext, useEffect, useState } from 'react';
-import { string } from 'prop-types';
 import {FormContext} from '../contexts/FormContext';
+import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux';
+import { logIn } from '../redux/actions/actions';
 const Form: FC = () => {
-    const  { setUsername,setMoveToNextPage }  = useContext(FormContext);
+    interface Rootstate{
+        isLog: boolean
+    }
+    const isLogged = useSelector((state: Rootstate) => state.isLog);
+    const dispatch = useDispatch();
+
+    const router = useRouter();
+    const  { userName,setUsername }  = useContext(FormContext);
     const [usernameborder, setusernameBorder] = useState<string>("");
     const [usernameval, setusernameVal] = useState<string>("");
     const [placeholderText, setPlaceholderText] = useState<string>("Username");
@@ -14,7 +23,6 @@ const Form: FC = () => {
     const [passwordval, setpasswordVal] = useState<string>("");
     const [passwordplaceholderText, setpasswordPlaceholderText] = useState<string>("Password");
     const [text, setText] = useState<string>("");
-    
     const username : inputInterface = {
         placeholder: placeholderText,
         value: usernameval,
@@ -38,8 +46,10 @@ const Form: FC = () => {
             else{
                 setpasswordBorder("green");
                 setUsername(usernameval);
-                setMoveToNextPage(true);
+                // setMoveToNextPage(true);
+                dispatch(logIn());
                 setText("Alright!, Good to go");
+                console.log(isLogged)
             }
         }
         
