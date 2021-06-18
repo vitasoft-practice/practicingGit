@@ -11,7 +11,13 @@ export interface State {
 }
 
 export const initialState: State = {
-  users:[],
+  users:[
+    {
+      "name" : "barsha",
+      "gender" :"female",
+      "email" : "Barsha.s@vitasoft-tech.com"
+    }
+  ],
   error:''
 };
 
