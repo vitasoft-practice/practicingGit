@@ -5,6 +5,11 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
   }
+  body{
+    padding-top: 100px;
+    text-align: center;
+    background-color: #000;
+  }
 
   *,
   *::before,
