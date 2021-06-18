@@ -28,6 +28,11 @@ export default function Home() {
               <a>Data Fetch</a>
             </Link>
           </li>
+          <li>
+            <Link href="/reduxcounter">
+              <a>Redux Counter</a>
+            </Link>
+          </li>
          
          
 

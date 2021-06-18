@@ -36,6 +36,7 @@ const detailsuser = ({ users }: any) => {
     return (
 
         <div>
+        
             <img src={users.avatar} alt="img" />
             <h2>{users.id}</h2>
             <h4>{users.first_name}</h4>
