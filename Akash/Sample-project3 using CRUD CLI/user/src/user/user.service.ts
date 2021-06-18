@@ -11,6 +11,7 @@ export class UserService {
   
   async create(createUserDto: CreateUserDto):Promise<User> {
     return this.userRepository.create({
+      id: Date.now(),
       name : createUserDto.name,
     })
   }
