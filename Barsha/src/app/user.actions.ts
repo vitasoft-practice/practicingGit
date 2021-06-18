@@ -22,3 +22,6 @@ export class LoadUsersFailure implements Action {
 
 export type UserActions = LoadUsers | LoadUsersSuccess | LoadUsersFailure;
 
+// import { createAction } from "@ngrx/store";
+
+// export const increment  = createAction('[ou')
