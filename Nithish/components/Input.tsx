@@ -12,7 +12,7 @@ const Input  = ({inputInterface}: inputProps):JSX.Element =>{
         inputInterface.onstate(value);
     },[value]);
     return (
-        <input className={input.input} value={inputInterface.value} style = {{borderColor: inputInterface.border}} type = {inputInterface.type} onChange = {event =>{setValue(event.target.value)}} placeholder={inputInterface.placeholder}></input>
+        <input className={input.input} value={inputInterface.value} style = {{backgroundColor: inputInterface.border}} type = {inputInterface.type} onChange = {event =>{setValue(event.target.value)}} placeholder={inputInterface.placeholder}></input>
     )
 }
 export default Input;

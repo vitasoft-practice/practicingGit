@@ -1,32 +1,7 @@
-@keyframes push {
-    50%{
-        transform: scale(.9);
-    }
-    100%{
-        transform:  scale(1);
-    }
-}
-
+@import './variables';
 .button{
-    // @include hidetapHighLightColor();
-    // @include hardwareAccel();
-    // @include improveAntiAlias();
-    padding: 15px 15px;
-    font-size: 16px;
-    max-width: 300px;
-    background-color: #161616;
-    color: white;
-    margin: 5px;
-    border: 1px solid #ccc;
-    transition: box-shadow .1s;
-    border-radius: 3px;
-   &:hover{
-       box-shadow: 0 0 11px rgba(33,33,33,.2);
-       background-color: #000;
-   }
-   &:focus{
-       animation-name: push;
-       animation-duration: .2s;
-       animation-timing-function: linear;
-   }
+    @include BaseComponent(#161616, 'focus', $textColor: #FFF );
+    &:hover{
+        @include zoom-In();
+    }
 }

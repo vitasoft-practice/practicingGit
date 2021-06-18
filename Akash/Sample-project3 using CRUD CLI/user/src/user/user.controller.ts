@@ -59,7 +59,7 @@ export class UserController {
   @ApiBadGatewayResponse()
   @ApiNotFoundResponse()
   @Delete(':id')
-  async remove(@Param('id') id: string): Promise<User> {
+  async remove(@Param('id', ParseIntPipe) id: number): Promise<User> {
     const result = this.userService.remove(+id);
     if (!result){
       throw new NotFoundException();

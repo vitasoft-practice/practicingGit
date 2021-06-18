@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
@@ -17,6 +17,9 @@ import { StoreModule } from '@ngrx/store';
 import * as fromState from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './user.effects';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +40,7 @@ import { UserEffects } from './user.effects';
     ReactiveFormsModule,
     StoreModule.forFeature(fromState.stateFeatureKey, fromState.reducers, { metaReducers: fromState.metaReducers }),
     EffectsModule.forFeature([UserEffects]),
+   MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
