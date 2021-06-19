@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MaterialModule } from './material.module';
+// import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
@@ -14,9 +14,10 @@ import { CoursesComponent } from './pages/courses/courses.component';
 import { CourseDetailComponent } from './pages/course-detail/course-detail.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { StoreModule } from '@ngrx/store';
-import * as fromState from './reducers';
+// import * as fromState from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './user.effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -38,9 +39,10 @@ import { UserEffects } from './user.effects';
     BrowserModule,
     AppRoutingModule,FormsModule,
     ReactiveFormsModule,
-    StoreModule.forFeature(fromState.stateFeatureKey, fromState.reducers, { metaReducers: fromState.metaReducers }),
+   // StoreModule.forFeature(fromState.stateFeatureKey, fromState.reducers, { metaReducers: fromState.metaReducers }),
     EffectsModule.forFeature([UserEffects]),
-   MaterialModule,
+   BrowserAnimationsModule,
+   //MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
