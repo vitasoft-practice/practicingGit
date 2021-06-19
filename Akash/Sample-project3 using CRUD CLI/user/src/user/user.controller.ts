@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Query, NotFoundException, BadGatewayException, ParseIntPipe } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query, NotFoundException, BadGatewayException, ParseIntPipe, Req } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -29,6 +29,7 @@ export class UserController {
   @Get()
   async findAll(@Query('name') name:string):Promise<User[]> {
     return this.userService.findAll();
+
   }
 
   @ApiOkResponse({type:User})
