@@ -6,7 +6,7 @@ const Next = () => {
     return(
         <div>
             <h1>Hello!, {username}</h1>
-            <button className={button.button}>Sign Out</button>
+            <p>See the search bar?, Says /next/Andrew, This is dynamic routing</p>
         </div>
     )
 }
