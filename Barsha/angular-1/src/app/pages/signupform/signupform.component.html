@@ -1,0 +1,26 @@
+<form [formGroup] = 'signupForm' (ngSubmit)="onSubmit()">
+    <label>Name</label>:<br/>
+    <input type="text" formControlName = "name" />
+    <!-- {{name.value}} -->
+    <span *ngIf = "signupForm.get('name')?.hasError('required')"> NAme is required</span> <br/>
+    <label>Email</label>:<br/>
+    <input type="text" formControlName="email" />
+   <span *ngIf = "signupForm.get('email')?.hasError('email')">
+       Please enter correct email id
+   </span>
+    <br/>
+    <div formGroupName ="address">
+
+        <label>City</label>:<br/>
+        <input type="text" formControlName="city" /> <br/>
+        <label>State</label>:<br/>
+        <input type="text" formControlName="state" /> <br/>
+        <label>Zip</label>:<br/>
+        <input type="number" formControlName="zip" />
+        <span *ngIf ="signupForm.get('zip')?.hasError('maxlength')"> Zip code mustn't exceed 6 digits</span> <br/>
+
+    </div>
+
+    <button type="submit">Sign in</button>
+   
+</form>
