@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import style from "styled-components";
 import BasicLayout from "../layout/Basic";
-
-const Title = styled.h1`
+import Input from "../components/Input";
+const Title = style.h1`
   color: red;
 `;
 
@@ -11,6 +11,7 @@ const Home = () => {
         <div>
           <p>hello</p>
           <Title>Title</Title>
+          <Input />
         </div>
     </BasicLayout>
    
