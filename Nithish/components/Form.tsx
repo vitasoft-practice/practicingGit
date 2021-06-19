@@ -5,7 +5,7 @@ import inputInterface from '../interfaces/inputInterface';
 import { FC, useContext, useEffect, useState } from 'react';
 import {FormContext} from '../contexts/FormContext';
 import { useRouter } from 'next/router';
-import { RootStateOrAny, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { ActionCreators } from '../redux/actions';
 import { State } from '../redux/actions';
@@ -26,7 +26,6 @@ const Form: FC = () => {
     const [passwordborder, setpasswordBorder] = useState<string>("");
     const [passwordval, setpasswordVal] = useState<string>("");
     const [passwordplaceholderText, setpasswordPlaceholderText] = useState<string>("Password");
-    const [text, setText] = useState<string>("");
     const username : inputInterface = {
         placeholder: placeholderText,
         value: usernameval,
@@ -47,9 +46,12 @@ const Form: FC = () => {
             signIn();
         });
     }
-    // if(state){
-    //     router.push('/next/'+userName);
-    // }
+    
+    const resetValues = () =>{
+        setpasswordBorder("");
+        setusernameBorder("");
+    }
+
     const print = () =>{
         console.log({state});
         if(usernameval!= "Andrew") { setusernameVal(""); setusernameBorder("#FB3640"); setPlaceholderText("Invalid Username")}
@@ -59,24 +61,18 @@ const Form: FC = () => {
             else{
                 setpasswordBorder("#4AA96C");
                 setUsername(usernameval);
+                resetValues();
                 LogIn();
-                setText("Alright!, Good to go");
             }
         }
         
     }
-    // const Form2 = () =>{
-    //     return (
-            
-    //     )
-    // }
+    
     return (
        state ? <Home/> : <form className={form.formcontainer}>
        <Input inputInterface={username}/>
        <Input inputInterface={password}/>
        <button className={button.button} type="button" onClick={print}>Check</button>
-       <p className={form.p}>{text}</p>
-       <p>{state}</p>
    </form>
 
     )
