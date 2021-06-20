@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   body{
     padding-top: 100px;
     text-align: center;
-    background-color: #000;
+    background-color: #fff;
   }
 
   *,

@@ -16,15 +16,30 @@ const Next = () => {
     const router = useRouter();
     const composeEnhancers = composeWithDevTools(applyMiddleware(thunkMiddleware));
     const store = createStore(LoginReducers, composeEnhancers);
-    // const [moveToNextPage, setMoveToNextPage] = useState<boolean>(false);
-    // const [username, setUsername] = useState<string>("");
-    
     return(
        <Provider store={store}>
             <div className={form.formcontainer}>
                 <FormProvider>
                     <Form />
                 </FormProvider>
+                <div className={form.doc}>
+                    <div className={form.row}>
+                        <ul>
+                            <li>This form requires a username: "Andrew" and password: "admin"</li>
+                            <li>Entering wrong credentials will make the placeholder text display "Invalid username/password"</li>
+                            <li className={form.li}>Additionally wrong credentials will change the background of the Input field to red and green when valid</li>
+                        </ul>
+                    </div>
+                    <div className={form.row}>
+                        <ul>
+                            <li>The form also has a redux state which keeps track of the login Status</li>
+                            <li>Upon entering valid credentials, The redux boolean state changes from false to true</li>
+                            <li>On state change, The ternary operator displays the Home.tsx </li>
+                            <li>Home.tsx has username which is tracked by a React useContext</li>
+                            <li>The sign Out button resets the redux state to false which will make the ternary operator to display the form </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
        </Provider>
     )
