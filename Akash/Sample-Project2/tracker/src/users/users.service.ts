@@ -23,8 +23,12 @@ export class UsersService {
     return this.userModel.findOne({id})
   }
 
+  async findUser(username: string):Promise<User | undefined>{
+    return this.userModel.findOne({username} )
+  }
+
   update(id: string, updateUserDto: UpdateUserDto) {
-    return this.userModel.update({id},updateUserDto);
+    return this.userModel.updateOne({id},updateUserDto);
   }
 
   remove(id: number) {
