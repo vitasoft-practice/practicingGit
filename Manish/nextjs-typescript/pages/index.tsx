@@ -33,6 +33,11 @@ export default function Home() {
               <a>Redux Counter</a>
             </Link>
           </li>
+          <li>
+            <Link href="/reduxform">
+              <a>Redux form</a>
+            </Link>
+          </li>
          
          
 

@@ -2,9 +2,13 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Request }
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+<<<<<<< HEAD
 import { LocalAuthGuard } from 'src/auth/local-auth.guard';
 import { AuthService } from 'src/auth/auth.service';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+=======
+import { AuthService } from 'src/auth/auth.service';
+>>>>>>> 11aaf10188e3d18d47e098d42e58afcc5d946498
 
 @Controller('users')
 export class UsersController {
@@ -16,12 +20,18 @@ export class UsersController {
     return this.authService.login(req.user);
   }
 
+  
   @Post()
   create(@Body() createUserDto: CreateUserDto) {
-    return this.usersService.create(createUserDto);
+    const data = this.usersService.create(createUserDto);
+    console.log(data)
   }
 
+<<<<<<< HEAD
   @UseGuards(JwtAuthGuard)
+=======
+  
+>>>>>>> 11aaf10188e3d18d47e098d42e58afcc5d946498
   @Get()
   findAll() {
     return this.usersService.findAll();
@@ -39,6 +49,6 @@ export class UsersController {
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.usersService.remove(+id);
+    return this.usersService.remove(id);
   }
 }
