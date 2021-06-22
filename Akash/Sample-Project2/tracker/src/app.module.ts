@@ -9,7 +9,7 @@ import { UsersService } from './users/users.service';
 import { AuthService } from './auth/auth.service';
 
 @Module({
-  imports: [UsersModule,MongooseModule.forRoot('mongodb://127.0.0.1:27017/registry'), AuthModule],
+  imports: [UsersModule,MongooseModule.forRoot('mongodb://127.0.0.1:27017/registry')],
   controllers: [AppController],
   providers: [AppService],
 })
