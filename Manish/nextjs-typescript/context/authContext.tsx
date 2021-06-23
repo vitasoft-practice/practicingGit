@@ -8,13 +8,14 @@ interface authContextType {
 }
 
 const AuthContext = createContext({
-    user: null,
-    login: () => {},
-    logout: () => {},
+    user: false,
+    login: () => { },
+    logout: () => { },
 })
 
 export const AuthContextProvider = ({ children }: any) => {
-    const [user,setUser] = useState(false)
+
+    const [user, setUser] = useState(false)
 
     const login = () => {
         setUser(true);
@@ -22,8 +23,14 @@ export const AuthContextProvider = ({ children }: any) => {
     const logout = () => {
         setUser(false);
     }
+
+    const value = {
+        user,
+        login,
+        logout,
+    }
     return (
-        <AuthContext.Provider value={user}>
+        <AuthContext.Provider value={value}>
             {children}
         </AuthContext.Provider>
     )
