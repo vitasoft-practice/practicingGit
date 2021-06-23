@@ -9,9 +9,16 @@ import Style from "../styles/Home.module.css";
 
 
 import { Button } from '../layout/Button.style'
+<<<<<<< HEAD
 import textAreaInterface from "../interfaces/textAreaInterface";
 import RadioButton from "../components/RadioButton";
 
+=======
+import { RadioButton, Item, RadioButtonLabel } from '../layout/RadioButton'
+const Title = style.h1`
+    color: red;
+    `;
+>>>>>>> 96e32280417986ad82b6cfff15f529e344f6bce5
 
 const Home = () => {
 
@@ -58,6 +65,7 @@ const Home = () => {
 
   return (
     <BasicLayout>
+<<<<<<< HEAD
       <div className={Style.flex}>
         <Input props={inputProps} />
         <button onClick={handleClick}>Check</button>
@@ -69,12 +77,60 @@ const Home = () => {
         <p>hello</p>
         <Title>Title</Title>
         <Input props={inputProps} />
+=======
+      <div>
+        <p>hello</p>
+        <Title>Title</Title>
+        {/* <Input /> */}
+>>>>>>> 96e32280417986ad82b6cfff15f529e344f6bce5
       </div>
       <Button type='button' btnPrimary btnMd autofocus>medium button with primary color</Button>
       <Button type='submit' formmethod='post' btnSm btnSecondary>small button with secondary color</Button>
       <Button type='reset' btnPrimary btnLg value="CSS">large button with primary color</Button>
+<<<<<<< HEAD
       <Button btnBlock btnSecondary btnLg name="subject">Block Button With Large Size and secondary color</Button> */}
     </BasicLayout>
+=======
+      <Button btnBlock btnSecondary btnLg name="subject">Block Button With Large Size and secondary color</Button>
+
+
+      <Item>
+        <RadioButton
+          type="radio"
+          name="radio"
+          value="male"
+
+        />
+        <RadioButtonLabel />
+        <span>Male</span>
+      </Item>
+      <Item>
+        <RadioButton
+          type="radio"
+          name="radio"
+          value="female"
+
+        />
+        <RadioButtonLabel />
+        <span>Female</span>
+      </Item>
+      <Item>
+        <RadioButton
+          type="radio"
+          name="radio"
+          value="orthers"
+
+        />
+        <RadioButtonLabel />
+        <span>Others</span>
+      </Item>
+
+
+
+
+
+    </BasicLayout >
+>>>>>>> 96e32280417986ad82b6cfff15f529e344f6bce5
 
   );
 };

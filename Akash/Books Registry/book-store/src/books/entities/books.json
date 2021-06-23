@@ -1,0 +1,107 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Book-Store",
+    "description": "list of books available",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [{ "name": "Books Registry", "description": "" }],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "CreateBookDto": {
+        "type": "object",
+        "properties": {
+          "Book": { "type": "string" },
+          "Price": { "type": "number" }
+        },
+        "required": ["Book"]
+      },
+      "Book": {
+        "type": "object",
+        "properties": {
+          "_id": { "type": "string" },
+          "Book": { "type": "string" },
+          "Price": { "type": "number" },
+          "__v": { "type": "string" }
+        },
+        "required": ["_id", "Book", "Price"]
+      }
+    }
+  },
+  "paths": {
+    "/books": {
+      "post": {
+        "operationId": "BooksController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/CreateBookDto" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successfully Added the Book",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Book" }
+              }
+            }
+          },
+          "400": { "description": "Bad Request" }
+        },
+        "tags": ["books"]
+      },
+      "get": {
+        "operationId": "BooksController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Found the Book",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Book" }
+                }
+              }
+            }
+          },
+          "400": { "description": "Bad Request" },
+          "404": { "description": "" }
+        },
+        "tags": ["books"]
+      }
+    },
+    "/books/{id}": {
+      "get": {
+        "operationId": "BooksController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Found the Book",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Book" }
+              }
+            }
+          },
+          "400": { "description": "Bad Request" },
+          "404": { "description": "" }
+        },
+        "tags": ["books"]
+      }
+    }
+  }
+}

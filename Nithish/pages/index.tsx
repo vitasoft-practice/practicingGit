@@ -3,24 +3,26 @@ import Image from 'next/image'
 import Link from 'next/link';
 import isLogged from '../redux/reducers/login';
 import styles from '../styles/Home.module.scss';
+import ReduxForms from './next/reduxForm';
 
 
 
-export const getStaticProps = async () =>{
+
+export const getStaticProps = async () => {
   const res = await fetch('https://animechan.vercel.app/api/random');
   const data = await res.json();
   return {
-      props: {
-          data,
-      }
+    props: {
+      data,
+    }
   }
 }
 
-interface Homeprops{
+interface Homeprops {
   data: {
-      anime: string,
-      character: string,
-      quote: string
+    anime: string,
+    character: string,
+    quote: string
   };
 }
 
@@ -36,6 +38,7 @@ export default function Home(data: Homeprops) {
       </div>
       <p>This is an example implementation of getStaticProps() which retreives data from an api that generates a random anime quote.</p>
       <p>Refresh to see a diffrent quote(API courtesy: <a href="https://github.com/rocktimsaikia">Rocktimsaikia</a>)</p>
+
     </div>
   )
 }

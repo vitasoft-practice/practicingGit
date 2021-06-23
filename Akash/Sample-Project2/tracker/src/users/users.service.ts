@@ -31,7 +31,8 @@ export class UsersService {
     return this.userModel.updateOne({id},updateUserDto);
   }
 
-  remove(id: number) {
+  remove(id: string) {
+    const data = this.userModel.deleteOne({id})
     return `This action removes a #${id} user`;
   } 
 }

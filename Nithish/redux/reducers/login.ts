@@ -7,12 +7,12 @@ type Action = {
     type: string
 }
 
-const LoginReducers = (state: boolean = initialState, action : Action)=>{
-    switch(action.type){
+const LoginReducers = (state = initialState, action: Action) => {
+    switch (action.type) {
         case ActionType.SIGN_IN:
-            return !state;
+            return true;
         case ActionType.SIGN_OUT:
-            return !state;
+            return false;
         default:
             return state;
     }

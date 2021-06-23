@@ -9,7 +9,7 @@ interface Buttontype {
     btnMd: boolean;
     btnLg: boolean;
     btnBlock: boolean;
-    children: string;
+   
 
 }
 
