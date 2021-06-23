@@ -23,11 +23,16 @@ export class UsersService {
     return this.userModel.findOne({id})
   }
 
-  update(id: string, updateUserDto: UpdateUserDto) {
-    return this.userModel.update({id},updateUserDto);
+  async findUser(username: string):Promise<User | undefined>{
+    return this.userModel.findOne({username} )
   }
 
-  remove(id: number) {
+  update(id: string, updateUserDto: UpdateUserDto) {
+    return this.userModel.updateOne({id},updateUserDto);
+  }
+
+  remove(id: string) {
+    const data = this.userModel.deleteOne({id})
     return `This action removes a #${id} user`;
   } 
 }
