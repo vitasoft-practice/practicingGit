@@ -1,37 +1,46 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Req } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Req, NotFoundException, NotAcceptableException, BadRequestException } from '@nestjs/common';
 import { BooksService } from './books.service';
-import {Request} from 'express'
+import { ApiBadRequestResponse, ApiBody, ApiCreatedResponse, ApiFoundResponse, ApiNotFoundResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
+import { CreateBookDto } from './dto/create-book.dto';
+import { Book } from './entities/book.entity';
 
+@ApiTags('books')
 @Controller('books')
 export class BooksController {
   constructor(private readonly booksService: BooksService) {}
 
 
   @Post()
-  create(@Req() request: Request ) {
-    const data = this.booksService.create(request.body);
-    console.log(data)
+  async create(@Body() createbookDto :CreateBookDto ) {
+    const data = await this.booksService.create(createbookDto)
+    if (!data){
+      throw new BadRequestException()
+    }
     return data;
   }
 
   @Get()
-  findAll() {
-    return this.booksService.findAll();
+  async findAll() {
+    return await this.booksService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.booksService.findOne(id);
+  async findOne(@Param('id') id: string) {
+    const data = await this.booksService.findOne(id);
+    if (!data){
+      throw new NotFoundException()
+    }
+    return data
   }
 
-  @Patch(':id')
-  update(@Req() request: Request) {
-    return this.booksService.update(request.params.id,request.body);
-  }
+  // @Patch(':id')
+  // update(@Param() id: string, @Body() updateBookDto:UpdateBookDto) {
+  //   return this.booksService.update(id,updateBookDto);
+  // }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.booksService.remove(id);
-  }
+  // @Delete(':id')
+  // remove(@Param('id') id: string) {
+  //   return this.booksService.remove(id);
+  // }
 }
 
