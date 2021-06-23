@@ -2,11 +2,23 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Request }
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+<<<<<<< HEAD
+import { LocalAuthGuard } from 'src/auth/local-auth.guard';
 import { AuthService } from 'src/auth/auth.service';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+=======
+import { AuthService } from 'src/auth/auth.service';
+>>>>>>> 11aaf10188e3d18d47e098d42e58afcc5d946498
 
 @Controller('users')
 export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
+  constructor(private readonly usersService: UsersService,private readonly authService : AuthService) {}
+
+  @UseGuards(LocalAuthGuard)
+  @Post('login')
+  login(@Request() req):any{
+    return this.authService.login(req.user);
+  }
 
   
   @Post()
@@ -15,7 +27,11 @@ export class UsersController {
     console.log(data)
   }
 
+<<<<<<< HEAD
+  @UseGuards(JwtAuthGuard)
+=======
   
+>>>>>>> 11aaf10188e3d18d47e098d42e58afcc5d946498
   @Get()
   findAll() {
     return this.usersService.findAll();

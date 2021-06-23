@@ -11,7 +11,11 @@ import { LocalStrategy } from './local.strategy';
     UsersModule,
     PassportModule,
     JwtModule.register({
+<<<<<<< HEAD
+      secret: 'SECRET',
+=======
       secret: 'Secret',
+>>>>>>> 11aaf10188e3d18d47e098d42e58afcc5d946498
       signOptions: {
         expiresIn: '60s',
       },
