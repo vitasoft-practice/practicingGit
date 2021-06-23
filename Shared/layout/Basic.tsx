@@ -8,7 +8,9 @@ export const GlobalStyle = createGlobalStyle`
   body{
     padding-top: 100px;
     text-align: center;
-    background-color: #fff;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
   }
 
   *,
