@@ -1,0 +1,49 @@
+@import '../../scss/colors';
+@import '../../scss/fonts';
+
+
+%grid-container{
+    display:grid;
+    grid-template-columns: 100%;
+
+    
+}
+
+.header{
+    @extend %grid-container;
+    position: relative;
+    top:0;
+    
+    .bg-image{
+        grid-column:1/span 4;
+        
+        object-fit: cover;
+    }
+    .title{
+        position: absolute;
+        top:40%;
+        // width: 80%;
+        left:20%;
+
+        // padding: 30px;
+        // height: 445px;
+  width: 60%;
+  color: #FFFFFF;
+  font-family: "Lucida Grande";
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 65px;
+  text-align: center;
+       
+    //     color:$light;
+    //     font-family: $h-font;
+    //    letter-spacing: $l-1;
+       p{
+           font-family: $p-font;
+           font-weight:bold;
+           
+       }
+       
+    }
+}
