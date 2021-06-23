@@ -15,7 +15,6 @@ export class BooksService {
     return data.save()
   }
 
-  
   async findAll(): Promise<Book[]> {
     return await this.BooksModel.find()
   }
@@ -34,4 +33,3 @@ export class BooksService {
     
   // }
 }
-

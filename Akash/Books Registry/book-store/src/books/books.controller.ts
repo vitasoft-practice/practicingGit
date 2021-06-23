@@ -1,7 +1,8 @@
-import { Controller, Get, Post, Body, Param, NotFoundException, BadRequestException } from '@nestjs/common';
-import { ApiBadRequestResponse, ApiTags } from '@nestjs/swagger';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Req, NotFoundException, NotAcceptableException, BadRequestException } from '@nestjs/common';
 import { BooksService } from './books.service';
+import { ApiBadRequestResponse, ApiBody, ApiCreatedResponse, ApiFoundResponse, ApiNotFoundResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { CreateBookDto } from './dto/create-book.dto';
+import { Book } from './entities/book.entity';
 
 @ApiTags('books')
 @Controller('books')
@@ -20,11 +21,7 @@ export class BooksController {
 
   @Get()
   async findAll() {
-    const data = await this.booksService.findAll();
-    if (!data){
-      throw new NotFoundException()
-    }
-    return data
+    return await this.booksService.findAll();
   }
 
   @Get(':id')

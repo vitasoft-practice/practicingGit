@@ -5,12 +5,13 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  const BaseConfiguration = new DocumentBuilder()
+  const config = new DocumentBuilder()
   .setTitle('Book-Store')
   .setDescription('list of books available')
+  .addTag('Books Registry')
   .build()
 
-  const document = SwaggerModule.createDocument(app,BaseConfiguration)
+  const document = SwaggerModule.createDocument(app,config)
   SwaggerModule.setup('/apiDocs',app,document)
 
 

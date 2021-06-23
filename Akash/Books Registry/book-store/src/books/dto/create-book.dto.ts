@@ -1,9 +1,9 @@
 import { ApiProperty } from "@nestjs/swagger";
 
 export class CreateBookDto {
-    @ApiProperty()
+    @ApiProperty({type: String})
     Book : string;
-    @ApiProperty({ required : false}) //or @ApiPropertyOptional()
+    @ApiProperty({type: Number, required : false}) //or @ApiPropertyOptional()
     Price : number;
 }
 
