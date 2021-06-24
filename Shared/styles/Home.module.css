@@ -122,3 +122,9 @@
     flex-direction: column;
   }
 }
+
+.div{
+  background-color:#eaeaea;
+  width: 100%;
+  height: 60px;
+}

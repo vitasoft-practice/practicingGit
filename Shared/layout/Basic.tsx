@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import NavBar from "../components/NavBar";
 
 export const GlobalStyle = createGlobalStyle`
     // this is the shared style
@@ -6,7 +7,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body{
-    padding-top: 100px;
+    margin: 0;
+    padding: 0;
     text-align: center;
     background-color: #000;
     display: flex;
@@ -30,6 +32,7 @@ const BasicLayout = ({ children }: { children: any }) => {
   return (
     <>
       <GlobalStyle />
+      <NavBar />
       {children}
     </>
   );
