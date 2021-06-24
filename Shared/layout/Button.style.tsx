@@ -9,7 +9,9 @@ interface Buttontype {
     btnMd: boolean;
     btnLg: boolean;
     btnBlock: boolean;
-   
+    disable: boolean;
+
+
 
 }
 
@@ -27,6 +29,13 @@ ${props => props.btnPrimary && `
 background-color:#007bff;
 color:#fff;
 border-color:#007bff;
+`};
+
+${props => props.disable && `
+background-color: #eee;
+color:#fff;
+border-color:#eee;
+opacity:0.5;
 `};
 
 ${props => props.btnSecondary && `
