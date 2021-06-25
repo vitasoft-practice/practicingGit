@@ -1,0 +1,20 @@
+.container{
+    margin: 50px auto;
+    padding: 40px;
+    width: 50%;
+    background-color: #393E46;
+    border-radius: 5px;
+    &:focus{
+        outline: none;
+    }
+    .input{
+        margin: 10px;
+        background-color: white;
+        border: none;
+        padding: 10px 15px; 
+    }
+    .button{
+        margin: 10px;
+        padding: 10px 15px; 
+    }
+}
