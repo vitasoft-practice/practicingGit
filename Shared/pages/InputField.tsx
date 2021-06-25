@@ -2,10 +2,12 @@ import Input from "../components/Input";
 import Style from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import { InputPropsInterface } from "../interfaces/inputInterface";
+import { StyledButton } from "../styledComponents/button";
 
 
 
 const InputField = () => {
+    const primary = "#5F939A";
     const green = "#4AA96C";
     const red = "#F54748";
     const [borderColortext, setBorderColortext] = useState("");
@@ -14,12 +16,6 @@ const InputField = () => {
     const [placeholderColor, setPlaceholderColor] = useState("");
     const [textColor, setTextColor] = useState("#fff");
     const [textValue, setTextValue] = useState("");
-    useEffect(() => {
-        if (inputVal === "") {
-            setBorderColortext("#fff");
-        }
-
-    }, [inputVal])
 
     const handleClick = () => {
         if (inputVal != "admin") {
@@ -36,7 +32,7 @@ const InputField = () => {
     const inputProps: InputPropsInterface = {
         borderColor: borderColortext,
         value: inputVal,
-        type: "text",
+        type: "password",
         placeholderColor: placeholderColor,
         textColor: textColor,
         placeholder: placeholderText,
@@ -46,7 +42,7 @@ const InputField = () => {
     return (
         <div className={Style.flex}>
             <Input props={inputProps} />
-            <button onClick={handleClick}>Check</button>
+            <StyledButton backgroundColor={primary} onClick={handleClick}>Check</StyledButton>
         </div>
     )
 }

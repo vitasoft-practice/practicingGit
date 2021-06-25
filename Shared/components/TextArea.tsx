@@ -15,7 +15,7 @@ const Input = ({ props }: TextAreaProps): JSX.Element => {
     }, [val]);
 
     return (
-        <StyledTextArea rows={props.rows} cols={props.cols} onChange={event => { setVal(event.target.value) }} name={props.name} id={props.id} value={props.value} placeholder={props.placeholder}></StyledTextArea>
+        <StyledTextArea disabled={props.disabled} rows={props.rows} cols={props.cols} onChange={event => { setVal(event.target.value) }} name={props.name} id={props.id} value={props.value} placeholder={props.placeholder}></StyledTextArea>
     )
 }
 export default Input;

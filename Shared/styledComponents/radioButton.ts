@@ -1,6 +1,12 @@
 import style from "styled-components";
 import { RadioButtonLabel } from "../layout/RadioButton";
 
+const PrimaryBlack = "#000000";
+const disabledGrey = "#808080";
+type RadiobuttonProps = {
+    themeColor: string;
+    disabled?: boolean
+}
 
 export const StyledRadioGroup = style.div`
     background-color: #fff;
@@ -13,7 +19,11 @@ export const StyledRadioGroup = style.div`
 `
 
 export const StyledRadioButtonContainer = style.div`
+
     width: 100%;
+    &:hover{
+        background-color: #DDDDDD;
+    }
 `
 
 
@@ -21,8 +31,10 @@ export const StyledLabel = style.label`
    color: #000;
    font-size: 25px;
    padding: 20px 30px;
+   cursor: pointer;
    display: flex;
    width: 100%;
+   
    &::before{
        content:"";
        width: 25px;
@@ -34,13 +46,24 @@ export const StyledLabel = style.label`
    }
 `
 
-export const StyledRadioButton = style.input`
+export const StyledRadioButton = style.input<RadiobuttonProps>`
     display: none;
     width: 18px;
     height: 18px;
     &:checked + ${StyledLabel}{
         Color: black;  
-        background-color: #5F939A;
+        background-color: ${props => props.themeColor};
+    }
+    &:disabled + ${StyledLabel}{
+        color: ${disabledGrey};
+    }
+    &:disabled + ${StyledLabel}::before{
+        border: 2px solid ${disabledGrey};
+    }
+    &:disabled + ${StyledRadioButtonContainer}{
+        &:hover{
+            background-color: #fff;
+        }
     }
     &:checked + ${StyledLabel}::before{
         content:"";

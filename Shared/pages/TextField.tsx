@@ -11,6 +11,7 @@ const TextField = () => {
         value: textValue,
         name: "textArea",
         id: "textAres",
+        disabled: false,
         placeholder: "Enter something.......",
         cols: 80,
         rows: 4,

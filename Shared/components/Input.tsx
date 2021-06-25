@@ -12,7 +12,7 @@ const Input = ({ props }: InputProps): JSX.Element => {
     }, [val]);
 
     return (
-        <StyledInput onChange={event => { setVal(event.target.value) }} placeholderColor={props.placeholderColor} textColor={props.textColor} value={props.value} borderColor={props.borderColor} placeholder={props.placeholder}></StyledInput>
+        <StyledInput disabled={props.disabled} onChange={event => { setVal(event.target.value) }} placeholderColor={props.placeholderColor} textColor={props.textColor} value={props.value} borderColor={props.borderColor} placeholder={props.placeholder} type={props.type}></StyledInput>
     )
 }
 export default Input;

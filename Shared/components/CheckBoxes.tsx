@@ -31,7 +31,7 @@ const CheckBoxes = ({ props }: CheckboxProps): JSX.Element => {
                     <StyledLabel htmlFor="One">One</StyledLabel>
                 </StyledCheckboxContainer>
                 <StyledCheckboxContainer>
-                    <StyledCheckbox themeColor={props.themeColor} onChange={event => { addcheck(event) }} type="checkbox" value="Two" id="Two"></StyledCheckbox>
+                    <StyledCheckbox disabled themeColor={props.themeColor} onChange={event => { addcheck(event) }} type="checkbox" value="Two" id="Two"></StyledCheckbox>
                     <StyledLabel htmlFor="Two">Two</StyledLabel>
                 </StyledCheckboxContainer>
                 <StyledCheckboxContainer>

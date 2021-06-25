@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from 'react';
 
 interface textAreaInterface {
     rows: number,
+    disabled?: boolean,
     cols: number,
     value: string,
     placeholder: string,
