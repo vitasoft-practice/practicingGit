@@ -5,9 +5,5 @@ export class CreateBookDto {
     Book : string;
     @ApiProperty({type: Number, required : false}) //or @ApiPropertyOptional()
     Price : number;
-    @ApiProperty({type: String, required : false})
-    User : string;
-
-    
 }
 
