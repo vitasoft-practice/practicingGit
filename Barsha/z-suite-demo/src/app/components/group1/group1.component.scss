@@ -70,3 +70,18 @@ p{
   }
  
  }
+
+#radio1{
+  @if checked{
+    #template1{
+      display: flex;
+    }
+  }
+}
+#radio2{
+  @if checked{
+    #template2{
+      display: flex;
+    }
+  }
+}
