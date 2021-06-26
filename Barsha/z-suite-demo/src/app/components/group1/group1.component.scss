@@ -56,6 +56,31 @@ p{
  
 }
 
+
+.tabs{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.tabs .tab{
+  justify-content: space space-around;
+  width:30%;
+  order:1;
+}
+
+.tab-content{
+  display: none;
+}
+
+.tabs input[type="radio"]:checked + .tab-content{
+  display: block;
+}
+
+//  input[type="radio"]{
+//   display: none;
+// }
+
 @media only screen and (max-width:980px){
  .row-col{
    grid-template-columns: 50% 50%;
@@ -71,17 +96,4 @@ p{
  
  }
 
-#radio1{
-  @if checked{
-    #template1{
-      display: flex;
-    }
-  }
-}
-#radio2{
-  @if checked{
-    #template2{
-      display: flex;
-    }
-  }
-}
+
