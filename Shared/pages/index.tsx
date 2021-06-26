@@ -7,7 +7,7 @@ import { Button } from '../layout/Button.style'
 const Home = () => {
   return (
     <>
-      <div>Hello</div>
+      {/* <div>Hello</div>
       <Button disable>Disabled Button</Button>
       <CheckDiv>
         <CheckItem>
@@ -23,7 +23,7 @@ const Home = () => {
           <CheckLabel>Nextjs</CheckLabel>
         </CheckItem>
 
-      </CheckDiv>
+      </CheckDiv> */}
     </>
 
   );
