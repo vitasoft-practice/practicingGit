@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import {  BookDocument } from './entities/book.entity';
+import { BookDocument } from './entities/book.entity';
 import { Book } from './interfaces/book.interface';
 
 @Injectable()
@@ -11,8 +11,7 @@ export class BooksService {
 
   
   async create(book) {
-    const data = await new this.BooksModel(book)
-    return data.save()
+    return await this.BooksModel.create(book)
   }
 
   async findAll(): Promise<Book[]> {

@@ -18,7 +18,7 @@ describe('BooksService', () => {
   const mockmodel ={
     find : jest.fn().mockResolvedValue([data()]),
     findById : jest.fn().mockResolvedValue(data()),
-    save : jest.fn().mockResolvedValue(data())
+    create : jest.fn().mockResolvedValue(data())
 
   }
 
@@ -40,7 +40,7 @@ describe('BooksService', () => {
       book = await service.create(data())
     })
     test('then the BooksModel.save() should be called', () => {
-      expect(mockmodel.save).toBeCalled()
+      expect(mockmodel.create).toBeCalled()
     })
     test('then book should be added and returns the value', ()=>{
       expect(book).toEqual(data())
