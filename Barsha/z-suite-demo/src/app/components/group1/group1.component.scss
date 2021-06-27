@@ -56,25 +56,30 @@ p{
  
 }
 
+.default-card{
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 40px 0 rgba(144,144,144,0.5);
+}
 
 .tabs{
   display: flex;
   flex-wrap: wrap;
-  
+  justify-content:  space-around;
+  // width:30%;
+  // order:1;
+ 
 }
-
-.tabs .tab{
-  justify-content: space space-around;
-  width:30%;
-  order:1;
+.tabs input[type="radio"]{
+  display:none;
 }
-
-.tab-content{
+ .tab-content{
   display: none;
 }
 
-.tabs input[type="radio"]:checked + .tab-content{
+.tabs input[type="radio"]:checked + label +  .tab-content{
   display: block;
+  width: 100%;
+  
 }
 
 //  input[type="radio"]{
