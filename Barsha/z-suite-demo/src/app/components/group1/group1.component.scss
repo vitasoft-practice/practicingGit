@@ -62,13 +62,23 @@ p{
 }
 
 .tabs{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:  space-around;
-  // width:30%;
-  // order:1;
+  display: grid;
+  width: 100%;
+ grid-template-columns: auto auto auto auto;
+ 
+
  
 }
+
+
+label{
+  padding:5%;
+  display: inline-block;
+  border:2px solid white;
+  background-color: #61846D;
+  color: white;
+}
+
 .tabs input[type="radio"]{
   display:none;
 }
@@ -76,15 +86,30 @@ p{
   display: none;
 }
 
-.tabs input[type="radio"]:checked + label +  .tab-content{
-  display: block;
-  width: 100%;
-  
+.tabs input[type="radio"]:checked + label{
+  background-color: white;
+  color:#61846D
 }
 
-//  input[type="radio"]{
-//   display: none;
-// }
+.tabs input[type="radio"]:checked + label +  .tab-content{
+ 
+ grid-row-start: 2;
+
+ align-items: center;
+ background-color: white;
+grid-column-start: 1;
+grid-column-end: span 4;
+display: flex;
+align-items: center;
+
+  p{
+    line-height: 22px;
+    text-align: left;
+    padding:5%;
+  }
+}
+
+
 
 @media only screen and (max-width:980px){
  .row-col{
