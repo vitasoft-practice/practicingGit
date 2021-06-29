@@ -1,5 +1,6 @@
 import { person } from '../posts/index'
 import { GetStaticProps } from 'next'
+import fetch from 'node-fetch'
 
 export const getStaticPaths = async () => {
     const res = await fetch('https://reqres.in/api/users');

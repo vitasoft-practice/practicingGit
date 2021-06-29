@@ -1,6 +1,8 @@
 import { InferGetStaticPropsType } from 'next'
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
+import fetch from 'node-fetch'
+
 
 export interface person {
     id:number;

@@ -3,7 +3,7 @@ import React from 'react'
 const HelloTest = () => {
     return (
         <div>
-            Testing!
+            <h4 data-testid="heading">Testing!</h4>
         </div>
     )
 }
