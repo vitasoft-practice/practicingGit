@@ -1,6 +1,8 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { ApiProperty } from "@nestjs/swagger";
-import { Document } from "mongoose";
+import { Document, Mongoose } from "mongoose";
+import * as mongoose from 'mongoose'
+import { Author } from "src/author/entities/author.entity";
 
 export type BookDocument = Book & Document;
 
@@ -14,6 +16,10 @@ export class Book {
     @ApiProperty()
     @Prop()
     Price: number;
+
+    @ApiProperty()
+    @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'Author'})
+    author : Author
 
     
     
