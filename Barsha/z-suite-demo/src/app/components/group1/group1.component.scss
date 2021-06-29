@@ -56,30 +56,60 @@ p{
  
 }
 
+.default-card{
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 40px 0 rgba(144,144,144,0.5);
+}
 
 .tabs{
-  display: flex;
-  flex-wrap: wrap;
-  
+  display: grid;
+  width: 100%;
+ grid-template-columns: auto auto auto auto;
+ 
+
+ 
 }
 
-.tabs .tab{
-  justify-content: space space-around;
-  width:30%;
-  order:1;
+
+label{
+  padding:5%;
+  display: inline-block;
+  border:2px solid white;
+  background-color: #61846D;
+  color: white;
 }
 
-.tab-content{
+.tabs input[type="radio"]{
+  display:none;
+}
+ .tab-content{
   display: none;
 }
 
-.tabs input[type="radio"]:checked + .tab-content{
-  display: block;
+.tabs input[type="radio"]:checked + label{
+  background-color: white;
+  color:#61846D
 }
 
-//  input[type="radio"]{
-//   display: none;
-// }
+.tabs input[type="radio"]:checked + label +  .tab-content{
+ 
+ grid-row-start: 2;
+
+ align-items: center;
+ background-color: white;
+grid-column-start: 1;
+grid-column-end: span 4;
+display: flex;
+align-items: center;
+
+  p{
+    line-height: 22px;
+    text-align: left;
+    padding:5%;
+  }
+}
+
+
 
 @media only screen and (max-width:980px){
  .row-col{
