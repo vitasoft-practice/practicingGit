@@ -2,20 +2,34 @@ import { Meta, Story } from "@storybook/react";
 import Button from "./Button";
 import ButtonPropsInterface from "./buttonPropsInterface";
 
-const primary = '#185ADB';
-const secondary = '#0A1931';
+const primary = "#5F939A";
+const secondary = "#FF7B54";
 
 export default {
     title: 'Button',
     component: Button,
+    // argTypes: {
+    //     size: {
+    //         options: ['small', 'medium', 'large'],
+    //         control: { type: 'radio' },
+    //     },
+    //     color: {
+    //         options: [primary, secondary],
+    //         control: { type: 'radio' },
+    //     },
+    // },
+    argTypes: {
+        onClick: { action: 'Clicked' },
+        color: { control: 'color' }
+    }
 } as Meta;
 
 const Template: Story<ButtonPropsInterface> = (args) => <Button {...args} />
 
 export const PrimaryNormal = Template.bind({});
 PrimaryNormal.args = {
-    children: "primary",
-    color: primary
+    children: "Button",
+    color: primary,
 }
 export const SecondaryNormal = Template.bind({});
 SecondaryNormal.args = {

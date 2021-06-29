@@ -43,7 +43,6 @@ export const StyledLabel = style.label`
         border-radius: 5px;
         border: 2px solid black;
         margin-right: 20px;
-        margin-top: 5px;
     }
     
 `
@@ -67,8 +66,8 @@ export const StyledCheckbox = style.input<checkBoxProps>`
     &:checked + ${StyledLabel}::after{
         content: "";
         position: absolute;
-        top: 35px;
-        left: 42px;
+        top: 31px;
+        left: 44px;
         width: 10px;
         height: 18px;
         border-right: 3px solid #66DE93;

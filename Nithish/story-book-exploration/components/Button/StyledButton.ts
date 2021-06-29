@@ -23,6 +23,7 @@ export const StyledButton = style.button<ButtonProps>`
         padding: 20px 30px;
     `}
     padding: 15px 25px;
+    font-weight: bold;
     background-color: ${props => props.color};
     margin: 5px;
     border-radius: 3px;

@@ -1,4 +1,4 @@
-import { log } from "console";
+
 import { useEffect } from "react";
 import { ChangeEvent, useState } from "react";
 import checkboxInterface from "../interfaces/checkboxinterface";

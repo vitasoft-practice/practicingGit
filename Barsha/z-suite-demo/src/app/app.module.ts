@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { Group1Component } from './components/group1/group1.component';
+import { Group2Component } from './components/group2/group2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HeaderComponent,
-    Group1Component
+    Group1Component,
+    Group2Component
   ],
   imports: [
     BrowserModule,
