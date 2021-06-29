@@ -2,11 +2,13 @@ import style from 'styled-components';
 
 type InputProps = {
     color: string
+    borderColor: string
 }
 
-export const StyledInput = style.input`
+export const StyledInput = style.input<InputProps>`
     color: #000;
-    border: 1px solid black;
+    border: 1px solid ${props => props.borderColor};
+    margin: 5px;
     padding: 15px 20px;
     min-width: 300px;
     border-radius: 3px;
