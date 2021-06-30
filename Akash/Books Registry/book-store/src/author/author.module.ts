@@ -5,8 +5,10 @@ import { AuthorsSchema } from './entities/author.entity';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [MongooseModule.forFeature([{name: 'Authors', schema : AuthorsSchema}])],
+  imports: [MongooseModule.forFeature([{name: 'Author', schema : AuthorsSchema}])],
   controllers: [AuthorController],
-  providers: [AuthorService]
+  providers: [AuthorService],
 })
-export class AuthorModule {}
+export class AuthorModule {
+  
+}

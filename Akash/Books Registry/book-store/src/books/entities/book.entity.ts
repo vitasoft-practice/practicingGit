@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { ApiProperty } from "@nestjs/swagger";
-import { Document, Mongoose } from "mongoose";
+import { Document } from "mongoose";
 import * as mongoose from 'mongoose'
 import { Author } from "src/author/entities/author.entity";
 
@@ -20,6 +20,10 @@ export class Book {
     @ApiProperty()
     @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'Author'})
     author : Author
+
+    // @ApiProperty()
+    // @Prop({type :[{type: mongoose.Schema.Types.ObjectId, ref: 'Author'}]})
+    // author : Author[]
 
     
     
