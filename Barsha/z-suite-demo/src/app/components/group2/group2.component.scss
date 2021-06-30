@@ -1,0 +1,17 @@
+@import '../../scss/colors';
+.bg-sec{
+    background-color: $bg-sec;
+}
+
+.col-50{
+  grid-template-columns: 50% 50%;
+}
+
+.col-3{
+   display: grid;
+   grid-template-columns: auto auto auto;
+}
+ul{
+    
+    list-style:none;
+}
