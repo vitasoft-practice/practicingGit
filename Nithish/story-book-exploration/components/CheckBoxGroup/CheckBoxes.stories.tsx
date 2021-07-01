@@ -2,14 +2,14 @@ import CheckBoxes from "./CheckBoxes";
 import { Meta, Story } from "@storybook/react";
 import checkboxInterface from "./checkboxinterface";
 
-const primary = "#5F939A";
-const secondary = "#FF7B54";
+const primary = "#185ADB";
+const secondary = "#0A1931";
 export default {
     title: "CheckBoxGroup",
     component: CheckBoxes,
     argTypes: {
         themeColor: {
-            options: ["#5F939A", "#FF7B54"],
+            options: ["#185ADB", "#0A1931"],
             control: 'radio'
         }
     }

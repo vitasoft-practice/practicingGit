@@ -7,7 +7,7 @@ import { Author, AuthorDocument } from './entities/author.entity';
 @Injectable()
 export class AuthorService {
 
-  constructor(@InjectModel('Authors') private AuthorsModel : Model<AuthorDocument>){}
+  constructor(@InjectModel('Author') private AuthorsModel : Model<AuthorDocument>){}
   
   async create(createAuthorDto: CreateAuthorDto) {
     return await this.AuthorsModel.create(createAuthorDto)

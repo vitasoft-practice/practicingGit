@@ -1,8 +1,8 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Req, NotFoundException, NotAcceptableException, BadRequestException } from '@nestjs/common';
+import { Controller, Get, Post,Query, Body, Patch, Param, Delete, Req, NotFoundException, NotAcceptableException, BadRequestException, ParseIntPipe } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { BooksService } from './books.service';
-import { ApiBadRequestResponse, ApiBody, ApiCreatedResponse, ApiFoundResponse, ApiNotFoundResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { CreateBookDto } from './dto/create-book.dto';
-import { Book } from './entities/book.entity';
+import { query } from './dto/query.dto';
 
 @ApiTags('books')
 @Controller('books')
@@ -20,8 +20,8 @@ export class BooksController {
   }
 
   @Get()
-  async findAll() {
-    return await this.booksService.findAll();
+  async findAll(@Query() query:query ) {
+    return await this.booksService.findAll(query);
   }
 
   @Get(':id')
@@ -38,9 +38,9 @@ export class BooksController {
   //   return this.booksService.update(id,updateBookDto);
   // }
 
-  // @Delete(':id')
-  // remove(@Param('id') id: string) {
-  //   return this.booksService.remove(id);
-  // }
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.booksService.remove(id);
+  }
 }
 

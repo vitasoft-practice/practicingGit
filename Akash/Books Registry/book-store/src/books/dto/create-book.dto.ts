@@ -1,5 +1,4 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { ObjectId } from "mongoose";
 import { Author } from "src/author/entities/author.entity";
 
 export class CreateBookDto {
@@ -7,6 +6,7 @@ export class CreateBookDto {
     Book : string;
     @ApiProperty({type: Number, required : false}) //or @ApiPropertyOptional()
     Price : number;
+    @ApiProperty()
     author : Author;
     
 

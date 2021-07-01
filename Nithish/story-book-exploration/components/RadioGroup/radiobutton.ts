@@ -51,17 +51,17 @@ export const StyledRadioButton = style.input<RadiobuttonProps>`
     height: 18px;
     &:checked + ${StyledLabel}{ 
         background-color: ${props => props.themeColor};
+        color: #fff;
     }
     &:disabled + ${StyledLabel}{
         color: ${disabledGrey};
+        pointer-events: none;
     }
     &:disabled + ${StyledLabel}::before{
         border: 2px solid ${disabledGrey};
     }
     &:disabled + ${StyledRadioButtonContainer}{
-        &:hover{
-            background-color: #fff;
-        }
+        pointer-events: none;
     }
     &:checked + ${StyledLabel}::before{
         content:"";

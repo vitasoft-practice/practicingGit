@@ -2,14 +2,14 @@ import { Meta, Story } from "@storybook/react";
 import radiobuttonInterface from "./radiobuttonInterface";
 import RadioButton from "./RadioGroup";
 
-const primary = "#5F939A";
-const secondary = "#FF7B54";
+const primary = "#185ADB";
+const secondary = "#0A1931";
 export default {
     title: "RadioGroup",
     component: RadioButton,
     argTypes: {
         themeColor: {
-            options: ["#5F939A", "#FF7B54"],
+            options: ["#185ADB", "#0A1931"],
             control: 'radio'
         }
     }

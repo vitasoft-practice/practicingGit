@@ -53,9 +53,11 @@ export const StyledCheckbox = style.input<checkBoxProps>`
         position: relative;
         background-color: ${props => props.themeColor};
         font-weight: 500;
+        color: #fff;
     }
     &:disabled + ${StyledLabel}{
         color: ${disabledGrey};
+        pointer-events: none;
     }
     &:disabled + ${StyledLabel}::before{
         border: 2px solid ${disabledGrey};

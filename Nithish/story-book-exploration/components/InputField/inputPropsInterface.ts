@@ -5,5 +5,6 @@ export default interface InputpropsInterface {
     color: string,
     borderColor: string,
     value: string,
+    disabled?: boolean,
     onchange: Dispatch<SetStateAction<string>>
 }

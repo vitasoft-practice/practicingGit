@@ -5,8 +5,8 @@ import textAreaInterface from "./textAreaInterface";
 const defaultRows = 4;
 const defaultCols = 80;
 const defaultDisabled = false;
-const primary = "#5F939A";
-const secondary = "#FF7B54";
+const primary = "#185ADB";
+const secondary = "#0A1931";
 export default {
     title: 'TextArea',
     component: TextInput,
