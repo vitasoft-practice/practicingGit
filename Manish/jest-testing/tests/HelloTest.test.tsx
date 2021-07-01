@@ -9,16 +9,15 @@ describe('HelloTest components', () => {
 
 
     it('should correctly render components', () => {
-        // const { getByTestId } = 
-        render(<HelloTest />);
+        const { getByTestId } = render(<HelloTest />);
 
         // console.log(getByTestId);
 
-        const title = screen.getByTestId('header')
-        // expect(title.textContent).toBe('Testing!');
+        const title = getByTestId('heading')
+        expect(title.textContent).toBe('Testing!');
 
-        expect('title').toBeInTheDocument();
-        expect('title').toHaveTextContent('Testing!')
+        // expect('title').toBeInTheDocument();
+        // expect('title').toHaveTextContent('Testing!')
     });
 
 });
