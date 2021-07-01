@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { Group1Component } from './components/group1/group1.component';
 import { Group2Component } from './components/group2/group2.component';
+import { ZSuitecardComponent } from './components/z-suitecard/z-suitecard.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Group2Component } from './components/group2/group2.component';
     NavbarComponent,
     HeaderComponent,
     Group1Component,
-    Group2Component
+    Group2Component,
+    ZSuitecardComponent
   ],
   imports: [
     BrowserModule,
