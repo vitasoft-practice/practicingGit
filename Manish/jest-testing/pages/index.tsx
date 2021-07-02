@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import HelloTest from '../components/HelloTest'
 import CheckBoxWithLabel from '../components/CheckBoxWithLabel'
 import SimpleCounter from '../components/SimpleCounter'
+import IsLoggedIn from '../components/IsLoggedIn'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <HelloTest />
         <CheckBoxWithLabel />
         <SimpleCounter />
+        <IsLoggedIn />
       </main>
     </div>
   )
