@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import HelloTest from '../components/HelloTest'
+import CheckBoxWithLabel from '../components/CheckBoxWithLabel'
+import SimpleCounter from '../components/SimpleCounter'
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <HelloTest />
+        <CheckBoxWithLabel />
+        <SimpleCounter />
       </main>
     </div>
   )

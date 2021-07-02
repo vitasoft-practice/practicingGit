@@ -16,8 +16,6 @@ describe('HelloTest components', () => {
         const title = getByTestId('heading')
         expect(title.textContent).toBe('Testing!');
 
-        // expect('title').toBeInTheDocument();
-        // expect('title').toHaveTextContent('Testing!')
     });
 
 });
