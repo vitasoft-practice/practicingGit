@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { Group1Component } from './components/group1/group1.component';
 import { Group2Component } from './components/group2/group2.component';
 import { ZSuitecardComponent } from './components/z-suitecard/z-suitecard.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ZSuitecardComponent } from './components/z-suitecard/z-suitecard.compon
     HeaderComponent,
     Group1Component,
     Group2Component,
-    ZSuitecardComponent
+    ZSuitecardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

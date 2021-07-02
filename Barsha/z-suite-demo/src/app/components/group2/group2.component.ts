@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ZSuiteService } from 'src/app/z-suite.service';
 
 @Component({
   selector: 'app-group2',
@@ -13,5 +13,5 @@ export class Group2Component implements OnInit {
 
   ngOnInit(): void {
   }
-
+  data=this.zs.card_details;
 }
