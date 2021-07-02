@@ -1,9 +1,6 @@
 
 export interface Book {
-
-    
-    
-    Book: string;
+    Book:  string;
     Price: number;
 
     
