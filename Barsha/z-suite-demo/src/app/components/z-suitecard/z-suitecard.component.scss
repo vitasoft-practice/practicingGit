@@ -2,10 +2,34 @@
 
 .z-suite-card{
     background-color:$primary-bg;
-    box-shadow: 0 3px 20px 1px rgba(221,221,221,0.5);
-    border-radius: 10%;
+    box-shadow: 0 3px 20px 1px rgba(190, 127, 127, 0.5);
+    border-radius: 5%;
     box-sizing: border-box;
     text-align: center;
     justify-content: center;
-    align-items: center;
+    
+    width:22rem;
+    position: relative;
+    font-size:1.5rem;
+   padding:15%;
+}
+.outer{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+.top-img{
+    position: absolute;
+    top:0px;
+    left: 150px;
+    z-index: 2;
+    box-sizing: border-box;
+    right:40;
+    border-radius: 50%;
+    width:50px;
+    padding:7px;
+    font-size: 2rem;
+    color:white;
+    background-color: rgba(148, 212, 52, 0.795);
+
 }

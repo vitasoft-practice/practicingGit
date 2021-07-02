@@ -18,6 +18,21 @@
     display: grid;
     grid-template-columns: 50% 50%;
 }
+.col-3{
+  display: grid;
+  grid-template-columns:auto auto auto;
+  justify-content: space-around;
+  .col{
+    text-align: center;
+  }
+ 
+}
+
+.col-4{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-around;
+}
   .row{
     @extend %grid-container;
     text-align: center;
@@ -51,3 +66,19 @@
     padding-left: 3%;
     padding-right: 3%;
 }
+
+
+@media only screen and (max-width:980px){
+  .col-3{
+    grid-template-columns: 50% 50%;
+    
+  }
+ 
+ }
+ @media only screen and (max-width:600px){
+   .col-3{
+     grid-template-columns: 100%;
+     
+   }
+  
+  }
