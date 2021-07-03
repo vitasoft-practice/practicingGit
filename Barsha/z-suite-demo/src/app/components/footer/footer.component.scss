@@ -1,0 +1,19 @@
+@import '../../scss/colors';
+@import "../../scss/button";
+.signup{
+    border: 1px solid #61846D;
+    border-radius: 23.5px;
+    background-color: $bg-sec;
+    padding:7%;
+    width:150px;
+    font-size: 1rem;
+    font-weight:bold;
+    color: #61846D;
+}
+.w-100{
+    width: 100%;
+}
+.left-border{
+    border-left: 1px solid black;
+    padding: 5%;
+}
