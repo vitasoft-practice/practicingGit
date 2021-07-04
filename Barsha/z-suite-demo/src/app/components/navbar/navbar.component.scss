@@ -37,3 +37,66 @@
     }
 }
 
+.navbar-inverse{
+    background: cornflowerblue;
+}
+
+
+.navbar >  .nav-btn {
+    display: none;
+}
+.navbar > #navcheck {
+    display: none;
+}
+
+.nav-btn > label{
+    display: inline-block;
+    width:50px;
+    height: 60px;
+    padding:5px;
+}
+.nav-btn > label > span{
+    display: block;
+    width:40px;
+    height:20px;
+    border-top: 3px solid white;
+
+}
+
+@media only screen and (max-width:600px){
+    .navbar{
+        background: rgba(52, 54, 54, 0.822) ;
+    }
+     .navbar> .nav-btn {
+        display: block;
+    }
+   label:hover , .navbar #navcheck:checked~ .nav-btn >label{
+       background:  rgba(52, 54, 54, 0.822);
+   }
+    
+   #navcheck:checked ~.navarea{
+       position: absolute;
+       top:100px;
+       left:0;
+       width:100%;
+       display: block;
+       background: rgba(52, 54, 54, 0.822);
+       padding:30px;
+       
+       .nav-item{
+           display: block;
+           width:100%;
+           padding:30px;
+           border-bottom: 2px solid white;
+        }
+        .nav-item:hover{
+            color:black;
+            background: white;
+        }
+        
+   }
+   #navcheck:not(:checked) ~.navarea{
+       display: none;
+   }
+      
+    }

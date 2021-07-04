@@ -21,8 +21,11 @@
 }
 .col-3{
   display: grid;
-  grid-template-columns:auto auto auto;
+  grid-template-columns: 33% 33% 33%;
   justify-content: space-around;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+ 
   .col{
     text-align: center;
   }

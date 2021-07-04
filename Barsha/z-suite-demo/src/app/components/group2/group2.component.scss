@@ -11,7 +11,10 @@
 
 ul{
     
-    list-style:none;
+    list-style: none;
+    li{
+      font-size: 15px;
+    }
 }
 .bg2{
   background-image: url("/assets/bg3.jpg");
@@ -31,3 +34,10 @@ p{
   line-height: 30px;
   letter-spacing: 1px;
 }
+
+@media only screen and (max-width:600px){
+ .item:nth-child(3){
+   order:4;
+ }
+ 
+ }
