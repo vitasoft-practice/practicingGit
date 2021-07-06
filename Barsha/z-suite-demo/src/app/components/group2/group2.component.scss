@@ -1,4 +1,5 @@
 @import '../../scss/colors';
+@import "../../scss/button";
 .bg-sec{
     background-color: $bg-sec;
 }
@@ -10,5 +11,34 @@
 
 ul{
     
-    list-style:none;
+    list-style: none;
+    li{
+      font-size: 18px;
+    }
 }
+.bg2{
+  background-image: url("/assets/bg3.jpg");
+  width: 100%;
+
+}
+
+h1{
+  font-size: 36px;
+  color:#28456E;
+}
+p{
+  color:#28456E;
+  font-size: 21px;
+  width:60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width:600px){
+ .item:nth-child(3){
+   order:4;
+ }
+ 
+ }

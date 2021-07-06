@@ -40,10 +40,10 @@ p{
 
 .tabs{
   display: grid;
-  width: 100%;
+  
  grid-template-columns: auto auto auto auto;
  
-
+box-sizing: border-box;
  
 }
 
@@ -54,6 +54,7 @@ label{
   border:2px solid white;
   background-color: #61846D;
   color: white;
+  width: 100%;
 }
 
 .tabs input[type="radio"]{
@@ -96,11 +97,14 @@ align-items: center;
 
 }
 @media only screen and (max-width:600px){
-  .row-col{
+  .row-col {
     grid-template-columns: 100%;
     
   }
- 
+  // .tabs input[type="radio"]:checked + label{
+  //   grid-template-columns: 100%;
+
+  // }
  }
 
 
