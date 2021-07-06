@@ -8,8 +8,8 @@ interface authContextType {
 
 const AuthContext = createContext({
     user: false,
-    login: () => { },
-    logout: () => { },
+    login: () => {},
+    logout: () => {},
 })
 
 export const AuthContextProvider = ({ children }: any) => {
@@ -17,9 +17,13 @@ export const AuthContextProvider = ({ children }: any) => {
     const [user, setUser] = useState(false)
 
     const login = () => {
+        console.log("clicked login");
         setUser(true);
     }
     const logout = () => {
+
+        console.log("clicked logout");
+
         setUser(false);
     }
 

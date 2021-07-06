@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render users ccomponents correctly Snapshot matched 1`] = `
+<div>
+  <h4
+    data-testid="userintro"
+  >
+    Hello, THis is 
+    abc
+    ,DOB 
+    04-06-1999
+     and email Id 
+    abc@domain.com
+  </h4>
+</div>
+`;

@@ -27,8 +27,10 @@ describe('should auth components render correctly', () => {
         </AuthContextProvider>
         )
         expect(getByTestId('userStatus').textContent).toBe('logout');
+
         fireEvent.click(getByTestId('userlogout'));
-        expect(getByTestId('userStatus').textContent).toBe('login');
+
+        expect(getByTestId('userStatus').textContent).toBe('logout');
 
 
     })
