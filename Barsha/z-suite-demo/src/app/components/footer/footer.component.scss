@@ -1,5 +1,13 @@
 @import '../../scss/colors';
 @import "../../scss/button";
+
+%footer-font{
+    color:$f-color;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  font-weight: 300;
+  letter-spacing: 0.89px;
+}
 .signup{
     border: 1px solid #61846D;
     border-radius: 23.5px;
@@ -17,3 +25,17 @@
     border-left: 1px solid black;
     padding: 5%;
 }
+.bottom-border{
+    border-left: 1px solid black;
+    padding: 5%;
+}
+h3,p{
+   @extend %footer-font;
+   font-size: 16px;
+}
+.line-3 {
+    box-sizing: border-box;
+    height: 1px;
+    
+    border: 1px solid #61846D;
+  }

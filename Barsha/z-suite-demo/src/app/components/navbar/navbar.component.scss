@@ -1,5 +1,5 @@
 @import '../../scss/colors';
-
+@import '../../scss/button';
 
 .navbar{
     display: flex;
@@ -63,7 +63,7 @@
 
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:840px){
     .navbar{
         background: rgba(52, 54, 54, 0.822) ;
     }

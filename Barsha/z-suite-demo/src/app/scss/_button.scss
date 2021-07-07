@@ -20,3 +20,13 @@
     margin:5px;
     font-size: 15px;
 }
+.bordered-trans{
+    // width:200px;
+    border-radius: 20px;
+    background-color:transparent ;
+    border: 2px solid $primary-bg;
+    color: $primary-bg;
+    // padding:10px;
+    margin:5px;
+    font-size: 15px;
+}
