@@ -6,19 +6,12 @@ import { CreatePatientConsultationDto } from './dto/create-patient-consultation.
 export class PatientConsultationController {
   constructor(private readonly patientConsultationService: PatientConsultationService) {}
 
-  @Post()
-  create(@Body() createPatientConsultationDto: CreatePatientConsultationDto) {
-    return this.patientConsultationService.create(createPatientConsultationDto);
+  
+
+  @Get()
+  findAll() {
+    return this.patientConsultationService.findAll();
   }
 
-  // @Get()
-  // findAll() {
-  //   return this.patientConsultationService.findAll();
-  // }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.patientConsultationService.findOne(+id);
-  }
-
+  
 }
