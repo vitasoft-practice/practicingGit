@@ -11,7 +11,9 @@
 .text-center{
     text-align: center;
 }
-
+.text-left{
+  text-align: left;
+}
 %grid-container{
     display: grid;
     grid-template-columns: 100%;
@@ -77,13 +79,20 @@
 .w-70{
   width:300px;
 }
-
+.left-border{
+  border-left: 1px solid black;
+  padding: 5%;
+}
+.bottom-border{
+  border-left: 1px solid black;
+  padding: 5%;
+}
 p{
   font-size: 1.125rem;
   color: #7E8085;
   font-family: Helvetica;
   letter-spacing: 0;
-  line-height: 30px;
+  line-height: 1.9rem;
 }
 
 h1{
@@ -102,8 +111,19 @@ h1{
      grid-template-columns: 100%;
      text-align: center;
     
-     
+    
    }
-  
+   
+ .res-w{
+   padding-left:44%;
+   padding-right: 44%;
+   margin-bottom:2%;
+ }
+  .left-border{
+    border-left: 0px solid white;
+  }
   }
 
+.left {
+  float : left;
+}

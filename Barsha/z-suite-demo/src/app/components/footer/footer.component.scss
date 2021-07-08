@@ -21,21 +21,23 @@
 .w-100{
     width: 100%;
 }
-.left-border{
-    border-left: 1px solid black;
-    padding: 5%;
-}
-.bottom-border{
-    border-left: 1px solid black;
-    padding: 5%;
-}
-h3,p{
+
+p,h3{
    @extend %footer-font;
    font-size: 16px;
 }
+
 .line-3 {
     box-sizing: border-box;
     height: 1px;
     
     border: 1px solid #61846D;
   }
+// img{
+//     border:2px solid black;
+
+// }
+h1{
+    @extend %footer-font;
+    font-size:30px;
+}

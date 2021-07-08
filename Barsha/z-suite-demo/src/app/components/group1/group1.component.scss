@@ -9,18 +9,15 @@
 }
 
 
-.h1{
+h1{
   color: #2E3C57;
   font-family: Helvetica;
-  font-size: 34px;
+  font-size: 2.125rem;
   letter-spacing: 0;
   line-height: 41px;
 }
-p{
-  color: #7E8085;
-  font-family: Helvetica;
-  letter-spacing: 0;
-  line-height: 30px;
+h3{
+  font-size: 1.3125rem;
 }
 .row-col{
   display: grid;
