@@ -3,8 +3,13 @@ import { PatientConsultationService } from './patient-consultation.service';
 import { PatientConsultationController } from './patient-consultation.controller';
 
 @Module({
-  imports: [HttpModule],
+  imports: [
+    HttpModule.register({
+      //timeout: 5000,
+      //maxRedirects: 5,
+    }),
+  ],
   controllers: [PatientConsultationController],
-  providers: [PatientConsultationService]
+  providers: [PatientConsultationService],
 })
 export class PatientConsultationModule {}
