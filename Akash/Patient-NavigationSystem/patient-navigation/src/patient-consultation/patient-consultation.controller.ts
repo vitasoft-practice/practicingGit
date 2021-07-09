@@ -1,8 +1,4 @@
-import {
-  Controller,
-  Get,
-  Param,
-} from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { patientConsultationParameterDto } from './dto/patient-consultation-parameters.dto';
 import { PatientConsultationService } from './patient-consultation.service';
 
@@ -12,9 +8,11 @@ export class PatientConsultationController {
     private readonly patientConsultationService: PatientConsultationService,
   ) {}
 
-  @Get()
-  anyname(@Param() params : patientConsultationParameterDto ) {
-    console.log(1);
-    return this.patientConsultationService.findAll(params.sampleId,params.customerId);
+  @Get('/:sampleId/:customerId')
+  anyname(
+    @Param('sampleId') sampleId: number,
+    @Param('customerId') customerId: number,
+  ) {
+    return this.patientConsultationService.findAll(sampleId, customerId);
   }
 }

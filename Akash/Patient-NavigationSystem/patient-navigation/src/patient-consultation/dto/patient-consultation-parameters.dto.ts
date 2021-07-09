@@ -1,6 +1,5 @@
-export class patientConsultationParameterDto{
-    
-    sampleId : number;
+export class patientConsultationParameterDto {
+  sampleId: number;
 
-    customerId : number;
+  customerId: number;
 }

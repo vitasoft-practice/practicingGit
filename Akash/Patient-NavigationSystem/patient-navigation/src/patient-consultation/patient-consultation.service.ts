@@ -7,21 +7,33 @@ import { CreatePatientConsultationDto } from './dto/create-patient-consultation.
 
 @Injectable()
 export class PatientConsultationService {
-  constructor(private httpService: HttpService) {}
+  constructor(
+    private httpService: HttpService,
+    private configService: ConfigService,
+  ) {}
 
   // servlet name to be passed => getPatientPaymentInfo
   // param => sampelId and customer Id
   // add port and ip in env and use as ur local
 
-  findAll(sampleId, customerId) {
-    const port = process.env.PORT_NUMBER;
-    const ip = process.env.IP_ADDRESS;
-    const url = 'http://' + ip + ':' + port;
-    return this.httpService.get(url + `/getPatientPaymentInfo/${sampleId}/${customerId}`).pipe(
-      map((response) => {
-        response.data;
-      }),
-    );
+  findAll(sampleId: number, customerId: number) {
+    const url =
+      'http://' +
+      this.configService.get('IP_ADDRESS') +
+      ':' +
+      this.configService.get('PORT_NUMBER');
+
+    return this.httpService
+      .get(url + `/getPatientPaymentInfo?sampleId=${sampleId}&customerId=${customerId}`)
+      .pipe(
+        map((response) => {
+          response.data;
+        }),
+      );
   }
 }
-// `/${sampleId}/${customerId}
+
+
+
+// getPPatientData?sampleId=12 -> when u run in java 
+// getPatientData/12 -> api
