@@ -5,7 +5,7 @@
     position: relative;
 }
 .banner{
-    background-color: rgb(245, 244, 244);
+    background-color:white;
     padding:2%;
     text-align: center;
     justify-content: center;
@@ -17,22 +17,29 @@
     
 }
 .tab-button{
-    width:200px;
-    background-color: rgb(119, 165, 250);
+    
+    height: 48px;
+    width: 170px;
+    border-radius: 6px;
+    background-color: #3498DB;
+    font-family: Helvetica;
     color:White;
     padding:1%;
-    border-radius: 10px;
     margin:2%;
     border: none;
     font-size: 1rem;
     z-index: 2;
 }
 p{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-family: Helvetica;
+
+  letter-spacing: 0;
+  line-height: 24px;
 }
 .px-10{
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 .mt-2{
     margin-top: 2%;
@@ -54,26 +61,24 @@ i{
    
 }
 .col>p{
-    font-size: 1.2rem;
+    font-size: 0.9375rem;
 }
 
 
-    @media only screen and (max-width:980px){
-        .col-5{
+@media only screen and (max-width:980px){
+    .col-5{
             display: grid;
-          grid-template-columns: 33.33% 33.33% 33.33%;
-          text-align: center;
-         
+             grid-template-columns: 33.33% 33.33% 33.33%;
+            text-align: center;
          }
+}
+@media only screen and (max-width:600px){
+    .col-5{
+            display: grid;
+            grid-template-columns: 100%;
+            text-align: center; 
         }
-        @media only screen and (max-width:600px){
-            .col-5{
-                display: grid;
-              grid-template-columns: 100%;
-              text-align: center;
-             
-             }
-            }
+}
 .red{
     color:rgb(250, 78, 78);
     background-color: rgb(247, 194, 194);
@@ -98,7 +103,7 @@ i{
     border: none;
 }
 .element{
-    width:200px;
+    width:15.375%;
     margin:0;
     box-sizing: border-box;
 }
@@ -116,7 +121,8 @@ i{
     right: 0;
     box-sizing: border-box;
     margin:0;
-    overflow-x: hidden ;
+    overflow: hidden ;
+   
 }
 /* .element img{
     
