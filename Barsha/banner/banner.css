@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    position: relative;
+}
+.banner{
+    background-color:white;
+    padding:2%;
+    text-align: center;
+    justify-content: center;
+}
+.col-5{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+   
+    
+}
+.tab-button{
+    
+    height: 48px;
+    width: 170px;
+    border-radius: 6px;
+    background-color: #3498DB;
+    font-family: Helvetica;
+    color:White;
+    padding:1%;
+    margin:2%;
+    border: none;
+    font-size: 1rem;
+    z-index: 2;
+}
+p{
+    font-size: 1.25rem;
+    font-family: Helvetica;
+
+  letter-spacing: 0;
+  line-height: 24px;
+}
+.px-10{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.mt-2{
+    margin-top: 2%;
+}
+i{
+    width: 60px;
+    font-size: 30px;
+    color: rgb(35, 109, 247) ;
+    padding:10px;
+    border-radius: 50%;
+    border: 1px solid rgb(119, 165, 250);
+    margin:2%;
+}
+.col-5>.col{
+  
+   padding:5px;
+   margin: 2%;
+   z-index: 2;
+   
+}
+.col>p{
+    font-size: 0.9375rem;
+}
+
+
+@media only screen and (max-width:980px){
+    .col-5{
+            display: grid;
+             grid-template-columns: 33.33% 33.33% 33.33%;
+            text-align: center;
+         }
+}
+@media only screen and (max-width:600px){
+    .col-5{
+            display: grid;
+            grid-template-columns: 100%;
+            text-align: center; 
+        }
+}
+.red{
+    color:rgb(250, 78, 78);
+    background-color: rgb(247, 194, 194);
+}
+.blue{
+    color: rgb(74, 74, 250);
+    background-color: rgb(166, 166, 253);
+}
+.yellow{
+    color: rgb(250, 250, 76);
+    background-color: rgb(250, 250, 193);
+}
+.purple{
+    color:rgb(117, 6, 207);
+    background-color:rgb(167, 124, 202) ;
+}
+.green{
+    color:rgb(25, 155, 25);
+    background-color:rgb(103, 161, 103) ;
+}
+.trans-b{
+    border: none;
+}
+.element{
+    width:15.375%;
+    margin:0;
+    box-sizing: border-box;
+}
+.banner + .element{
+    position: absolute;
+    bottom:0;
+    left:0;
+    padding:1%;
+    box-sizing: border-box;
+    margin: 0;
+}
+.element:last-child{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    box-sizing: border-box;
+    margin:0;
+    overflow: hidden ;
+   
+}
+/* .element img{
+    
+  
+} */
