@@ -1,47 +1,46 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../../styles/section1.module.scss'
+import Hstyles from '../../styles/Home.module.scss'
 import Card from './Card'
-// import { secLists } from './secLists'
+import { secLists } from './secLists'
+import zshop from '../../assets/z-group/icons/z-shop.png'
+import zapp from '../../assets/z-group/icons/z-app.png'
+import zpro from '../../assets/z-group/icons/z-pro.png'
 
-import zshop from '../../assets/z-shop.png'
-import zapp from '../../assets/z-app.png'
-import zpro from '../../assets/z-pro.png'
+// const secLists = [
+//     {
+//         id: 1,
+//         Img: { zshop },
+//         title: "Z Shop",
+//         des: "Creating revenue streams"
 
-const secLists = [
-    {
-    id:1,
-    // Img:'../../assets/z-shop.png',
-    Img:{zshop},
-    title:"Z Shop",
-    des:"Creating revenue streams"
+//     },
+//     {
+//         id: 2,
+//         Img: { zapp },
+//         title: "Z App",
+//         des: "Improving patient retention and outcomes"
 
-},
-{
-    id:2,
-    Img:{zapp},
-    // Img:'../../assets/z-zapp.png',
-    title:"Z App",
-    des:"Improving patient retention and outcomes"
+//     },
+//     {
+//         id: 3,
+//         Img: { zpro },
+//         title: "Z Pro",
+//         des: "Marketing and growing your practice"
 
-},
-{
-    id:3,
-    Img:{zpro},
-    // Img:'../../assets/z-pro.png',
-    title:"Z Pro",
-    des:"Marketing and growing your practice"
-
-},
+//     },
 
 
-]
+// ]
 
 
 const section1 = () => {
+
     return (
         <>
-            <div className={styles.container}>
+
+            <div className={Hstyles.container}>
                 <div className={styles.section1}>
 
                     <div className={styles.title}>
@@ -55,8 +54,11 @@ const section1 = () => {
                     </div>
                     <div className={styles.main__card}>
                         {
-                            secLists.map(list => (
-                                <Card key={list.id}  title={list.title} des={list.des} />
+                            secLists.map((list, index) => (
+
+                               
+                                    <Card key={index} Img={list.Img} title={list.title} des={list.des} />
+                               
                             ))
                         }
                     </div>

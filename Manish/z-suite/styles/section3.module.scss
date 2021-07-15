@@ -1,0 +1,74 @@
+@import "../styles/variables";
+@import "../styles/mixin";
+
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main__zgroup {
+    background-color: #f6f8f9;
+    padding: 70px 0;
+
+    .zgroup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        margin: 50px auto;
+    }
+}
+
+.group__section {
+    margin: 40px;
+}
+.main__title {
+    text-align: center;
+    margin: 30px auto;
+    h4 {
+        font-family: Verdana;
+        font-size: 16px;
+        letter-spacing: 1.33px;
+        line-height: 19px;
+        color: $main-title-color;
+        font-weight: normal;
+    }
+}
+
+.title {
+    display: flex;
+    .z__icons {
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+    }
+
+    h2 {
+        font-size: 36px;
+        color: $main-title-color;
+        font-weight: bold;
+        font-family: helvetica;
+    }
+}
+
+.left__section {
+    display: grid;
+    place-items: center;
+}
+
+.right__section {
+    display: grid;
+    place-items: center;
+}
+
+.zshop__content {
+    @include zgroup($zshop-color);
+}
+
+.zapp__content {
+    @include zgroup($zapp-color);
+}
+
+.zpro__content {
+    @include zgroup($zpro-color);
+}

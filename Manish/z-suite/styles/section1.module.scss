@@ -12,13 +12,14 @@
     .title {
         text-align: center;
         color: #2e3c57;
+        font-family: $main-font;
 
         p {
             font-size: 16px;
         }
         h4 {
             font-size: 32px;
-            font-weight: 550;
+            font-weight: normal;
         }
     }
     .des {
@@ -33,6 +34,34 @@
 .main__card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    place-items: center;
+}
+.sec__card {
+    margin: 50px auto;
+    .content {
+        font-family: $main-font;
+        h4 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #000000;
+        }
+        p {
+            font-weight: normal;
+            font-size: 18px;
+            color: #4a4a4a;
+        }
+    }
+}
+
+.sec1__icon {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 6px 23px 0 #2ed3c5;
+    border-radius: 100%;
+    img {
+        box-shadow: 0 6px 23px 0 #2ed3c5;
+    }
 }
 
 // @include media("<=phone") {
@@ -47,7 +76,7 @@
 
 @media only screen and (max-width: 576px) {
     .main__card {
-        display:flex;
+        display: flex;
         flex-direction: column;
         // grid-template-columns: 1fr;
     }

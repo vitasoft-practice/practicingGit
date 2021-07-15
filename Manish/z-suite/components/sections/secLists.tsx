@@ -1,7 +1,6 @@
-import zshop from '../../assets/z-shop.png'
-import zapp from '../../assets/z-zapp.png'
-import zpro from '../../assets/z-pro.png'
-
+import zshop from '../../assets/z-group/icons/z-shop.png'
+import zapp from '../../assets/z-group/icons/z-app.png'
+import zpro from '../../assets/z-group/icons/z-pro.png'
 export const secLists = [
     {
     id:1,

@@ -1,0 +1,63 @@
+@import "../styles/variables";
+@import "../styles/mixin";
+
+.container {
+    @include container;
+}
+
+.main__footer {
+    margin-top: 50px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    place-items: center;
+    padding: 50px 0;
+    border-bottom: 1px solid #61846d;
+}
+.flogo {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.singup__btn {
+    margin: 20px auto;
+    a {
+        border: 1px solid #61846d;
+        border-radius: 23.5px;
+        background-color: rgba(97, 132, 109, 0.05);
+        padding: 10px 25px;
+        font-size: 18px;
+        font-family: $main-font;
+        color: $main-title-color;
+        font-weight: 500;
+    }
+}
+.title {
+    margin: 15px auto;
+    h4 {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: $main-font;
+        color: $main-title-color;
+    }
+}
+
+.content {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: $main-font;
+    color: $main-title-color;
+}
+
+.copyright{
+    text-align:center;
+    p{
+        font-size: 16px;
+        font-weight: normal;
+        font-family: $main-font;
+        color: $main-title-color; 
+    }
+}
