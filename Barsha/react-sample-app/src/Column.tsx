@@ -1,10 +1,14 @@
 import React from "react";
-
+import "./scss/mysass.scss"
 interface text{
     name:String
 }
-export const Column=({name}:text)=>{
-    return (<div> Welcome to Column Component <br/>
-        Hello {name}
+export const Column=({name , children}:React.PropsWithChildren<text>)=>{
+    return (<div className="column-container"> 
+    <div className="column-title">
+    {name}
+    </div>
+        <br/>
+        {children}
     </div>)
 }
