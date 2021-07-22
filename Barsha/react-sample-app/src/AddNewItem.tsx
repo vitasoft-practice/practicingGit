@@ -12,7 +12,7 @@ export const AddNewItem = (props: NewItemProps) =>{
     const {onAdd, toggleButtonText} =props;
 
     if(showForm){
-        <NewItemForm onAdd={text=>{onAdd(text); setShowForm(false)}} />
+       // <NewItemForm onAdd={text=>{onAdd(text); setShowForm(false)}} />
     }
     return(
         <button onClick={()=>setShowForm(true)}>{toggleButtonText}</button>
