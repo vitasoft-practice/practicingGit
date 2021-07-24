@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Link from "next/link"
 import  About  from './about'
 import  FirstPost  from './posts/first-post'
@@ -26,9 +25,9 @@ export default function Home({
   return (
     <div>
       Learn Next.js using Typescript!
-      <Link href="/posts/first-post">
+      {/* <Link href="/posts/first-post">
         <h2>first post</h2>
-      </Link>
+      </Link> */}
       <Link href="/about">
         <h2>About Page</h2>
       </Link>
