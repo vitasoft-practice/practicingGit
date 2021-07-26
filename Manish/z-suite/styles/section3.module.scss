@@ -1,5 +1,6 @@
 @import "../styles/variables";
 @import "../styles/mixin";
+@import "../styles/breakpoints.scss";
 
 .container {
     min-height: 100vh;
@@ -10,17 +11,28 @@
 .main__zgroup {
     background-color: #f6f8f9;
     padding: 70px 0;
+    margin: 0 20px;
+    @include media("<=phone") {
+        padding: 0;
+    }
 
     .zgroup {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 30px;
         margin: 50px auto;
+        place-items: center;
+        @include media("<=tablet") {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
 .group__section {
     margin: 40px;
+    @include media("<=phone") {
+        margin: 25px;
+    }
 }
 .main__title {
     text-align: center;
@@ -38,9 +50,12 @@
 .title {
     display: flex;
     .z__icons {
-        width: 60px;
-        height: 60px;
-        margin: 20px;
+        // width: 60px;
+        // height: 60px;
+        margin: 20px 20px 0px -20px;
+        @include media("<=phone") {
+            margin: 5px 10px 0 -5px;
+        }
     }
 
     h2 {
@@ -48,17 +63,35 @@
         color: $main-title-color;
         font-weight: bold;
         font-family: helvetica;
+        @include media("<desktop") {
+            font-size: 28px;
+        }
+        @include media("<tablet") {
+            font-size: 22px;
+        }
+
+        @include media("<phone") {
+            font-size: 22px;
+        }
     }
 }
 
 .left__section {
-    display: grid;
-    place-items: center;
+    // display: grid;
+    // place-items: center;
+    @include media("<=tablet") {
+        order: 2;
+        place-items: flex-start;
+    }
 }
 
 .right__section {
-    display: grid;
-    place-items: center;
+    // display: grid;
+    // place-items: center;
+    @include media("<=tablet") {
+        order: 1;
+        place-items: flex-start;
+    }
 }
 
 .zshop__content {

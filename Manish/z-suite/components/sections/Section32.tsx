@@ -12,9 +12,10 @@ const Section32 = () => {
                 <div className={styles.right__section}>
                     <div className={styles.title}>
                         <div className={styles.z__icons}>
-                            <Image src={zappicon} alt='z-shop=icon' width={60} height={60} />
+                            <Image src={zappicon} alt='z-shop-icon' width={50} height={50} ḷayout="responsive" />
                         </div>
                         <h2>Z App</h2>
+                
                     </div>
                     <div className={styles.zapp__content}>
                         <ul>
@@ -32,7 +33,7 @@ const Section32 = () => {
                     </div>
                 </div>
                 <div className={styles.left__section}>
-                    <Image src={zapp} alt='z-shop-image' width={530} height={450} />
+                    <Image src={zapp} alt='z-shop-image' width={530} height={450} ḷayout="responsive"  />
                 </div>
             </div>
         </>

@@ -1,5 +1,6 @@
 @import "../styles/variables";
 @import "../styles/mixin";
+@import "../styles/breakpoints.scss";
 
 .container {
     @include container;
@@ -15,6 +16,13 @@
     grid-row-gap: 70px;
     place-items: center;
     margin: 50px auto;
+    
+    @include media("<=tablet") {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include media("<=phone") {
+        grid-template-columns: 1fr;
+    }
 }
 .title {
     text-align: center;
@@ -56,5 +64,8 @@
         font-size: 16px;
         font-weight: normal;
         padding: 0 15px;
+        @include media("<phone"){
+            font-size: 14px;
+        }
     }
 }

@@ -9,12 +9,12 @@ const Section31 = () => {
         <>
             <div className={styles.zgroup}>
                 <div className={styles.left__section}>
-                    <Image src={zshop} alt='z-shop-image' width={530} height={330} />
+                    <Image src={zshop} alt='z-shop-image' width={530} height={330} ḷayout="responsive" />
                 </div>
                 <div className={styles.right__section}>
                     <div className={styles.title}>
                         <div className={styles.z__icons}>
-                        <Image src={zshopicon} alt='z-shop-icon' width={60} height={60}  /> 
+                        <Image src={zshopicon} alt='z-shop-icon' width={60} height={60} ḷayout="responsive" /> 
                         </div>
                        
                         <h2>Z Shop provides solutions to:</h2>

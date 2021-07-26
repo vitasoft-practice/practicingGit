@@ -1,0 +1,10 @@
+@import "../styles/variables";
+@import "../styles/breakpoints.scss";
+@import "../styles/mixin";
+
+.banner {
+    // width: 100vw;
+    height: 200px;
+    background: #5c5f5d;
+    @include space(margin,top,70px);
+}

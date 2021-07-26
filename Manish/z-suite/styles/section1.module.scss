@@ -9,6 +9,7 @@
 }
 
 .section1 {
+    margin: 50px auto;
     .title {
         text-align: center;
         color: #2e3c57;
@@ -16,10 +17,16 @@
 
         p {
             font-size: 16px;
+            @include media("<=phone") {
+                font-size: 14px;
+            }
         }
         h4 {
             font-size: 32px;
             font-weight: normal;
+            @include media("<=phone") {
+                font-size: 22px;
+            }
         }
     }
     .des {
@@ -27,6 +34,9 @@
         p {
             font-size: 18px;
             color: #7e8085;
+            @include media("<=phone") {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -34,17 +44,27 @@
 .main__card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
     place-items: center;
+    grid-gap: 30px;
+    margin: 50px auto;
+
+    @include media("<=tablet") {
+        grid-template-columns: 1fr 1fr;
+        place-items: flex-start;
+        margin: 0 40px;
+    }
+    @include media("<=phone") {
+        grid-template-columns: 1fr;
+    }
 }
 .sec__card {
-    margin: 50px auto;
+    // margin: 50px auto;
     .content {
         font-family: $main-font;
         h4 {
             font-size: 22px;
             font-weight: bold;
-            color: #000000;
+            color: #000;
         }
         p {
             font-weight: normal;
@@ -52,41 +72,11 @@
             color: #4a4a4a;
         }
     }
-}
 
-.sec1__icon {
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 6px 23px 0 #2ed3c5;
-    border-radius: 100%;
-    img {
+    .sec1__icon {
+        width: 50px;
+        height: 50px;
         box-shadow: 0 6px 23px 0 #2ed3c5;
+        border-radius: 100%;
     }
-}
-
-// @include media("<=phone") {
-
-// .main__card{
-
-//     grid-template-columns: 1fr;
-
-// }
-
-// }
-
-@media only screen and (max-width: 576px) {
-    .main__card {
-        display: flex;
-        flex-direction: column;
-        // grid-template-columns: 1fr;
-    }
-}
-
-@include media("<=tablet") {
-    .main__card {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@include media("<=desktop") {
 }

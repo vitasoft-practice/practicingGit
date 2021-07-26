@@ -1,0 +1,90 @@
+@import "../styles/variables";
+@import "../styles/breakpoints.scss";
+
+.slider {
+    // background-image: url("../assets/menu.png");
+    // background-repeat: no-repeat;
+    // background-size: 100% 100%;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 68px;
+    z-index: -1;
+    @include media("<=desktop"){
+        margin-top: 111px;
+    }
+    @include media("<=phone"){
+        margin-top: 66px;
+    }
+    // img {
+    //     width: 100%;
+    //     height: auto !important;
+    // }
+}
+
+.container {
+    width: 100%;
+    // padding: 0 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.menu__middle {
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    h4 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 650;
+        color: $text-color;
+        margin: 0;
+        @include media("<tablet") {
+            font-size: 18px;
+        }
+    }
+   
+    @include media("<phone") {
+        display: none;
+    }
+}
+
+.menu__lower {
+    text-align: center;
+    color: $text-color;
+    position: absolute;
+    bottom: 35px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    p {
+        font-size: 12px;
+        margin: 0;
+        @include media("<tablet") {
+            font-size: 10px;
+        }
+    }
+    h4 {
+        margin: 0;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 25px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            // top: 100%;
+            background-color: #fff;
+            bottom: -40px;
+        }
+        @include media("<tablet") {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,5 +1,7 @@
 @import "../styles/variables";
 @import "../styles/mixin";
+@import "../styles/breakpoints.scss";
+
 
 .main__signup {
     background: url("../assets/singup/bg-1.png");
@@ -18,6 +20,9 @@
         font-weight: 700;
         font-family: $main-font;
         color: $main-title-color;
+        @include media("<=phone"){
+            font-size: 22px;
+        }
     }
 }
 
@@ -28,8 +33,15 @@
         font-weight: 550;
         font-family: $main-font;
         color: $main-title-color;
+        @include media("<=phone"){
+            font-size: 12px;
+            
+        }
         &:first-child {
             margin-bottom: 50px;
+            @include media("<=phone"){
+                margin-bottom: 30px;
+            }
         }
     }
 }
@@ -37,6 +49,16 @@
 .signup__list {
     margin: 60px auto;
     text-align: center;
+    @include media("<=phone") {
+        margin: 28px auto;
+    }
+    li:first-child {
+        margin-right: 50px;
+        @include media("<=phone") {
+            margin-right: 5px;
+            margin-bottom: 50px;
+        }
+    }
     .signup {
         @include signinup($zshop-color, #fff);
     }

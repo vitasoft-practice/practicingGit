@@ -10,8 +10,11 @@ const Card = ({ Img, title, des }: any) => {
             <div className={styles.sec__card}>
                 <div className={styles.sec1__icon}>
 
+                    {
+                        Img
+                    }
                     {/* <Image src={Img} alt={title} width={50} height={50} /> */}
-                    <Image src={img} alt={title} width={50} height={50} />
+                    {/* <Image src={img} alt={title} width={50} height={50} /> */}
 
                 </div>
                 <div className={styles.content}>

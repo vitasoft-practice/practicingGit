@@ -3,12 +3,15 @@ import Image from 'next/image'
 import img from '../../assets/section4/002-hook.png'
 import styles from '../../styles/section4.module.scss'
 
-const Sec4Card = ({ content }: any) => {
+const Sec4Card = ({ Img,content }: any) => {
     return (
         <>
             <div className={styles.card}>
                 <div className={styles.card__icon}>
-                    <Image src={img} alt="icons" width={50} height={50} />
+                    {/* <Image src={img} alt="icons" width={50} height={50} /> */}
+                    {
+                        Img
+                    }
                 </div>
 
                 <div className={styles.card__content}>

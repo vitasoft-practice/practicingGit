@@ -12,17 +12,20 @@ const Footer = () => {
             <footer className={styles.main__footer}>
                 <div className={styles.container}>
                     <div className={styles.footer}>
-                        <div className="about">
+                        <div className={`${styles.vertical__line} ${styles.about}`}>
                             <div className={styles.flogo}>
                                 <Image src={logo} alt='Z Suite' height={54} width={169} />
-                                {/* <Image src={flogo} alt='Z Suite' height={54} width={169} /> */}
+                                <div className={styles.flogo__abs}>
+                                    <Image src={flogo} alt='Z Suite' height={50} width={120} />
+                                </div>
                             </div>
+
                             <div className={styles.singup__btn}>
                                 <Link href='/signup'>Sign Up</Link>
                             </div>
 
                         </div>
-                        <div className="address">
+                        <div className={`${styles.vertical__line} ${styles.address}`}>
                             <div className={styles.title}>
                                 <h4>Address</h4>
                             </div>
@@ -32,7 +35,7 @@ const Footer = () => {
                                     94070 USA</p>
                             </div>
                         </div>
-                        <div className="hours">
+                        <div className={`${styles.vertical__line} ${styles.hours}`}>
                             <div className={styles.title}>
                                 <h4>Hours Of Operations</h4>
                             </div>
@@ -43,7 +46,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="info">
+                        <div className={`${styles.vertical__line} ${styles.info}`}>
                             <div className={styles.title}>
                                 <h4>Information</h4>
                             </div>

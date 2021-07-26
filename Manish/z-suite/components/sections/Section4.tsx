@@ -20,7 +20,7 @@ const Section4 = () => {
                             {
                                 lists.map(list => (
                             
-                                        <Sec4Card key={list.id} content={list.des} />
+                                        <Sec4Card key={list.id} Img={list.Img} content={list.des} />
                                  
                                 ))
                             }

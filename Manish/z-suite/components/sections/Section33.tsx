@@ -9,12 +9,12 @@ const Section33 = () => {
         <>
             <div className={styles.zgroup}>
                 <div className={styles.left__section}>
-                    <Image src={zpro} alt='z-shop-image' width={500} height={345} />
+                    <Image src={zpro} alt='z-shop-image' width={500} height={345} ḷayout="responsive" />
                 </div>
                 <div className={styles.right__section}>
                     <div className={styles.title}>
                         <div className={styles.z__icons}>
-                            <Image src={zproicon} alt='z-shop=icon' width={60} height={60} />
+                            <Image src={zproicon} alt='z-shop=icon' width={50} height={50} ḷayout="responsive"  />
                         </div>
                         <h2>Z Pro</h2>
                     </div>

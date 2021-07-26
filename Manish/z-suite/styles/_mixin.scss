@@ -1,25 +1,95 @@
+$xss: 5px;
+$xs: 10px;
+$s: 20px;
+$md: 50px;
+$lg: 75px;
+$xl: 100px;
+$xll: 150px;
 
-@mixin space() {
-
+@mixin font($weight,$size) {
+    font-family: $main-font;
+    font-weight: $weight;
+    color: $font-color;
+    font-size: $size;
 }
 
-@mixin container{
-    min-height: 100vh;
+@mixin space($type: padding, $dir: all, $size: $xss) {
+    @if $type==padding {
+        @if $dir==all {
+            padding: $size;
+        } @else if $dir==top {
+            padding-top: $size;
+        } @else if $dir==right {
+            padding-right: $size;
+        } @else if $dir==bottom {
+            padding-bottom: $size;
+        } @else if $dir==left {
+            padding-left: $size;
+        } @else if $dir == x {
+            padding-left: $size;
+            padding-right: $size;
+        } @else if $dir == y {
+            padding-top: $size;
+            padding-bottom: $size;
+        } @else {
+            @warn "direction must be all,top,right,bottom,left,x or y";
+        }
+    } @else if $type == margin {
+        @if $dir==all {
+            margin: $size;
+        } @else if $dir==top {
+            margin-top: $size;
+        } @else if $dir==right {
+            margin-right: $size;
+        } @else if $dir==bottom {
+            margin-bottom: $size;
+        } @else if $dir==left {
+            margin-left: $size;
+        } @else if $dir == x {
+            margin-left: $size;
+            margin-right: $size;
+        } @else if $dir == y {
+            margin-top: $size;
+            margin-bottom: $size;
+        } @else {
+            @warn "2nd second arguments  must be all,top,right,bottom,left ,x or y";
+        }
+    } @else {
+        @warn '1st arguments  must be only padding or margin';
+    }
+}
+
+@mixin container {
+    // min-height: 100vh;
     padding: 0 0.5rem;
     margin-left: auto;
     margin-right: auto;
 }
 
-@mixin zgroup($color){
+@mixin zgroup($color) {
     display: grid;
     justify-content: center;
+    ul {
+        padding-left: 48px;
+    }
     li {
         margin: 30px auto;
         position: relative;
-        left: 45px;
+        left: 0;
         font-size: 22px;
         font-family: helvetica;
-        color:$main-title-color;
+        color: $main-title-color;
+        @include media("<=desktop") {
+            font-size: 20px;
+            margin: 20px auto;
+        }
+        @include media("<=tablet") {
+            font-size: 18px;
+        }
+
+        @include media("<=phone") {
+            font-size: 16px;
+        }
         &::before {
             position: absolute;
             content: "";
@@ -28,33 +98,41 @@
             background: $color;
             border-top-left-radius: 100%;
             border-bottom-right-radius: 100%;
-            left: -54px;
+            left: -10%;
             top: 0;
+            @include media("<=tablet") {
+                width: 28px;
+                height: 22px;
+                left: -10%;
+            }
+            @include media("<=phone") {
+                left: -10%;
+            }
         }
     }
 }
 
-@mixin tab__group{
+@mixin tab__group {
     ul {
         li {
-           display: inline-block;
-           margin-right: 2px;
-           padding: 30px 40px;
-           font-size: 22px;
-           font-family: $main-font;
-           color:#fff;
-           background-color: rgb(97 132 109);
-           img {
-              margin-left: 20px;
-           }
+            display: inline-block;
+            margin-right: 2px;
+            padding: 30px 40px;
+            font-size: 22px;
+            font-family: $main-font;
+            color: #fff;
+            background-color: rgb(97 132 109);
+            img {
+                margin-left: 20px;
+            }
         }
-     }
+    }
 }
 
-@mixin signinup($bgcolor,$color){
+@mixin signinup($bgcolor, $color) {
     display: inline-block;
-    margin-right: 20px;
-   
+    // margin-right: 50px;
+
     a {
         background-color: $bgcolor;
         color: $color;
@@ -65,6 +143,10 @@
         border: 2px solid $color;
         transition: all 0.3s ease-in-out;
         border-radius: 5px;
+        @include media("<=phone") {
+            padding: 8px 16px;
+            font-size: 12px;
+        }
         &:hover {
             border: 2px solid $bgcolor;
             background-color: $color;

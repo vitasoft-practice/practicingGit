@@ -21,23 +21,26 @@ const Section2 = () => {
                             <li
                                 onClick={() => clicked('rev')}
                                 className={click === 'rev' ? styles.active : ''}>
-                                <Image src={revenue} alt="revenue-img" height={25} width={18} />
+                                {/* <Image src={revenue} alt="revenue-img" height={25} width={18} /> */}
+                                <i className="fas fa-hand-holding-usd"></i>
                                 Revenue
                             </li>
                             <li className={click === 'res' ? styles.active : ''}
                                 onClick={() => clicked('res')}>
-                                <Image src={result} alt="result-img" height={25} width={18} />
+                                {/* <Image src={result} alt="result-img" height={25} width={18} /> */}
+                                <i className="far fa-file-alt"></i>
                                 Results
                             </li>
                             <li className={click === 'ret' ? styles.active : ''}
                                 onClick={() => clicked('ret')}>
-                                <Image src={retention} alt="retention-img" height={25} width={18} />
+                                {/* <Image src={retention} alt="retention-img" height={25} width={18} /> */}
+                                <i className="fas fa-history"></i>
                                 Retension
                             </li>
                             <li className={click === 'ref' ? styles.active : ''}
                                 onClick={() => clicked('ref')}>
-                                <Image src={referrals} alt="referrals-img" height={25} width={18} />
-
+                                {/* <Image src={referrals} alt="referrals-img" height={25} width={18} /> */}
+                                <i className="fas fa-user-plus"></i>
                                 Referrals
                             </li>
                         </ul>
