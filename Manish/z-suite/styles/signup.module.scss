@@ -1,0 +1,86 @@
+@import "../styles/variables";
+@import "../styles/breakpoints.scss";
+@import "../styles/mixin";
+
+.main__signup {
+    @include space(margin, top, -50px);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    @include space(margin, x, 50px);
+    @include media("<desktop"){
+        grid-template-columns:2fr 1fr;
+    }
+    @include media("<tablet"){
+        grid-template-columns:1fr;
+    }
+}
+
+.left__section {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 15px 0 #c9cacd;
+    @include space(padding, all, 50px);
+}
+
+.form__title {
+    border-bottom: 1px solid #bcccdc;
+    h4 {
+        @include font(700, 28px);
+    }
+    i {
+        @include space(margin, right, $s);
+        font-size: 22px;
+        color: $zshop-color;
+    }
+}
+.form__des {
+    @include font(500, 17px);
+    @include space(padding, x, 36px);
+}
+
+.form {
+    @include space(padding, x, 36px);
+}
+
+.right__section {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 15px 0 #c9cacd;
+    @include space(padding, all, 30px);
+}
+.socials__links {
+    .socials__link {
+        @include space(margin, y, $xs);
+        i {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background: #61846d;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 22px;
+        }
+        a {
+            @include font(500, 16px);
+            color: #3498db;
+            @include space(margin, left, $s);
+            text-decoration: underline;
+        }
+    }
+}
+
+.form__signin {
+    .title {
+        @include font(700, 20px);
+    }
+    .des {
+        @include font(500, 16px);
+        a {
+            @include space(margin, x, $xss);
+            color: #84bc3b;
+            text-decoration: underline;
+        }
+    }
+}
