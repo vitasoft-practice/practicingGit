@@ -5,6 +5,7 @@ import  About  from './about'
 import  FirstPost  from './posts/first-post'
 import { getSortedPostsData } from '../lib/posts'
 import { GetStaticProps } from 'next'
+import CreateForm from '../component/createForm'
 
 
 //  interface allPostsData{
@@ -48,6 +49,10 @@ export default function Home({
       </ul>
     </section>
 
+<section>
+          <CreateForm/>
+
+  </section>
     </div>
   )
 }
