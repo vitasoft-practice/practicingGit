@@ -20,6 +20,8 @@
 //   export default CreateForm;
 
 import * as React from 'react';
+import Button from '@material-ui/core/Button';
+
  import {
    Formik,
    FormikHelpers,
@@ -49,9 +51,11 @@ import * as React from 'react';
          <Form>
            <label htmlFor="firstName">First Name</label>
            <Field id="firstName" name="firstName" placeholder="First Name" />
-           <button type="submit">Submit</button>
+           <Button variant = "contained" color="primary" type="submit">Submit</Button>
          </Form>
+         {}
        </Formik>
+       
      </div>
    );
  };

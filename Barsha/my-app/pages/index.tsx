@@ -6,7 +6,7 @@ import  FirstPost  from './posts/first-post'
 import { getSortedPostsData } from '../lib/posts'
 import { GetStaticProps } from 'next'
 import CreateForm from '../component/createForm'
-
+import { Container } from '@material-ui/core'
 
 //  interface allPostsData{
 //    date:string,
@@ -24,7 +24,7 @@ export default function Home({
   }]
 }) {
   return (
-    <div>
+    <Container fixed>
       Learn Next.js using Typescript!
       {/* <Link href="/posts/first-post">
         <h2>first post</h2>
@@ -49,11 +49,11 @@ export default function Home({
       </ul>
     </section>
 
-<section>
+<Container maxWidth="sm">
           <CreateForm/>
 
-  </section>
-    </div>
+  </Container>
+    </Container>
   )
 }
 
