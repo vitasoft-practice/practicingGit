@@ -6,7 +6,9 @@ import  FirstPost  from './posts/first-post'
 import { getSortedPostsData } from '../lib/posts'
 import { GetStaticProps } from 'next'
 import CreateForm from '../component/createForm'
-import { Container } from '@material-ui/core'
+import { Button, Container } from '@material-ui/core'
+import ReduxForm from './ReduxForm'
+import { increment_counter } from '../redux/actions/counterAction'
 
 //  interface allPostsData{
 //    date:string,
@@ -14,6 +16,10 @@ import { Container } from '@material-ui/core'
 //    id:string
 //  }[]
 
+export interface IUser {
+  firstName: string;
+  lastName: string;
+}
 export default function Home({
   allPostsData
 }: {
@@ -23,6 +29,8 @@ export default function Home({
     id: string
   }]
 }) {
+  const greetTheUser = (user: IUser) => alert(`Hi, ${user.firstName} ${user.lastName}!`);
+  const submit = (values:any)=>{console.log(values)}
   return (
     <Container fixed>
       Learn Next.js using Typescript!
@@ -44,6 +52,8 @@ export default function Home({
               <small>
                 <h3>{date}</h3>
               </small>
+              <Button onClick={increment_counter}>Like </Button>
+              
           </li>
         ))}
       </ul>
@@ -53,6 +63,9 @@ export default function Home({
           <CreateForm/>
 
   </Container>
+
+  <h2>Redux Form + Typescript example</h2>
+         <ReduxForm onSubmit={submit}/>
     </Container>
   )
 }
