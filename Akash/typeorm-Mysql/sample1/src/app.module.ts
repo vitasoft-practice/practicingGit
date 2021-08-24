@@ -11,7 +11,7 @@ import { UserDetailsModule } from './user-details/user-details.module';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: '',
-      port: 3001 ,
+      //port:  ,
       username: '',
       password: '',
       database: '',

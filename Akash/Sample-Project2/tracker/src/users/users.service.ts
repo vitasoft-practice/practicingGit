@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -7,11 +7,14 @@ import { User, UserDocument } from './entities/user.entity';
 
 @Injectable()
 export class UsersService {
+  
+  constructor(
+    @InjectModel('Registry') private userModel: Model<UserDocument>,
+  ) {}
+  private logger = new Logger()
 
-  constructor(@InjectModel('Registry') private userModel: Model<UserDocument>){}
-
-
-  async create(createUserDto: CreateUserDto): Promise<User>  {
+  async create(createUserDto: CreateUserDto): Promise<User> {
+    this.logger.log('hello im here')
     return new this.userModel(createUserDto).save();
   }
 
@@ -20,19 +23,19 @@ export class UsersService {
   }
 
   async findOne(id: string): Promise<User> {
-    return this.userModel.findOne({id})
+    return this.userModel.findById(id);
   }
 
-  async findUser(username: string):Promise<User | undefined>{
-    return this.userModel.findOne({username} )
+  async findUser(username: string): Promise<User | undefined> {
+    return this.userModel.findOne({ username });
   }
 
   update(id: string, updateUserDto: UpdateUserDto) {
-    return this.userModel.updateOne({id},updateUserDto);
+    return this.userModel.updateOne({ id }, updateUserDto);
   }
 
   remove(id: string) {
-    const data = this.userModel.deleteOne({id})
-    return `This action removes a #${id} user`;
-  } 
+    const data = this.userModel.deleteOne({ id });
+    return `User is deleted`;
+  }
 }

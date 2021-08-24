@@ -25,8 +25,8 @@ export class BooksController {
   }
 
   @Get(':id')
-  async findOne() {
-    const data = await this.booksService.findOne();
+  async findOne(@Param() id: string) {
+    const data = await this.booksService.findOne(id);
     if (!data){
       throw new NotFoundException()
     }
