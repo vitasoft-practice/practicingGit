@@ -14,7 +14,7 @@ export class BooksService {
     return await this.BooksModel.create(book);
   }
 
-  async findAll(query): Promise<Book[]> { 
+  async findAll(query?): Promise<Book[]> { 
     return await this.BooksModel.find().populate('author').sort(String(query.sort)).limit(parseInt(query.limit));  
   }
 

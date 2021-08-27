@@ -7,4 +7,7 @@ export class CreateAuthorDto {
     @ApiProperty({type: String})
     lastName : string;
 
+
+    password : string;
+
 }
