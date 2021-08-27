@@ -7,9 +7,7 @@ import { IPost } from "../types";
 
 const API_URL: string = "https://jsonplaceholder.typicode.com/posts";
 
-const logout: NextPage = ({
-  posts,
-}: IProps[]) => {
+const logout = ({ posts }: IPost[]) => {
   const [postList, setPostList] = React.useState(posts);
 
   const addPost = async (e: React.FormEvent, formData: IPost) => {
@@ -19,7 +17,7 @@ const logout: NextPage = ({
       title: formData.title,
       body: formData.body,
     };
-    setPostList([post]);
+    setPostList([post, ...postList]);
   };
 
   const deletePost = async (id: number) => {
@@ -30,35 +28,39 @@ const logout: NextPage = ({
 
   //   if (!postList) return <h1>Loading...</h1>;
 
-//   if (!postList)
-//     return (
-//       <main className="container">
-//         <h1>My posts</h1>
-//         <AddPost savePost={addPost} />
-//       </main>
-//     );
-  
+  if (!postList)
     return (
       <main className="container">
         <h1>My posts</h1>
         <AddPost savePost={addPost} />
+      </main>
+    );
 
+  return (
+    <main className="container">
+      <h1>My posts</h1>
+      <div className="login">
+        <AddPost savePost={addPost} />
+      </div>
+
+      <div className="login">
         {postList.map((post: IPost) => (
           <Post key={post.id} deletePost={deletePost} post={post} />
         ))}
-      </main>
-    );
+      </div>
+    </main>
+  );
 };
 
-// export async function getStaticProps() {
-//   const res = await fetch(API_URL);
-//   const posts: IPost[] = await res.json();
+export async function getStaticProps() {
+  const res = await fetch(API_URL);
+  const posts: IPost[] = await res.json();
 
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// }
+  return {
+    props: {
+      posts,
+    },
+  };
+}
 
 export default logout;
