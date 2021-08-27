@@ -9,13 +9,20 @@ import CreateForm from '../component/createForm'
 import { Button, Container } from '@material-ui/core'
 import ReduxForm from './ReduxForm'
 import { increment_counter } from '../redux/actions/counterAction'
+import * as Sentry from '@sentry/nextjs';
 
-//  interface allPostsData{
-//    date:string,
-//    title:string,
-//    id:string
-//  }[]
 
+
+
+Sentry.init({
+  dsn: 'https://1b905adebba0453bbd190d2e4787110d@o976280.ingest.sentry.io/5932865',
+  // Adjust this value in production, or use tracesSampler for greater control
+  tracesSampleRate: 1.0,
+  // ...
+  // Note: if you want to override the automatic release value, do not set a
+  // `release` value here - use the environment variable `SENTRY_RELEASE`, so
+  // that it will also get attached to your source maps
+});
 export interface IUser {
   firstName: string;
   lastName: string;
@@ -52,7 +59,9 @@ export default function Home({
               <small>
                 <h3>{date}</h3>
               </small>
-              <Button onClick={increment_counter}>Like </Button>
+              <Button onClick={() => {
+    throw new Error("Sentry Frontend Error");
+  }}>Like </Button>
               
           </li>
         ))}

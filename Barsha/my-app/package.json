@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.12.2",
+    "@sentry/nextjs": "^6.11.0",
     "@types/redux-form": "^8.3.2",
     "formik": "^2.2.9",
     "gray-matter": "^4.0.3",
