@@ -1,0 +1,29 @@
+.button {
+  border-radius: 5px;
+  height: 56px;
+  text-align: center;
+
+  &[data-variation="primary"] {
+    color: white;
+    background-color: purple;
+    border: 1px solid black;
+
+    &:hover {
+      border: 1px solid purple;
+      background-color: white;
+      color: purple;
+    }
+  }
+
+  &[data-variation="secondary"] {
+    color: black;
+    background-color: red;
+    border: 1px solid white;
+
+    &:hover {
+      border: 1px solid purple;
+      background-color: white;
+      color: purple;
+    }
+  }
+}
