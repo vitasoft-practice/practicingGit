@@ -11,10 +11,10 @@ const ThumbnailPdf : React.FC =() => {
     <div className="rpv-core__viewer"  style={{ height:"100%", overflow:"hidden"}}>
      
       <div >
-        <Thumbnails  />
+        <Thumbnails />
       </div>
      
-      <div style={{display:"hidden"}}>
+      <div style={{flex:1 }}>
         <Viewer fileUrl="/readviolinmusic.pdf" plugins={[thumbnailPluginInstance]} />
       </div>
     </div>

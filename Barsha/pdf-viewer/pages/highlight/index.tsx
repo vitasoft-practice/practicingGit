@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 import React, { Fragment } from 'react';
-import RenderHighlightsExample from '../../components/highlight';
+import RenderHighlightContentExample from '../../components/highlight';
 
 const PdfViewer: NextPage = () => {
   return (
     <Fragment>
-      <RenderHighlightsExample fileUrl='/pdfwithattachment.pdf' />
+      <RenderHighlightContentExample fileUrl='/pdfwithattachment.pdf' />
     </Fragment>
   );
 };
