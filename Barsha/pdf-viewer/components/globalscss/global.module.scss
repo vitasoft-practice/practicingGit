@@ -1,0 +1,16 @@
+.outercontainer{
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: 20%;
+  overflow: auto;
+  .right{
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    overflow:auto;
+    width:30%;
+  }
+  .left{
+    width:50%;
+    overflow: auto;
+    
+  }
+}
