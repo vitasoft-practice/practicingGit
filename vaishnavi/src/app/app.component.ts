@@ -9,6 +9,7 @@ import { map, first, filter, take } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
   title = 'practice';
+  well_pro_image:string="assets/images/proz-marketing.svg";
 
   constructor(){
     // const test$ = new Observable(Subscriber => {

@@ -1,3 +1,5 @@
+import { MarketingSupportComponent } from './marketing-support/marketing-support.component';
+import { MarketingReturnComponent } from './marketing-return/marketing-return.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminGuardGuard } from './admin-guard.guard';
@@ -12,6 +14,8 @@ import { TestCompComponent } from './test-comp/test-comp.component';
 
 
 const routes: Routes = [
+  { path:'marketing-return', component: MarketingReturnComponent},
+  { path:'marketing-support', component:MarketingSupportComponent},
   {path:"",redirectTo:'home',pathMatch:'full'},
   { path:'admin', component: AdminHomeComponent, canActivate:[AdminGuardGuard]},
   { path:'home', component: HomeComponent},
@@ -26,8 +30,8 @@ const routes: Routes = [
   { path:'route/:id', component: RouteComponent},
   // { path:'route', component: RouteComponent},
   { path: 'watch', loadChildren: () => import('./testwatch/testwatch.module').then(m => m.TestwatchModule) },
-  { path:'**', component: PagenotfoundComponent}
- 
+  { path:'**', component: PagenotfoundComponent},
+  
 ];
 
 @NgModule({

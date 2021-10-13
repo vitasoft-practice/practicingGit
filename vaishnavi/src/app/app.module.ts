@@ -18,6 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { SigninComponent } from './signin/signin.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { MarketingReturnComponent } from './marketing-return/marketing-return.component';
+import { MarketingSupportComponent } from './marketing-support/marketing-support.component';
 // import { NewcompComponent } from './newcomp/newcomp.component' ;
 // import { FormsModule } from '@angular/forms';
 
@@ -35,6 +37,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     AdminHomeComponent,
     SigninComponent,
     CheckoutComponent,
+    MarketingReturnComponent,
+    MarketingSupportComponent,
     // NewcompComponent
   ],
   imports: [
