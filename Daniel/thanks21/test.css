@@ -1,0 +1,21 @@
+.thanks21_test {
+    font-size: 1.4rem;
+    font-family: Roboto;
+}
+
+.thanks21_test_bold {
+    font-weight: 600;
+}
+
+.thanks21_test_thin {
+    font-weight: 300;
+}
+
+.thanks21_test_red {
+    color: red;
+}
+
+.thanks21_test_grey {
+    color: lightgray;
+    font-weight: 300;
+}
