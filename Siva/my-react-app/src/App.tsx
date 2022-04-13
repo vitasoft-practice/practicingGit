@@ -2,9 +2,11 @@ import React from 'react';
 import Invoice from './invoice';
 import './reactstyle.scss'
 import GlobalStyle from './styles/Globalstyles';
-import Fetchdata from './fetchdata';
 
-function App(props: any) {
+import Datashare from './context/context';
+function App(this:any, props: any ) {
+  
+
   const data={
     cust_name: "sivakumar",
     new: [{
@@ -19,17 +21,30 @@ function App(props: any) {
     }
     ]
 }
+console.log(this.context.person)
+  
   return (
-    <div>
+    <Datashare.Consumer>
+      {
+        () => {
+          return(
+            <div>
     
     <GlobalStyle/>
      Hello Hi
     <Invoice details={data}/>
     {/* <GlobalStyle/> */}
     <button>click me</button>
-    <Fetchdata/>
+    <h1>this.context.person</h1>
+    
+    
     </div>
+          )
+        }
+      }
+    
+    </Datashare.Consumer>
   );
 }
-
+App.contextType = Datashare;
 export default App;

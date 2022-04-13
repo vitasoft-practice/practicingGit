@@ -1,4 +1,5 @@
 import * as React from "react";
+import Fetchdata from './fetchdata';
 
 interface InvoiceListProps {
     details: { 
@@ -14,6 +15,7 @@ const Invoice = (props : InvoiceListProps) => {
         <div>
             <h1> Hello Invoice </h1>
             <h2>{props.details.cust_name} </h2>
+            <Fetchdata/>
         </div>
     )
 };

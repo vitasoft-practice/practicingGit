@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './App';
+import Datashare from './context/context';
 
 
 class Fetchdata extends React.Component {
@@ -7,7 +7,7 @@ class Fetchdata extends React.Component {
         loading : true, 
         person : null 
     };
-
+    
     async componentDidMount() {
         const url="https://api.randomuser.me/";
         const response = await fetch(url);
@@ -22,20 +22,40 @@ class Fetchdata extends React.Component {
         
     }
     render() { 
+        
         return ( 
+            <Datashare.Provider value={this.state}>
+                return(
+                        <div>
+                            {this.state.loading || !this.state.person ? 
+                            ( <div>...loading</div> ) :
+                            ( <div>
+                                <div>...this.state.person.name</div>
+                                {/* <div>this.state.person.n</div> */}
+                            </div> ) }
+                        </div>
+                        ) 
+            </Datashare.Provider>
            
-            <div>
-                
-                {this.state.loading || !this.state.person ? 
-                ( <div>...loading</div> ) :
-                ( <div>
-                    <div>this.state.person.name</div>
-                    {/* <div>this.state.person.n</div> */}
-                    </div> ) }
-                <App data1={this.state}/>
-            </div>
+                // <Datashare.Consumer>{
+                //     ()=>{
+                //         return(
+                //             <div>
+                //             {this.state.loading || !this.state.person ? 
+                //                 ( <div>...loading</div> ) :
+                //                 ( <div>
+                //                     <div>...this.state.person.name</div>
+                //                     {/* <div>this.state.person.n</div> */}
+                //                     </div> ) }
+                //             </div>
+                //         )
+                //     }
+                //     }
+               
+                // </Datashare.Consumer>
+            
          );
     }
 }
- 
+// Fetchdata.contextType = Datashare;
 export default Fetchdata;
