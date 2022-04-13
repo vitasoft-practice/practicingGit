@@ -1,0 +1,9 @@
+$colorh1: red;
+$mycolor: blue;
+h1{
+    color: $colorh1;
+}
+h2{
+    $mycolor: green;
+    color: $mycolor;
+}
