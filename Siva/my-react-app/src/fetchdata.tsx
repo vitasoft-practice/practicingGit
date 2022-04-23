@@ -1,61 +1,54 @@
-import React from 'react';
-import Datashare from './context/context';
+import React, { useEffect, useState } from 'react';
+import AppContext from './contexts/context';
+// import { useContext } from 'react';
 
-
-class Fetchdata extends React.Component {
-    state = { 
-        loading : true, 
-        person : null 
-    };
-    
-    async componentDidMount() {
-        const url="https://api.randomuser.me/";
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log(data);
-        
-        this.setState({
-            loading: false,
-            person : data.results[0]
-        });
-
-        
-    }
-    render() { 
-        
-        return ( 
-            <Datashare.Provider value={this.state}>
-                return(
-                        <div>
-                            {this.state.loading || !this.state.person ? 
-                            ( <div>...loading</div> ) :
-                            ( <div>
-                                <div>...this.state.person.name</div>
-                                {/* <div>this.state.person.n</div> */}
-                            </div> ) }
-                        </div>
-                        ) 
-            </Datashare.Provider>
-           
-                // <Datashare.Consumer>{
-                //     ()=>{
-                //         return(
-                //             <div>
-                //             {this.state.loading || !this.state.person ? 
-                //                 ( <div>...loading</div> ) :
-                //                 ( <div>
-                //                     <div>...this.state.person.name</div>
-                //                     {/* <div>this.state.person.n</div> */}
-                //                     </div> ) }
-                //             </div>
-                //         )
-                //     }
-                //     }
-               
-                // </Datashare.Consumer>
-            
-         );
-    }
+interface info{
+    seed: string,
+    results:number,
+    page:number,
+    version:string,
 }
-// Fetchdata.contextType = Datashare;
+
+interface employee {
+        results: any,
+        info : info
+
+    };
+   
+const Fetchdata=()=> {
+    const [newval, setnewval]= useState<employee>({results: {}, info: {seed:'',results:0,page: 0, version:''} })
+    useEffect(()=> {
+        const data=async ()=>{
+            const url="https://api.randomuser.me/";
+            const response = await fetch(url);
+            const data = await response.json();
+            setnewval(data)
+            console.log(data)
+        }
+        data()
+    }, [] )
+    
+    
+    // const value = useContext(AppContext);
+    return (
+    <div>
+<h1>{newval.info.seed}</h1>
+<AppContext.Consumer>
+    {/* {value} */}
+    {
+    ({authenticated,theme,lang}) => {
+      if(authenticated) {
+        return <h1>Logged in! {theme}</h1>
+
+      }
+      return <h1>You need to sign in</h1>
+    
+    }
+  }
+</AppContext.Consumer>
+        
+        
+    </div>
+    )
+}
 export default Fetchdata;

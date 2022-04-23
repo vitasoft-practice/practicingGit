@@ -1,5 +1,7 @@
 import * as React from "react";
 import Invoice from "./invoice";
+import Dashboard from "./dashboard";
+import EventList from "./event";
 
 const Index = () => {
     const data={
@@ -20,7 +22,9 @@ const Index = () => {
         <div>
             Hello Hi
             <Invoice details={data} />
-        </div>
+            <Dashboard/>
+            <EventList eventList={1}/>   
+         </div>
         
     )
 };
