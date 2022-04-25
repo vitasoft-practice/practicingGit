@@ -8,7 +8,7 @@ interface logindetails{
     name: String,
     email: String,
 }
-
+//using formik validation
 const useStyles = makeStyles({
     btn :{
         color: 'blue',

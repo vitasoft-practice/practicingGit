@@ -11,8 +11,8 @@ interface datainapp{
   cust_name: string;
   new: { id: Number; name: String; mail: String }[];
 }
-
-const AppContext = React.createContext({cust_name: "sivakumar",
+// added typescript
+const AppContext = React.createContext<datainapp>({cust_name: "sivakumar",
 new: [{
     id:1,
     name:"sk",

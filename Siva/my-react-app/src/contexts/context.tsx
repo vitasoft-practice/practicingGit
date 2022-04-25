@@ -5,6 +5,7 @@ import React  from "react";
 // // export const DatashareProvider = Datashare.Provider
 
 // export default Datashare;
+//added create context
 const AppContext = React.createContext({cust_name: "sivakumar",
 new: [{
     id:1,

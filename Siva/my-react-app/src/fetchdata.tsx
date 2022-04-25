@@ -20,6 +20,7 @@ const Fetchdata=()=> {
     useEffect(()=> {
         const data=async ()=>{
             const url="https://api.randomuser.me/";
+            //fetching data form API
             const response = await fetch(url);
             const data = await response.json();
             setnewval(data)
@@ -33,15 +34,16 @@ const Fetchdata=()=> {
     return (
     <div>
 <h1>{newval.info.seed}</h1>
+{/* consuming a context Provider */}
 <AppContext.Consumer>
     {/* {value} */}
     {
     ({cust_name}) => {
       if(cust_name='sivakumar') {
-        return <h1>Logged in! {cust_name}</h1>
+        return <h1>Logged in! {cust_name}</h1>// using fetched data
 
       }
-      return <h1>You need to sign in {}</h1>
+      return <h1>You need to sign in </h1>
     
     }
   }
