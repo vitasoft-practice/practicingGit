@@ -36,12 +36,12 @@ const Fetchdata=()=> {
 <AppContext.Consumer>
     {/* {value} */}
     {
-    ({authenticated,theme,lang}) => {
-      if(authenticated) {
-        return <h1>Logged in! {theme}</h1>
+    ({cust_name}) => {
+      if(cust_name='sivakumar') {
+        return <h1>Logged in! {cust_name}</h1>
 
       }
-      return <h1>You need to sign in</h1>
+      return <h1>You need to sign in {}</h1>
     
     }
   }

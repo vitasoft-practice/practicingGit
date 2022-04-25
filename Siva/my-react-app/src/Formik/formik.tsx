@@ -1,23 +1,39 @@
 import React from 'react';
 import {useFormik} from 'formik';
+import Button from '@mui/material/Button'
+import SaveIcon from '@mui/icons-material/Save'
+import {makeStyles} from '@mui/styles'
+
 interface logindetails{
     name: String,
-    email: String
+    email: String,
 }
 
+const useStyles = makeStyles({
+    btn :{
+        color: 'blue',
+        height: 48,
+        padding: '30px 30px',   
+    }
+})
+
 const Loginform: React.FC<logindetails>=()=>{
-    const formik = ()=>{ useFormik({
+
+    const classes=useStyles()
+
+    const formik =  useFormik({
         initialValues:{
             name:'',
             email:''
 
         },
-        onSubmit: Value => {
+        onSubmit: (Value) => {
             console.log(Value)
         },
-        validate: Value =>{
+        validate: (Value) =>{
 
-            let errors= {}
+            let errors= {name:'',
+            email:''}
             if(!Value.name){
                 errors.name= 'required'
             }
@@ -31,7 +47,7 @@ const Loginform: React.FC<logindetails>=()=>{
             return errors;
         }
     })
-}
+
     // console.log('formik values',formik.values)
     return(
         <div>
@@ -40,19 +56,24 @@ const Loginform: React.FC<logindetails>=()=>{
             Username
             </label>
             <input type='text' name='name' onChange={formik.handleChange} value={formik.values.name} />
+            <br/>
             {formik.errors.name ? (<div>{formik.errors.name}</div>) : null}
 
             <label htmlFor='email' >
             Email
             </label>
             <input type='text' name='email' onChange={formik.handleChange} value={formik.values.email} />
+            <br/>
             {formik.errors.email ? (<div>{formik.errors.email}</div>) : null}
 
-            <button type='submit'>
+            <Button className={classes.btn} variant='contained' color='secondary' type='submit' startIcon={<SaveIcon/>} onClick={()=>{alert('submitted')}}>
                 Submit
-            </button>
+            </Button>
         </form>
         </div>
     )
 }
+
 export default Loginform;
+
+

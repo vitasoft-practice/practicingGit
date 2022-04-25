@@ -5,9 +5,16 @@ import React  from "react";
 // // export const DatashareProvider = Datashare.Provider
 
 // export default Datashare;
-const AppContext = React.createContext({ 
-    authenticated: true,
-    lang: 'en',
-    theme: 'dark'
-  });
+const AppContext = React.createContext({cust_name: "sivakumar",
+new: [{
+    id:1,
+    name:"sk",
+    mail: "sivask"
+},
+{
+    id:2,
+    name:"skkv",
+    mail: "sivaskkv"
+}
+]});
   export default AppContext;
