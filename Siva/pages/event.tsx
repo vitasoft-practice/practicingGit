@@ -9,6 +9,8 @@ type eventprops={
 function EventList({ eventList }) {
   const [events, setEvents] = useState(eventList)
   const router = useRouter()
+  //data fetching
+
 
   const fetchSportsEvents = async () => {
     const response = await fetch('http://localhost:3002/events?category=sports')
@@ -36,7 +38,7 @@ function EventList({ eventList }) {
 }
 
 export default EventList
-
+//pre-rendering 
 export async function getServerSideProps(context) {
   const { query } = context
   const { category } = query

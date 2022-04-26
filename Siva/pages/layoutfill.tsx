@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import imge from '../public/123.jpeg'
 
+
+//image optimzation
 const Fill = () => (
   <div>
     

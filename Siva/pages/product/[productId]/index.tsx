@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router'
 
+
+//dynamic routing
 function ProductDetails(){
     const router = useRouter();
 
