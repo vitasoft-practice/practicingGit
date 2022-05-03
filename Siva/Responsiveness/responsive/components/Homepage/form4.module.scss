@@ -1,0 +1,96 @@
+.main{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.part1{
+width: 50%;
+height: 637px;
+background: #61846D;
+margin-top: 10px;
+color: white;
+position: relative;
+
+.first{
+margin-left: 230px;
+padding-top: 150px;
+font-weight: bolder;
+font-size: x-large;
+
+
+
+
+}
+.labtest{
+    float: right;
+}
+.line{
+    display: block;
+    border-bottom: 8px solid white;
+    width: 300px;
+    margin-left: 250px;
+}
+.second{
+    margin-left: 250px;
+    
+    font-size: larger;
+    
+}
+.third{
+margin:30px;
+margin-left: 200px;
+}
+.fourth{
+    margin:30px;
+}
+.fifth{
+    margin:30px;
+}
+.box{
+    width: 900px;
+    height: 500px;
+    
+    margin-top: 0px;
+    color: white;
+}
+.icon1{
+    display: block;
+    margin-left: 50px;
+    margin-top: -25px;
+}
+.p{
+    margin-top: -53px;
+    margin-left: 55px;
+}
+.ul{
+    list-style: none;
+    margin-top: 75px;
+    font-size: large;
+    font-weight:bold ;
+}
+.partt{
+    
+    width: 50%;
+   
+}
+.part123{
+    width: 50%;
+    margin-left: 500px;
+    
+}
+}
+.part2{
+    width: 50%;
+    // margin-left: 75px;
+    float: right;
+    
+    margin-left: 20px;
+    margin-top:-663px ;
+    
+}
+@media only screen and (max-width:1400px) {
+    .part1{
+        background: blue;
+    }
+    
+}

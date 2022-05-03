@@ -25,11 +25,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/event": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/event.js"
-    ],
     "/product": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
