@@ -1,5 +1,5 @@
 import Image from "next/image"
-import imge from '../../public/images/abcd.png'
+import imge from '../../public/images/123.jpeg'
 
 
 

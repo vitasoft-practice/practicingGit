@@ -1,96 +1,211 @@
+@import "../../styles/mixins";
+$flex-dir: column;
+
 .main{
     width: 100%;
     margin-top: 100px;
-}
-
-.part1{
-width: 50%;
-height: 637px;
-background: #61846D;
-margin-top: 10px;
-color: white;
-position: relative;
-
-.first{
-margin-left: 230px;
-padding-top: 150px;
-font-weight: bolder;
-font-size: x-large;
-
-
-
-
-}
-.labtest{
-    float: right;
-}
-.line{
-    display: block;
-    border-bottom: 8px solid white;
-    width: 300px;
-    margin-left: 250px;
-}
-.second{
-    margin-left: 250px;
+    display: flex;
     
-    font-size: larger;
-    
-}
-.third{
-margin:30px;
-margin-left: 200px;
-}
-.fourth{
-    margin:30px;
-}
-.fifth{
-    margin:30px;
-}
-.box{
-    width: 900px;
-    height: 500px;
-    
-    margin-top: 0px;
-    color: white;
-}
-.icon1{
-    display: block;
-    margin-left: 50px;
-    margin-top: -25px;
-}
-.p{
-    margin-top: -53px;
-    margin-left: 55px;
-}
-.ul{
-    list-style: none;
-    margin-top: 75px;
-    font-size: large;
-    font-weight:bold ;
-}
-.partt{
-    
-    width: 50%;
-   
-}
-.part123{
-    width: 50%;
-    margin-left: 500px;
-    
-}
-}
-.part2{
-    width: 50%;
-    // margin-left: 75px;
-    float: right;
-    
-    margin-left: 20px;
-    margin-top:-663px ;
-    
-}
-@media only screen and (max-width:1400px) {
     .part1{
-        background: blue;
+        flex-direction: $flex-dir;
+        width: 50%;
+        display: flex;
+        background-color: #61846D;
+        color: white;
+        justify-content: center; 
+        align-items: center;
+        .ul{
+            list-style: none;
+            width: 400px;
+            height: 200px;
+            font-size: x-large;
+        }
+        .ul li{
+            margin: 20px;
+        }
+        .month{
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 40px;
+        }
+        .first{
+           text-align: left;
+           margin-left: -180px;
+           
+           font-size: xx-large;
+           font-weight:800;
+        }
+        .line{
+            display: block;
+            border-bottom: 8px solid white;
+            width: 400px;
+            
+           
+        }
+        .second{
+            text-align: center;
+            margin-left: -350px;
+            
+        }
+        .third{
+            text-align: center;
+        }
+        .image{
+            margin-left: -30px;
+            position: absolute;
+        }
     }
+    .part2{
+        width: 50%;
+    }
+}
+
+@include form4(){
+    .main{
+        
+        flex-direction: $flex-dir;
+        .part1{
+            width: 100%;
+        }
+        .part2{
+            width: 100%;
+        }
     
 }
+}
+
+// @media only screen and (max-width:1400px) {
+    
+    
+// }
+
+// .part1{
+// width: 50%;
+// height: 637px;
+// background: #61846D;
+// margin-top: 10px;
+// color: white;
+// position: relative;
+
+// .first{
+// margin-left: 230px;
+// padding-top: 150px;
+// font-weight: bolder;
+// font-size: x-large;
+
+
+
+
+// }
+// .labtest{
+//     float: right;
+// }
+// .line{
+//     display: block;
+//     border-bottom: 8px solid white;
+//     width: 300px;
+//     margin-left: 250px;
+// }
+// .second{
+//     margin-left: 250px;
+    
+//     font-size: larger;
+    
+// }
+// .third{
+// margin:30px;
+// margin-left: 200px;
+// }
+// .fourth{
+//     margin:30px;
+// }
+// .fifth{
+//     margin:30px;
+// }
+// .box{
+//     width: 900px;
+//     height: 500px;
+    
+//     margin-top: 0px;
+//     color: white;
+// }
+// .icon1{
+//     display: block;
+//     margin-left: 50px;
+//     margin-top: -25px;
+// }
+// .p{
+//     margin-top: -53px;
+//     margin-left: 55px;
+// }
+// .ul{
+//     list-style: none;
+//     margin-top: 75px;
+//     font-size: large;
+//     font-weight:bold ;
+// }
+// .partt{
+    
+//     width: 50%;
+   
+// }
+// .part123{
+//     width: 50%;
+//     margin-left: 500px;
+    
+// }
+// }
+// .part2{
+//     width: 50%;
+//     // margin-left: 75px;
+//     float: right;
+    
+//     margin-left: 20px;
+//     margin-top:-663px ;
+    
+// }
+// @media only screen and (max-width:1400px) {
+//     .part1{
+//         height: 500px;
+        
+//         .second{
+//             margin-left: 50px;
+//         }
+//         .line{
+//             margin-left: 50px;
+//         }
+//         .ul{
+//             margin-left: -180px;
+//             font-size: small;
+        
+//         }
+//     }    
+    
+// }
+
+// // 
+//    .part1{
+//     @include part1{
+//         background: blue;
+//    }
+
+//    .first{
+//        @include first{
+//     margin-left: 50px;
+//     margin-top: -100px;
+//     font-size: small;
+// }
+// }
+
+// }
+// .part2{
+//     @include part2{
+//         width: 50%;
+//         // margin-left: 75px;
+//         float: right;
+//         margin-left: 20px;
+//         margin-top:-463px ;
+//    }
+    
+
+// }

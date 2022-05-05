@@ -10,31 +10,37 @@ import Image from 'next/image'
 const Form3=()=>{
     return (
         <div>
+{/* made three columns to two and then to one column */}
+
         <div className={classes.main}>
-            <div className={classes.container}>
-                <div>
-                <Image src={icon1} alt="Boost"
-              height="86px"
-              width="80.46px"/>
-                </div>
-                <p className={classes.p}>Boost Practice Revenue</p>
-            
-            </div>
-            <div className={classes.container1}>
-            <div>
-                <Image src={icon2} alt="Boost"
-              height="86px"
-              width="80.46px"/>
-                </div>
-            <p className={classes.p}>Easy to Build online shop</p>
-            </div>
-            <div className={classes.container2}>
-            <Image src={icon3} alt="Boost"
-              height="86px"
-              width="80.46px"/>
-            <p className={classes.p}>Virtual Dipensary</p>
-            </div><br/>
-            <div className={classes.container3}>
+          <div className={classes.row1}>
+          <div className={classes.container}>
+               
+               <Image src={icon1} alt="Boost"
+             height="86px"
+             width="80.46px"/>
+               
+               <p className={classes.p}>Boost Practice Revenue</p>
+           
+           </div>
+           <div className={classes.container1}>
+           
+               <Image src={icon2} alt="Boost"
+             height="86px"
+             width="80.46px"/>
+               
+           <p className={classes.p}>Easy to Build online shop</p>
+           </div>
+           <div className={classes.container2}>
+           <Image src={icon3} alt="Boost"
+             height="86px"
+             width="80.46px"/>
+           <p className={classes.p}>Virtual Dipensary</p>
+           </div>
+          </div>
+
+          <div className={classes.row2}>
+          <div className={classes.container3}>
             <Image src={icon4} alt="Boost"
               height="86px"
               width="80.46px"/>
@@ -52,6 +58,9 @@ const Form3=()=>{
               width="80.46px"/>
             <p className={classes.p}>Targeted Business Analysis</p>
             </div>
+          </div>
+           
+            
 
         </div>
         </div>

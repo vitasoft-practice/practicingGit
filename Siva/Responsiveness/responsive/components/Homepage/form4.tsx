@@ -14,11 +14,11 @@ const Form4=()=>{
         <div className={classes.part1}>
             
             <p className={classes.first}>Easy to get start</p>
-            <div className={classes.second}><h1>$0</h1><p className={classes.p}> /month</p></div>
+            <div className={classes.second}><h1>$0</h1> <p className={classes.month}>/month</p> </div>
             <div className={classes.line}></div>
-            <div>
+            <div className={classes.third}>
             <ul className={classes.ul}>
-            <li><div className={classes.third} >     
+            <li>   <div className={classes.image}>
             <Image
                 alt="Nature"
                 src={icon}
@@ -26,11 +26,15 @@ const Form4=()=>{
                 objectFit="none" 
                 width="17px"
                 height="13px"
+                
                 />
-                <div className={classes.icon1}>Free to set up an account and get started, no hidden fees</div></div></li>
+            </div>
+            
+                Free to set up an account and get started, no hidden fees</li>
                 
                 <li>
-                    <div className={classes.third} >     
+                        
+                <div className={classes.image}>
             <Image
                 alt="Nature"
                 src={icon}
@@ -38,9 +42,12 @@ const Form4=()=>{
                 objectFit="none" 
                 width="17px"
                 height="13px"
+                
                 />
-                <div className={classes.icon1}>All you need is a computer or Laptop</div></div></li>    
-                <li><div className={classes.third} >     
+            </div>
+                All you need is a computer or Laptop</li>    
+                <li>     
+                <div className={classes.image}>
             <Image
                 alt="Nature"
                 src={icon}
@@ -48,8 +55,10 @@ const Form4=()=>{
                 objectFit="none" 
                 width="17px"
                 height="13px"
+                
                 />
-                <div className={classes.icon1}>We provide expertise with marketing and patient clinical lab support</div></div></li>
+            </div>
+                We provide expertise with marketing and patient clinical lab support</li>
         </ul>
         </div>
             
@@ -61,10 +70,10 @@ const Form4=()=>{
         <Image
                 alt="Nature"
                 src={photo}
-                layout="intrinsic"
+                layout="responsive"
                 objectFit="contain" 
-                width={1200}
-                height={950}
+                width={847}
+                height={634}
                 />
         </div>
 

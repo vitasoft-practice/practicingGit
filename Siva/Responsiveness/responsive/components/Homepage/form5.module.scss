@@ -1,101 +1,357 @@
+@import "../../styles/mixins";
+$teal-color : teal;
+
 .main{
    width: 100%;
-
-.part11{
-
-width: 50%;
-display: inline-block;
-}
-.lab{
-    font-weight: bolder;
-    font-size: xx-large;
-    margin-bottom: 30px;
-    margin-left: -80px;
-}
-.part12{
-
-display: inline-block;
-width: 50%;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size: x-large;
-.icon{
-    margin-left: -50px;
-    position: absolute;
+   .part1{
+       display: flex;
    
+   .part11{
+       width: 50%;
+   }
+   .part12{
+       width: 50%;
+       text-align: center;
+       font-size: x-large;
+       
+       .ul{
+           list-style: none;
+       }
+       .lab{
+           margin-left: -70px;
+       }
+       
+       .icon{
+           
+           display: inline-flex;
+          
+       }
+       .easy{
+         display: inline-flex;  
+         margin: 20px;
+           
+       }
+       .button{
+           margin-left: -180px;
+           background-color: $teal-color;
+           &:hover {
+            background-color: white;
+            color: $teal-color;
+          }
+       }
+
+   }
 }
+.part2{
+    display: flex;
+    .part21{
+        width: 50%;
+        text-align: center;
+        justify-content: center;
+        font-size: x-large;
+        .icon2{
+            display: inline-flex;
+            margin-right: 20px;
+        }
+        .icon3{
+            display: inline-flex;
+            margin-right: 20px;
+        }
+        .ul2{
+            display: inline-flex;
+            margin: 20px;
+        }
+        .ul3{
+            display: inline-flex;
+            margin: 20px;
+        }
+        .supplement{
+            margin-left: -130px;
+        }
+        .button2{
+            margin-left: -280px;
+            background-color: $teal-color;
+           &:hover {
+            background-color: white;
+            color: $teal-color;
+          }
+        }
+
+    }
+    .part22{
+        width: 50%;
+    }
 }
 
-.p{
-    margin-top: 0px;
+.part3{
+    display: flex;
+    .part31{
+        width: 50%;
+    }
+    .part32{
+        width: 50%;
+        text-align: center;
+        font-size: x-large;
+        .zymebalanz{
+            margin-left: -100px;
+        }
+        .icon4{
+            display: inline-flex;
+            margin-right: 20px;
+        }
+        .icon5{
+            display: inline-flex;
+            margin-right: 20px;
+        }
+        .ul4{
+            display: inline-flex;
+            margin: 20px;
+        }
+        .ul5{
+            display: inline-flex;
+            margin: 20px;
+        }
+        .button3{
+            margin-left: -300px;
+            background-color: $teal-color;
+           &:hover {
+            background-color: white;
+            color: $teal-color;
+          }
+        }
+    }
 }
-.ul{
-    list-style-type: none;
-    
 }
-.button{
-    height: 35px;
-    width: 150px;
-    background-color: skyblue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: medium;
-    margin-left: -50px;
+@include form5(){
+    .main{
+        .part1{
+            flex-direction: column;
+            margin: 20px;
+            .part11{
+                width: 100%;
+            }
+            .part12{
+                width: 100%;
+            }
+        }
+        .part2{
+            margin: 20px;
+            flex-direction: column-reverse;
+            .part21{
+                width: 100%;
+            }
+            .part22{
+                width: 100%;
+            }
+        }
+        .part3{
+            margin: 20px;
+            flex-direction: column;
+            .part31{
+                width: 100%;
+            }
+            .part32{
+                width: 100%;
+            }
+        }
+    }
 }
-.button2{
-    margin-left: 420px;
-}
-
-// .part2{
-    
-//     width: 100%;
+// @media only screen and (max-width: 1400px) {
     
 // }
-.part21{
-    font-weight: bolder;
-    font-size: xxx-large;
-    margin-top: 300px;
-    margin-left: 410px;
-}
-.part22{
-margin-left: 200px;
-margin-top: -600px;
-}
-.icon3{
-    display: inline-block;
-    margin-right: 20px;
-}
-.icon4{
-    display: inline-block;
-    margin-right: 20px;
-}
-.image3{
-    padding-right: 1500px;
-}
-.zyme{
-    margin-left: 1100px;
-    margin-top: -400px;
-    position: relative;
-    font-size: xx-large;
-    font-weight: bolder;
-}
-.ul2{
-    list-style: none;
-    margin-left: 400px;
-    font-weight: bold;
-    margin: 50px;
-    margin-left: 440px;
-    font-size: x-large;
+// .part11{
 
-}
-.ul3{
-    list-style: none;
-    margin-left: 400px;
-    font-weight: bold;
-    margin: 50px;
-    margin-left: 100px;
-    font-size: x-large;
-}
-.button3{
-    margin-left: 100px;
-}}
-// .last{}
+// width: 50%;
+// // display: inline-block;
+// float: left;
 // }
+
+// .lab{
+//     font-weight: bolder;
+//     font-size: xx-large;
+//     margin-bottom: 30px;
+//     margin-left: 140px;
+// }
+// .part12{
+
+// float: left;
+// width: 50%;
+// font-family: Verdana, Geneva, Tahoma, sans-serif;
+// font-size: x-large;
+
+// .icon{
+//     margin-left: 150px;
+//     position: absolute;
+   
+// }
+// }
+
+// .p{
+//     margin-left: 200px;
+// }
+// .ul{
+//     list-style-type: none;
+//     margin-left: 200px;
+    
+// }
+// .button{
+//     height: 35px;
+//     width: 150px;
+//     background-color: skyblue;
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     font-size: medium;
+//     margin-left: 140px;
+// }
+// // .button2{
+// //     // margin-left: 420px;
+// // }
+
+// // .part2{
+    
+// //     width: 100%;
+    
+// // }
+// .part21{
+//     font-weight: bolder;
+//     font-size: xxx-large;
+//     width: 50%;
+//     margin-top: 300px;
+//     margin-left: 410px;
+//     position: relative;
+//     display: $display;
+// }
+// .part41{
+//     font-weight: bolder;
+//     font-size: xxx-large;
+//     width: 50%;
+//     margin-top: 100px;
+//     margin-left: 410px;
+//     position: relative;
+//     display: $display;
+// }
+// .part22{
+// // margin-left: 200px;
+// display: $display;
+// margin-top: -400px;
+// margin-left: 1100px;
+// width: 50%;
+// // margin-top: -600px;
+
+// }
+// // .supplement{
+// //     // display: inline-block;
+// // }
+// // .zymediv{
+    
+// // }
+// .icon3{
+//     display: $display;
+//     margin-right: 20px;
+// }
+// .icon4{
+//     display: $display;
+//     margin-right: 20px;
+// }
+// .image3{
+//     // padding-right: 1500px;
+//     // display: inline;
+   
+//     float: left;
+//     width: 50%;
+    
+// }
+
+// .span1{
+//     position: relative;
+//     margin-left:50px;
+// }
+// .zyme{
+    
+    
+//     width: 50%;
+    
+//    float: left;
+//     font-size: xx-large;
+//     font-weight: bolder;
+//     margin-top: 200px;
+// }
+// .ul2{
+//     list-style: none;
+//     margin-left: 400px;
+//     font-weight: bold;
+//     margin: 50px;
+//     // margin-left: 440px;
+//     font-size: x-large;
+
+// }
+// .ul3{
+//     list-style: none;
+    
+//     font-weight: bold;
+//     margin-left: 200px;
+//     margin-bottom: 50px;
+    
+    
+//     font-size: x-large;
+// }
+// .zymename{
+//     margin-left: 190px;
+//     margin-bottom: 50px;
+// }
+// .button3{
+//     margin-left: 200px;
+// }
+// .provider{
+//     display: $display;
+// } 
+// .image4{
+//     width: 50%;
+//     display: $display;
+//     margin-left: 800px;
+//     margin-top: -100px;
+// }
+// .last{
+// width: 50%;
+// padding-left: 300px;
+// display: $display;
+
+// }
+
+
+// }
+// @media only screen and (max-width: 1400px) {
+//     .main{
+//         .supplement{
+//             .part21{
+//                 font-weight: bold;
+//                 font-size: xx-large;
+//                 width: 50%;
+//                 margin-top: 50px;
+//                 margin-left: 110px;
+//                 position: relative;
+                
+//             }
+//             .part22{
+                
+//                 margin-top: -400px;
+//                 margin-left: 650px;
+//                 width: 50%;
+//                 display: $display;
+//             }
+//             .part41{
+//                 font-weight: bold;
+//     font-size: xx-large;
+//     width: 50%;
+//     margin-top: 50px;
+//     margin-left: 110px;
+//     position: relative;
+//         }
+
+           
+    
+            
+//         }
+//     }
+// }
+
+// // 

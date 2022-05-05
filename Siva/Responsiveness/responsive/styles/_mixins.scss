@@ -1,6 +1,37 @@
 @mixin  anime() {
-    @media (max-width: 600px) {
+    @media (max-width: 1000px) {
         @content;
         }
       }
+//form1
+@mixin form1(){
+  @media (max-width: 1400px){
+    @content;
+  }
+} 
+
+//form4
+@mixin form4(){
+  @media (max-width: 1400px){
+    @content;
+  }
+} 
+//form5
+@mixin form5(){
+  @media (max-width: 1400px){
+    @content;
+  }
+} 
+//form6
+@mixin form6(){
+  @media (max-width: 1400px){
+    @content;
+  }
+} 
+//footer
+@mixin footer(){
+  @media (max-width: 1400px){
+    @content;
+  }
+} 
     
