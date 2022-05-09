@@ -1,0 +1,95 @@
+
+$teal-color: teal;
+
+
+
+    
+    .labTesting{
+        display: flex;
+    
+    &_image{
+        width: 50%;
+    }
+    &_text{
+        width: 50%;
+        text-align: center;
+        font-size: x-large;
+        
+        &_ul{
+            list-style: none;
+        }
+        &_lab{
+            margin-left: -70px;
+        }
+        
+        &_icon{
+            
+            display: inline-flex;
+           
+        }
+        &_easy{
+          display: inline-flex;  
+          margin: 20px;
+            
+        }
+        &_button{
+            margin-left: -180px;
+            background-color: $teal-color;
+            &:hover {
+             background-color: white;
+             color: $teal-color;
+           }
+        }
+ 
+    }
+ }
+//  @include form5(){
+//     .labTesting{
+
+//         flex-direction: column;
+//         margin: 20px;
+//         &_image{
+//             width: 100%;
+//             align-items: center;
+//   justify-content: center;
+//   margin: auto;
+//         }
+//         &_text{
+//             width: 80%;
+//             align-items: center;
+//             margin: auto;
+//   justify-content: center;
+//         }
+//     }
+//  }
+ @include dynamicQuery(800px){
+     .labTesting{
+     background-color: aqua;
+     }
+ }
+//  @include respond(phone){
+//     .labTesting{
+
+//         flex-direction: column;
+//         margin: 20px;
+//         &_image{
+//             width: 100%;
+//             align-items: center;
+//   justify-content: center;
+//   margin: auto;
+//         }
+//         &_text{
+//             width: 80%;
+//             align-items: center;
+//             margin: auto;
+//             justify-content: center;
+//             text-align: center;
+//              font-size: large;
+//         &_lab{
+            
+//         }
+//         }
+//     }   
+//  }
+
+

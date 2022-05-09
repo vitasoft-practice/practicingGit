@@ -1,0 +1,56 @@
+@import "../../../styles/mixins";
+$teal-color: teal;
+
+.supplement{
+    display: flex;
+    &_text{
+        width: 50%;
+        text-align: center;
+        justify-content: center;
+        font-size: x-large;
+        &_icon2{
+            display: inline-flex;
+            margin-right: 20px;
+        }
+        &_icon3{
+            display: inline-flex;
+            margin-right: 20px;
+        }
+        &_ul2{
+            display: inline-flex;
+            margin: 20px;
+        }
+        &_ul3{
+            display: inline-flex;
+            margin: 20px;
+        }
+        &_supplement{
+            margin-left: -130px;
+        }
+        &_button2{
+            margin-left: -280px;
+            background-color: $teal-color;
+           &:hover {
+            background-color: white;
+            color: $teal-color;
+          }
+        }
+
+    }
+    &_image{
+        width: 50%;
+    }
+}
+
+@include form5{
+    .supplement{
+        margin: 20px;
+        flex-direction: column-reverse;
+        &_text{
+            width: 100%;
+        }
+        &_image{
+            width: 100%;
+        }
+    }
+}

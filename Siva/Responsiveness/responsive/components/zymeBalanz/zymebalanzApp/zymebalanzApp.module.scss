@@ -1,0 +1,54 @@
+@import "../../../styles/mixins";
+$teal-color: teal;
+
+.zymebalanzApp{
+    display: flex;
+    &_image{
+        width: 50%;
+    }
+    &_text{
+        width: 50%;
+        text-align: center;
+        font-size: x-large;
+        &_zymebalanz{
+            margin-left: -100px;
+        }
+        &_icon4{
+            display: inline-flex;
+            margin-right: 20px;
+        }
+        &_icon5{
+            display: inline-flex;
+            margin-right: 20px;
+        }
+        &_ul4{
+            display: inline-flex;
+            margin: 20px;
+        }
+        &_ul5{
+            display: inline-flex;
+            margin: 20px;
+        }
+        &_button3{
+            margin-left: -300px;
+            background-color: $teal-color;
+           &:hover {
+            background-color: white;
+            color: $teal-color;
+          }
+        }
+    }
+}
+
+@include form5{
+    .zymebalanzApp{
+        margin: 20px;
+        flex-direction: column;
+        &_image{
+            width: 100%;
+        }
+        &_text{
+            width: 100%;
+        }
+    }
+}

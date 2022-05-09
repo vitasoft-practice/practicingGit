@@ -1,0 +1,115 @@
+@import "../../../styles/mixins"; //added mixins
+$max-height: 262px;
+$back-color: white;   //added varaibles
+$max-width:1400px;
+$teal-color : teal;
+
+.main{
+    display: flex;
+    justify-content: center;
+
+.part1{
+    width: 50%;
+    height: 262px;
+    
+    .logo{
+        width: 177px;
+        
+        height: 77px;
+        margin-top: 40px;
+        margin-left: 200px;
+        
+    }
+    .button{
+        margin-left: 200px;
+        margin-top: 20px;
+        height: 65px;
+        width: 150px;
+        font-family: Arial, Helvetica, sans-serif;
+        background:none;
+        font-size: large;
+        font-weight: bold;
+        border-color: $teal-color ;
+        box-shadow: none;
+        color: $teal-color ;
+        border-radius: 25px;
+        &:hover {
+            background-color: $teal-color ;
+            color: white;
+          }
+    }
+    .addr{
+        margin-left: 560px;
+        margin-top: 50px;
+        width: 150px;
+        height: 50px;
+        font-size: larger;
+        
+        
+        
+    }
+    .address{
+        margin-left: 560px;
+        margin-top: -140px; 
+        font-weight: bold;
+        font-size: x-large;
+    }
+}
+.part2{
+width: 50%;
+font-size: x-large;
+.hours{
+    font-weight: bolder;
+    margin-top: 70px;
+}
+
+.bigline{
+    display: block;
+        border-left: 2px solid black;
+        height: 200px;
+        margin-left: 500px;
+        margin-top: -140px;
+}
+.link{
+    margin-left: 900px;
+    margin-top: 0px;
+}
+}
+
+.part3{
+
+
+flex-direction: row;
+.smallline{
+    display: block;
+        border-bottom: 8px solid black;
+        width: 100%;
+        margin-top: 0px;
+}
+.copyright{
+   text-align: center;
+}
+}
+}
+    
+@include footer{
+    .main{
+        flex-wrap: wrap;
+        flex-direction: column;
+       
+        .part2{
+            // flex-direction: column;
+            .hours{
+                text-align: center;
+
+            }
+            .p{
+                text-align: center;
+            }
+            .link{
+                text-align: center;
+                
+            }
+        }
+    }
+}

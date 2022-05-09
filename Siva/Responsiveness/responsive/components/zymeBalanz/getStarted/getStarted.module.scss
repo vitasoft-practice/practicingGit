@@ -1,0 +1,121 @@
+@import "../../../styles/mixins";
+$flex-dir: column;
+
+.getStarted{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    
+    &_text{
+        flex-direction: $flex-dir;
+        width: 50%;
+        display: flex;
+        background-color: #61846D;
+        color: white;
+        justify-content: center; 
+        align-items: center;
+        &_ul{
+            list-style: none;
+            width: 400px;
+            height: 200px;
+            font-size: x-large;
+            &_icon{
+                margin-left: -30px;
+                position: absolute;
+                // &_ul li{
+                //     margin: 20px;
+                // }
+            }
+        }
+        
+        &_month{
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 40px;
+        }
+        &_first{
+           text-align: left;
+           margin-left: -180px;
+           
+           font-size: xx-large;
+           font-weight:800;
+        }
+        &_line{
+            display: block;
+            border-bottom: 8px solid white;
+            width: 400px;
+            
+           
+        }
+        &_second{
+            text-align: center;
+            margin-left: -350px;
+            
+        }
+        &_third{
+            text-align: center;
+        }
+        
+    }
+    &_image{
+        width: 50%;
+    }
+}
+
+@include respond(md-desktop){
+    .getStarted{
+        
+        flex-direction: $flex-dir;
+        &_text{
+            width: 70%;
+            margin: auto;
+        }
+        &_image{
+            width: 60%;
+            margin: auto;
+        }
+    
+}
+}
+@include respond(phone) {
+    .getStarted{
+        
+        flex-direction: $flex-dir;
+        &_text{
+            width: 100%;
+            margin: auto;
+            &_ul{
+                list-style: none;
+                width: 300px;
+                text-align: left;
+                margin-left: 10px;
+                height: 200px;
+                font-size: small;
+                &_icon{
+                    margin-left:-30px;
+                    position: absolute;
+                    // &_ul li{
+                    //     margin: 20px;
+                    // }
+                }
+            }
+            &_first{
+                text-align: left;
+                margin-left: -270px;
+                
+                font-size: small;
+                font-weight:800;
+             }
+             &_second{
+                text-align: center;
+                margin-left: -320px;
+                
+            }
+        }
+        &_image{
+            width: 100%;
+            margin: auto;
+            height: 100%;
+        }
+}
+}
