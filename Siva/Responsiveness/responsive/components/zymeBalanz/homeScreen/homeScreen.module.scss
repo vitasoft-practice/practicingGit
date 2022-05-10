@@ -114,7 +114,7 @@
     
   }
 
-@include form1(){
+@include respond(md-desktop){
     .home_screen_main{
           &_header{
               &_navbar {
@@ -146,7 +146,8 @@
                     width: 100%;
                     text-align: center;
                     position: absolute;
-                    margin-top: 250px;
+                    margin-top: 230px;
+                    margin-left: 10px;
 
                   }
                 }
@@ -161,11 +162,21 @@
 }
 @include respond(phone){
   .home_screen_main{
+    &_header{
+      &_navbar{
+        &_icon{
+          width: 107px;
+          height: 47px;
+          margin-left: 50px;
+      }
+      }
+    }
      
   &_para{
       &_unit{
           width: 20rem;
           font-size: large;
+          margin-top: 20px;
       }
   }    
 }

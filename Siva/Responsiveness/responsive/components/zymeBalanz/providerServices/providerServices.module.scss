@@ -3,6 +3,7 @@ $teal-color: teal;
 
 .provider{
     display: flex;
+    margin-top: 20px;
     &_text{
         width: 50%;
         text-align: center;
@@ -22,13 +23,13 @@ $teal-color: teal;
         }
         &_ul3{
             display: inline-flex;
-            margin: 20px;
+            margin: 28px;
         }
         &_provider{
             margin-left: -130px;
         }
         &_button2{
-            margin-left: -280px;
+            margin-left: -400px;
             background-color: $teal-color;
            &:hover {
             background-color: white;
@@ -41,7 +42,7 @@ $teal-color: teal;
         width: 50%;
     }
 }
-@include form5{
+@include respond(md-desktop){
     .provider{
         margin: 20px;
         flex-direction: column-reverse;
@@ -52,4 +53,26 @@ $teal-color: teal;
             width: 100%;
         }
     }
+}
+@include respond(phone){
+    .provider{
+        margin: 20px;
+        flex-direction: column-reverse;
+        &_text{
+            width: 100%;
+            margin: 10px;
+            font-size: large;
+            &_provider{
+                font-size: large;
+                font-weight: bold;
+                margin-left: -60px;
+            }
+            &_button2{
+                margin-left: -230px;
+            }
+        }
+        &_image{
+            width: 100%;
+        }
+    }   
 }

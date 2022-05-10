@@ -3,6 +3,7 @@ $teal-color: teal;
 
 .zymebalanzApp{
     display: flex;
+    margin-top: 20px;
     &_image{
         width: 50%;
     }
@@ -15,7 +16,7 @@ $teal-color: teal;
         }
         &_icon4{
             display: inline-flex;
-            margin-right: 20px;
+            margin-right: 17px;
         }
         &_icon5{
             display: inline-flex;
@@ -30,7 +31,7 @@ $teal-color: teal;
             margin: 20px;
         }
         &_button3{
-            margin-left: -300px;
+            margin-left: -360px;
             background-color: $teal-color;
            &:hover {
             background-color: white;
@@ -40,15 +41,41 @@ $teal-color: teal;
     }
 }
 
-@include form5{
+@include respond(md-desktop){
     .zymebalanzApp{
         margin: 20px;
         flex-direction: column;
+        
+        &_image{
+            width: 80%;
+        }
+        &_text{
+            width: 100%;
+            // font-size: large;
+            
+        }
+    }
+}
+@include respond(phone){
+    .zymebalanzApp{
+        margin: 20px;
+        flex-direction: column;
+        
         &_image{
             width: 100%;
         }
         &_text{
             width: 100%;
+            margin: 20px;
+            font-size: large;
+            &_zymebalanz{
+                font-size: large;
+                font-weight: bold;
+                margin-left: -80px;
+            }
+            &_button3{
+                margin-left: -250px;
+            }
         }
     }
 }

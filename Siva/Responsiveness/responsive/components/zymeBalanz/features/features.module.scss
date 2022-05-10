@@ -28,7 +28,7 @@ margin-bottom: auto;
 border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+//   border-radius: 8px;
   
 //   grid-auto-flow: $flex-dir;
   justify-content: space-between;
@@ -47,7 +47,7 @@ margin-bottom: auto;
 border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+//   border-radius: 8px;
   background: #ffffff;
   
 //   grid-auto-flow: column;
@@ -67,7 +67,7 @@ margin-bottom: auto;
 border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
+//   border-radius: 8px;
   background: #ffffff;
   
  
@@ -89,7 +89,7 @@ box-shadow: 100px white;
 border: 1px solid rgba(0, 0, 0, 0.1);
 box-sizing: border-box;
 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-border-radius: 8px;
+// border-radius: 8px;
 background: #ffffff;
 
 
@@ -112,7 +112,7 @@ position: relative;
 border: 1px solid rgba(0, 0, 0, 0.1);
 box-sizing: border-box;
 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-border-radius: 8px;
+// border-radius: 8px;
 background: #ffffff;
 display: inline-block;
 // grid-auto-flow: $flex-dir;
@@ -131,7 +131,7 @@ margin-bottom: auto;
 border: 1px solid rgba(0, 0, 0, 0.1);
 box-sizing: border-box;
 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-border-radius: 8px;
+// border-radius: 8px;
 background: #ffffff;
 
 
@@ -185,7 +185,7 @@ text-align: center;
     }
 }
 }
-@media only screen and (max-width: 1400px) and (min-width: 1100px) { 
+@media only screen and (max-width: 1440px) and (min-width: 1100px) { 
     .main{
                 display: flex;
                 flex-wrap: nowrap;
@@ -226,6 +226,9 @@ text-align: center;
                         }
    
 }
+// @include respond(md-desktop){
+    
+// }
 // .main{
 //     width: 100%;
    

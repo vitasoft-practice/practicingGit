@@ -1,4 +1,4 @@
-
+@import "../../../styles/mixins";
 $teal-color: teal;
 
 
@@ -43,53 +43,56 @@ $teal-color: teal;
  
     }
  }
-//  @include form5(){
-//     .labTesting{
+ @include respond(md-desktop){
+    .labTesting{
 
-//         flex-direction: column;
-//         margin: 20px;
-//         &_image{
-//             width: 100%;
-//             align-items: center;
-//   justify-content: center;
-//   margin: auto;
-//         }
-//         &_text{
-//             width: 80%;
-//             align-items: center;
-//             margin: auto;
-//   justify-content: center;
-//         }
-//     }
-//  }
- @include dynamicQuery(800px){
-     .labTesting{
-     background-color: aqua;
-     }
+        flex-direction: column;
+        margin: 20px;
+        &_image{
+            width: 70%;
+            align-items: center;
+  justify-content: center;
+  margin: auto;
+        }
+        &_text{
+            width: 80%;
+            align-items: center;
+            margin: auto;
+  justify-content: center;
+        }
+    }
  }
-//  @include respond(phone){
-//     .labTesting{
+ @include respond(phone){
+    .labTesting{
 
-//         flex-direction: column;
-//         margin: 20px;
-//         &_image{
-//             width: 100%;
-//             align-items: center;
-//   justify-content: center;
-//   margin: auto;
-//         }
-//         &_text{
-//             width: 80%;
-//             align-items: center;
-//             margin: auto;
-//             justify-content: center;
-//             text-align: center;
-//              font-size: large;
-//         &_lab{
-            
-//         }
-//         }
-//     }   
-//  }
+        
+        margin: 10px;
+        &_image{
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+        &_text{
+            width: 80%;
+            align-items: center;
+            margin: 10px;
+            justify-content: center;
+            text-align: center;
+            font-size: large;
+            &_ul{
+                text-align: center;
+            }
+            &_button{
+                margin-left: -100px;
+            }
+            &_lab{
+                font-size: large;
+                font-weight: bold;
+            }
+ 
+        }
+    }   
+ }
 
 

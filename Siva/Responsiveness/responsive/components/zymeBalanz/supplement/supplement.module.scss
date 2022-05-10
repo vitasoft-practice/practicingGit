@@ -3,6 +3,7 @@ $teal-color: teal;
 
 .supplement{
     display: flex;
+    margin-top: 30px;
     &_text{
         width: 50%;
         text-align: center;
@@ -14,7 +15,7 @@ $teal-color: teal;
         }
         &_icon3{
             display: inline-flex;
-            margin-right: 20px;
+            margin-right: 32px;
         }
         &_ul2{
             display: inline-flex;
@@ -28,7 +29,7 @@ $teal-color: teal;
             margin-left: -130px;
         }
         &_button2{
-            margin-left: -280px;
+            margin-left: -310px;
             background-color: $teal-color;
            &:hover {
             background-color: white;
@@ -42,7 +43,7 @@ $teal-color: teal;
     }
 }
 
-@include form5{
+@include respond(md-desktop){
     .supplement{
         margin: 20px;
         flex-direction: column-reverse;
@@ -53,4 +54,44 @@ $teal-color: teal;
             width: 100%;
         }
     }
+}
+@include respond(phone){
+    .supplement{
+        margin: 20px;
+        flex-direction: column-reverse;
+        &_text{
+            width: 100%;
+            margin: 10px;
+            text-align: center;
+            font-size: large;
+            &_supplement{
+                font-size: large;
+                font-weight: bold;
+                // margin-left: -150px;
+            }
+            &_icon2{
+                display: inline-flex;
+                margin-right: 1px;
+            }
+            &_icon3{
+                display: inline-flex;
+                margin-right: 12px;
+            }
+            &_ul2{
+                display: inline-flex;
+                margin: 10px;
+            }
+            &_ul3{
+                display: inline-flex;
+                margin: 10px;
+            }
+            &_button2{
+                margin-left: -240px;
+            }
+        }
+        &_image{
+            width: 100%;
+        }
+    }
+
 }

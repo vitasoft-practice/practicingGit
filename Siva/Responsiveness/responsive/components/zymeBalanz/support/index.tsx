@@ -15,6 +15,7 @@ const Support: React.FC = ()=>{
     {/* <span className={classes.support}> Support</span> */}
             <div className={classes.row1}>
                 
+                <div className={classes.row11}> 
             <div className={classes.container}>
                 
                 <Image src={icon1} alt="Boost"
@@ -42,12 +43,25 @@ const Support: React.FC = ()=>{
             <div><Button name='Sign In' className={classes.buttonbig3} variant='contained'> Sign In</Button>  </div>
             </div>
             </div>
+            <div className={classes.image}> <Image alt="Nature"
+                src={image}
+                layout="responsive"
+                objectFit='fill'
+                width={1436}
+                height={829}/> </div> 
+                
+
             
-            <div className={classes.row22}>
-                 <div className={classes.para}> We're here to help! Give us a shout — our support team works directly with practitioners and patients to take the hassle out of healthcare.</div>
-            <div className={classes.para2}>You’re passionate about helping patients. We’re passionate about helping your practice grow. Our precision wellness platform does both.</div>             
+<div className={classes.para2}>
+            We're here to help! Give us a shout — our support team works directly with practitioners and patients to take the hassle out of healthcare.
+            </div>  
             
-            <div><Button name='Sign In' className={classes.button} variant='contained'>Learn More</Button> </div></div>
+                 <div className={classes.para}> You’re passionate about helping patients. We’re passionate about helping your practice grow. Our precision wellness platform does both.
+             <div> <Button name='Sign In' className={classes.button} variant='contained'>Learn More</Button> </div></div>
+                       
+            
+           
+            
             
         
        
@@ -57,8 +71,9 @@ const Support: React.FC = ()=>{
                 layout="responsive"
                 objectFit='fill'
                 width={1436}
-                height={829}/> </div> 
+                height={829}/> </div>  
         
+        </div>
         </div>
         </div>
     )
