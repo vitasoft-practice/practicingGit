@@ -238,10 +238,14 @@ $flex-dir : row;
       @include respond(md-desktop){
         .main{
           .row1{
+
               // display: flex;
               justify-content: center;
               align-content: center;
               // grid-template-columns:1fr;
+              .image{
+                grid-area: 1/1/4/4;
+                }
               .row11{
               
               .container1{
@@ -275,9 +279,7 @@ $flex-dir : row;
                   }
               }
             }
-          }
-          
-          .para{
+            .para{
               // grid-area: 4/1/2/3;
               text-align: left;
               font-size: large;
@@ -290,6 +292,9 @@ $flex-dir : row;
               font-size: medium;
               // margin-top: 950px;
           }
+          }
+          
+          
       }
       }
     
