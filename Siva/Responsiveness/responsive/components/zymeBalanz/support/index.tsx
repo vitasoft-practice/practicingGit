@@ -14,8 +14,8 @@ const Support: React.FC = ()=>{
             <div className={classes.main}>
     {/* <span className={classes.support}> Support</span> */}
             <div className={classes.row1}>
+                <p className={classes.support}>  Support </p>
                 
-                <div className={classes.row11}> 
             <div className={classes.container}>
                 
                 <Image src={icon1} alt="Boost"
@@ -42,17 +42,17 @@ const Support: React.FC = ()=>{
             <p className={classes.p}>Virtual Dipensary</p>
             <div><Button name='Sign In' className={classes.buttonbig3} variant='contained'> Sign In</Button>  </div>
             </div>
-            </div>
+            
             <div className={classes.image}> <Image alt="Nature"
                 src={image}
                 layout="responsive"
-                objectFit='fill'
+                objectFit="fill"
                 width={1436}
                 height={829}/> </div> 
                 
 
             
-<div className={classes.para2}>
+            <div className={classes.para2}>
             We're here to help! Give us a shout — our support team works directly with practitioners and patients to take the hassle out of healthcare.
             </div>  
             
@@ -66,16 +66,16 @@ const Support: React.FC = ()=>{
         
        
          
-        <div className={classes.image}> <Image alt="Nature"
+            {/* <div className={classes.image}> <Image alt="Nature"
                 src={image}
-                layout="responsive"
+                layout="fill"
                 objectFit='fill'
-                width={1436}
-                height={829}/> </div>  
+                // width={1436}
+                height={829}/> </div>   */}
         
-        </div>
-        </div>
-        </div>
+            </div>
+            </div>
+            </div>
     )
 }
 

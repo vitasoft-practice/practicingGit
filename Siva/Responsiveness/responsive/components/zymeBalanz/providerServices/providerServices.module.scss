@@ -3,11 +3,16 @@ $teal-color: teal;
 
 .provider{
     display: flex;
-    margin-top: 20px;
+    // margin-top: 20px;
+    
     &_text{
         width: 50%;
         text-align: center;
         justify-content: center;
+        
+        display:flex ;
+        flex-direction: column;
+        align-items: center;
         font-size: x-large;
         &_icon2{
             display: inline-flex;
@@ -19,11 +24,11 @@ $teal-color: teal;
         }
         &_ul2{
             display: inline-flex;
-            margin: 20px;
+            margin: 10px;
         }
         &_ul3{
             display: inline-flex;
-            margin: 28px;
+            margin: 17px;
         }
         &_provider{
             margin-left: -130px;
@@ -44,35 +49,51 @@ $teal-color: teal;
 }
 @include respond(md-desktop){
     .provider{
-        margin: 20px;
+        // margin: 20px;
         flex-direction: column-reverse;
         &_text{
             width: 100%;
+            &_button2{
+                margin-left: 0;
+            }
+            &_provider{
+                margin-left: 0;
+            }
         }
         &_image{
-            width: 100%;
+            width: 70%;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
         }
     }
 }
 @include respond(phone){
     .provider{
-        margin: 20px;
+        // margin: 20px;
         flex-direction: column-reverse;
         &_text{
             width: 100%;
-            margin: 10px;
+            // margin: 10px;
             font-size: large;
+            &_icon3{
+                display: inline-flex;
+                margin-right: 15px;
+            }
             &_provider{
                 font-size: large;
                 font-weight: bold;
-                margin-left: -60px;
+                margin-left: 0px;
             }
             &_button2{
-                margin-left: -230px;
+                margin-left: 0px;
             }
         }
         &_image{
             width: 100%;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
         }
     }   
 }

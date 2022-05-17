@@ -29,11 +29,13 @@ border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 //   border-radius: 8px;
-  
+  display: flex;
+  flex-direction: column;
 //   grid-auto-flow: $flex-dir;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  align-content: center;
 
 }
 .container1{
@@ -51,9 +53,12 @@ border: 1px solid rgba(0, 0, 0, 0.1);
   background: #ffffff;
   
 //   grid-auto-flow: column;
-  justify-content: space-between;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
+  align-content: center;
 
 }
 .container2{
@@ -72,9 +77,12 @@ border: 1px solid rgba(0, 0, 0, 0.1);
   
  
 //   grid-auto-flow: $flex-dir;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 
 }
 .container3{
@@ -96,9 +104,12 @@ background: #ffffff;
 // grid-auto-flow: $flex-dir;
 
 
-justify-content: space-between;
+justify-content: center;
 align-items: center;
 text-align: center;
+display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 .container4{
 width: $container-width;
@@ -119,6 +130,9 @@ display: inline-block;
 justify-content: center;
 align-items: center;
 text-align: center;
+display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 .container5{
 width: $container-width;
@@ -136,9 +150,12 @@ background: #ffffff;
 
 
 // grid-auto-flow: $flex-dir;
-justify-content: space-between;
+justify-content: center;
 
 text-align: center;
+display: flex;
+align-content: center;
+  flex-direction: column;
 }
 
 }
@@ -152,16 +169,16 @@ text-align: center;
         flex-wrap: wrap;
         grid-auto-flow: row;
         .container{
-            flex-direction: row;
+            // flex-direction: row;
             margin: 100px auto auto auto; 
             
         }
         .container1{
-            flex-direction: row;
+            // flex-direction: row;
             margin: 100px auto auto auto; 
         }
         .container2{
-            flex-direction: row;
+            // flex-direction: row;
             margin: 100px auto auto auto; 
         }
 
@@ -170,15 +187,15 @@ text-align: center;
         flex-wrap: wrap;
         grid-auto-flow: row;
         .container3{
-            flex-direction: row;
+            // flex-direction: row;
             margin: 100px auto auto auto; 
         }
         .container4{
-            flex-direction: row;
+            // flex-direction: row;
             margin: 100px auto auto auto; 
         }
         .container5{
-            flex-direction: row;
+            // flex-direction: row;
             margin: 100px auto auto auto; 
         }
 

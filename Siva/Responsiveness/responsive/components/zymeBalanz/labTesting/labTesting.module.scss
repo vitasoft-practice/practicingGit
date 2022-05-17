@@ -2,10 +2,16 @@
 $teal-color: teal;
 
 
-
+    .text1{
+        font-size: x-large;
+        font-weight: 200;
+        text-align: center;
+        margin-top: 30px;
+    }
     
     .labTesting{
         display: flex;
+        // min-height: auto;
     
     &_image{
         width: 50%;
@@ -14,12 +20,19 @@ $teal-color: teal;
         width: 50%;
         text-align: center;
         font-size: x-large;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        
+        
         
         &_ul{
             list-style: none;
         }
         &_lab{
             margin-left: -70px;
+            
         }
         
         &_icon{
@@ -34,7 +47,9 @@ $teal-color: teal;
         }
         &_button{
             margin-left: -180px;
+            
             background-color: $teal-color;
+            
             &:hover {
              background-color: white;
              color: $teal-color;
@@ -45,38 +60,50 @@ $teal-color: teal;
  }
  @include respond(md-desktop){
     .labTesting{
+        // min-height: 500px;
 
         flex-direction: column;
         margin: 20px;
         &_image{
-            width: 70%;
+            width: 50%;
             align-items: center;
   justify-content: center;
   margin: auto;
         }
         &_text{
-            width: 80%;
+            width: 100%;
             align-items: center;
             margin: auto;
-  justify-content: center;
+            font-size: x-large;
+            justify-content: center;
+            &_lab{
+                display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-left:0 ;
+            }
+            &_button{
+                margin-left: 0;
+            }
+  
         }
     }
  }
  @include respond(phone){
     .labTesting{
-
+        // min-height: 500px;
         
         margin: 10px;
         &_image{
-            width: 100%;
+            width: 50%;
             align-items: center;
             justify-content: center;
             margin: auto;
         }
         &_text{
-            width: 80%;
-            align-items: center;
-            margin: 10px;
+            width: 100%;
+            align-content: center;
+            // margin: 10px;
             justify-content: center;
             text-align: center;
             font-size: large;
@@ -84,11 +111,15 @@ $teal-color: teal;
                 text-align: center;
             }
             &_button{
-                margin-left: -100px;
+                // margin-left: -100px;
             }
             &_lab{
                 font-size: large;
-                font-weight: bold;
+                // font-weight: bold;
+                display: flex;
+            text-align: center;
+            justify-content: center;
+
             }
  
         }

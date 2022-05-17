@@ -61,12 +61,18 @@ $teal-color : teal;
                         
                         &_bigline{
                             display: block;
-                                border-left: 2px solid black;
+                                border-left: 1px solid black;
                                 height: 200px;
                                 // margin-left: 100px;
                                 // margin-top: 0px;
                         }
-                        // .link{
+                        &_link{
+                            &_info{
+                                font-weight: bold;
+                                margin: 20px;
+                            }
+                            
+                        }
                         //     // margin-left: 900px;
                         //     // flex-direction: row;
                         //     // margin-top: 100px;
@@ -80,96 +86,10 @@ $teal-color : teal;
     }
 }
 
-// .main{
-//     display: grid;
-//     justify-content: center;
-//     grid-template-columns: repeat(2, 1fr);
 
-// .part1{
-//     width: 50%;
-//     height: 262px;
-    
-//     .logo{
-//         width: 177px;
-        
-//         height: 77px;
-//         margin-top: 40px;
-//         margin-left: 200px;
-        
-//     }
-//     .button{
-//         margin-left: 200px;
-//         margin-top: 20px;
-//         height: 65px;
-//         width: 150px;
-//         font-family: Arial, Helvetica, sans-serif;
-//         background:none;
-//         font-size: large;
-//         font-weight: bold;
-//         border-color: $teal-color ;
-//         box-shadow: none;
-//         color: $teal-color ;
-//         border-radius: 25px;
-//         &:hover {
-//             background-color: $teal-color ;
-//             color: white;
-//           }
-//     }
-//     .addr{
-//         margin-left: 560px;
-//         margin-top: 50px;
-//         width: 150px;
-//         height: 50px;
-//         font-size: larger;
-        
-        
-        
-//     }
-//     .address{
-//         margin-left: 560px;
-//         margin-top: -140px; 
-//         font-weight: bold;
-//         font-size: x-large;
-//     }
-// }
-// .part2{
-// width: 50%;
-// font-size: x-large;
-// display: flex;
-// .hours{
-//     font-weight: bolder;
-//     flex-direction: column;
-//     margin-top: 50px;
-// }
-
-// .bigline{
-//     display: block;
-//         border-left: 2px solid black;
-//         height: 200px;
-//         margin-left: 100px;
-//         margin-top: 0px;
-// }
-// .link{
-//     // margin-left: 900px;
-//     // flex-direction: row;
-//     margin-top: 100px;
-//     margin-left: 50px;
-// }.p{
-//     margin-top: 100px;
-    
-//     margin-left: -150px;
-// }
-// }
-
-
-
-
-// flex-direction: row;
-
-// }
 .smallline{
     display: block;
-        border-bottom: 8px solid black;
+        border-bottom: 4px solid black;
         width: 100%;
         margin-top: 0px;
 }
@@ -209,18 +129,18 @@ $teal-color : teal;
     .footer{
         &_part1{
             &_logo{
-                width: 127px;
+                width: 107px;
                 
                 height: 47px;
                 margin-top: 0px;
-                margin-left: 15px;
+                margin-left: 5px;
                 
             }
             &_button{
-                margin-left: 15px;
+                margin-left: 5px;
                 // margin-top: 0px;
                 height: 45px;
-                width: 120px;
+                width: 100px;
                 font-size: small;
                 
                 

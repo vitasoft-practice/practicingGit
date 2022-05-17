@@ -28,7 +28,7 @@ const ProviderServices: React.FC = ()=>{
                 <div className={classes.provider_image}><Image alt="Nature"
                             src={image4}
                             layout="responsive"
-                            objectFit='none'
+                            objectFit='fill'
                             width={1249}
                             height={500}/></div>
                             </div> 

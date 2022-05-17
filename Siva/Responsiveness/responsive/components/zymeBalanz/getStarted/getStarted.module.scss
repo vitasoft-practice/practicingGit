@@ -12,6 +12,7 @@ $flex-dir: column;
         display: flex;
         background-color: #61846D;
         color: white;
+        display: flex;
         justify-content: center; 
         align-items: center;
         &_ul{
@@ -35,7 +36,7 @@ $flex-dir: column;
         }
         &_first{
            text-align: left;
-           margin-left: -180px;
+           margin-left: -220px;
            
            font-size: xx-large;
            font-weight:800;
@@ -43,7 +44,7 @@ $flex-dir: column;
         &_line{
             display: block;
             border-bottom: 8px solid white;
-            width: 400px;
+            width: 440px;
             
            
         }
@@ -77,7 +78,7 @@ $flex-dir: column;
     
 }
 }
-@include respond(phone-lg){
+@include respond(phone-xl){
     .getStarted{
         
         flex-direction: $flex-dir;
@@ -126,6 +127,11 @@ $flex-dir: column;
         &_text{
             width: 100%;
             margin: auto;
+            &_line{
+                display: block;
+                border-bottom: 8px solid white;
+                width: 340px;  
+            }
             &_ul{
                 list-style: none;
                 width: 300px;

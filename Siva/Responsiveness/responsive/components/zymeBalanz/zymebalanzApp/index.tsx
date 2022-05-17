@@ -14,9 +14,8 @@ const ZymebalanzApp: React.FC = ()=>{
                 <Image alt="Nature"
                 src={image3}
                 layout="responsive"
-                objectFit="none"
-                width={829}
-                height={334}/>   
+                objectFit="fill"
+                />   
                 </div> 
 
                 <div className={classes.zymebalanzApp_text}>

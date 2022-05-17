@@ -1,7 +1,12 @@
-@import "../../../styles/mixins";   //added mixins
-$container-width: 389px;
-$container-height: 186px;   //added varaibles
-$flex-dir : row;
+@import "../../../styles/mixins"; 
+  //added mixins
+// @import '../../../styles/variables';
+//  $container-width: 389px;
+// $container-height: 186px; 
+  //added varaibles
+  $container-width: 300px;
+  $container-height: 180px; 
+
 .main{
         
         width: 100%;
@@ -10,24 +15,37 @@ $flex-dir : row;
         .row1{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            grid-auto-flow: row;
+            .support{
+              grid-area: 1/2/3/3;
+              z-index: 15;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              // margin-right: 200px;
+              font-size: x-large;
+              
+              
+            }
             
             // grid-template-areas: "cont cont1 cont2";
            
             // @media only screen and (max-width:1000px){
             //     grid-template-columns:1fr;
             // }   
-            .row11{
+            
 
               display: grid;
               grid-area: 1/1/3/4;
               grid-template-columns: repeat(3, 1fr);
               .container{
-                margin-top: 100px;
-                margin-left: 150px;
+                // margin-top: 100px;
+                margin: auto;
+                // margin-left: 150px;
                   width: $container-width;
                   text-align: center;
                   // grid-area: 1/1/3/2;
-                  grid-area: 1/1/3/2;
+                  grid-area: 1/1/2/2;
                   justify-content: center;
                   align-items: center;
                   z-index: 30;
@@ -40,11 +58,11 @@ $flex-dir : row;
                     box-sizing: border-box;
                     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
                     border-radius: 8px;
-                    justify-content: space-between;
+                    // justify-content: space-between;
                     text-align: center;
                     .buttonbig1{
-                        width: 300px;
-                        height: 100px;
+                        width: 200px;
+                        height: 70px;
                       //   z-index: 100;
                         background-color: black;
                         &:hover {
@@ -57,12 +75,13 @@ $flex-dir : row;
               .container1{
                 // grid-area: cont1;
                   width: $container-width;
-                  margin-left: 150px;
-                  margin-top: 100px;
+                  // margin-left: 150px;
+                  // margin-top: 100px;
                   height: $container-height;
+                  margin: auto;
                   justify-content: center;
                   align-items: center;
-                  grid-area: 1/2/4/3;
+                  grid-area: 1/2/2/3;
                   z-index: 20;
                   // margin-left: 100px;                // margin: 450px;
                   // margin: 100px 0 0 500px;
@@ -75,8 +94,8 @@ $flex-dir : row;
                   //   align-items: center;
                     text-align: center;
                     .buttonbig2{
-                      width: 300px;
-                      height: 100px;
+                      width: 200px;
+                      height: 70px;
                       // z-index: 12;
                       background-color: black;
                       &:hover {
@@ -88,12 +107,13 @@ $flex-dir : row;
               }
               .container2{
                 // grid-area: cont2;
-                margin-top: 100px;
-                margin-left: 100px;
+                // margin-top: 100px;
+                // margin-left: 100px;
+                margin: auto;
                   width: $container-width;
                   justify-content: center;
                   align-items: center;
-                  grid-area: 1/3/4/4;
+                  grid-area: 1/3/2/4;
                   z-index: 20;
                   // margin: 450px;
                   height: $container-height;
@@ -112,8 +132,8 @@ $flex-dir : row;
                   //   align-items: center;
                     text-align: center;
                     .buttonbig3{
-                      width: 300px;
-                      height: 100px;
+                      width: 200px;
+                      height: 70px;
                       // z-index: 10;
                       background-color: black;
                       &:hover {
@@ -123,7 +143,7 @@ $flex-dir : row;
                   }
                   
               }
-            }
+            
             .para{
 
               font-size: x-large;
@@ -131,7 +151,10 @@ $flex-dir : row;
               font-weight: bold;
               width: 400px;
               grid-area: 3/1/3/2;
-              margin: 30px;
+              margin: 50px;
+              justify-content: center;
+              align-content: center;
+              // text-align: left;
               // align-items: center;
               // margin-top: 800px;
               // margin-left: 600px;
@@ -144,6 +167,10 @@ $flex-dir : row;
               font-size: medium;
               z-index: 3;
               grid-area: 2/3/3/2;
+              text-align: center;
+              display: flex;
+              margin: auto;
+              align-items: center;
               // margin-top: 400px;
               // margin-left: 200px;
               // justify-content: center;
@@ -151,7 +178,7 @@ $flex-dir : row;
               
                       }
             .button{
-                // margin-top: 50px;
+                margin-top: 10px;
                 background-color: teal;
                 // margin-top: 1050px;
                 z-index: 10;
@@ -172,63 +199,83 @@ $flex-dir : row;
         }
        
    
-    
-    @include respond(phone-xl){
+    // @media only screen and (max-width:1300px) and (min-width:900px) {
+      
+    // }
+    @include respond(tab-land){
         .main{
             .row1{
                 // display: flex;
                 justify-content: center;
                 align-content: center;
-                grid-template-columns:1fr;
+                // grid-template-columns:1fr;
+                .support{
+                //  margin-left: 150px;
+                 font-size: x-large;
+                }
                 .image{
-                  grid-area: 1/1/4/4;
+                  grid-area: 1/1/6/4;
+                  }
+                  .support{
+                    grid-area: 1/2/3/3;
+                    z-index: 15;
+                    text-align: center;
+                    // margin-right: 200px;
+                    
+                    
                   }
                   .para{
-                    grid-area: 4/1/2/3;
-                    text-align: left;
+                    grid-area: 5/2/5/3;
+                    text-align: center;
                     font-weight: 100;
                     font-size: large;
+                    width: 200px;
                     // margin-top: 950px;
-                    // margin-left: -1500px;
+                    // margin-left: 100px;
                 }
                 .para2{
                     text-align: center;
-                    grid-area: 3/1/2/3;
+                    grid-area: 4/2/4/3;
                     font-size: medium;
+                    width: auto;
+                    display: flex;
+              justify-content: center;
+              align-items: center;
+                    // margin-left: 100px;
                     // margin-top: 950px;
                 }
-                .row11{
+                // .row11{
                 
                 .container1{
-                  grid-area: 2/2/3/4;
-                    margin: 30px;
-                    width: 300px;
-                    height: 180px;
-                    .buttonbig2{
-                      width: 200px;
-                      height: 70px;
-                    }
+                  grid-area: 1/2/2/3;
+                    // margin: 30px;
+                    // width: 300px;
+                    // height: 180px;
+                    // .buttonbig2{
+                    //   width: 200px;
+                    //   height: 70px;
+                    // }
                 }
                 .container2{
-                    margin: 30px;
-                    grid-area: 3/2/4/4;
-                    width: 300px;
-                    height: 180px;
-                    .buttonbig3{
-                      width: 200px;
-                      height: 70px;
-                    }
+                    // margin: 30px;
+                    grid-area: 2/2/3/3;
+                    // width: 300px;
+                    // height: 180px;
+                    // .buttonbig3{
+                    //   width: 200px;
+                    //   height: 70px;
+                    // }
                 }
                 .container{
-                  margin: 30px;
-                  grid-area: 1/2/2/3;
-                  width: 300px;
-                    height: 180px;
-                    .buttonbig1{
-                      width: 200px;
-                      height: 70px;
-                    }
-                }
+                  // margin: 30px;
+                  grid-area: 3/2/3/3;
+                  // width: 300px;
+                  //   height: 180px;
+                  //   .buttonbig1{
+                  //     width: 200px;
+                  //     height: 70px;
+                  //   }
+                // }
               }
             }
             
@@ -243,47 +290,63 @@ $flex-dir : row;
               justify-content: center;
               align-content: center;
               // grid-template-columns:1fr;
+              // .support{
+              //   grid-area: 1/2/3/3;
+              //   z-index: 15;
+              //   text-align: center;
+              //   // margin-right: 200px;
+                
+                .support{
+                  font-size: x-large;
+                }
+              // }
               .image{
                 grid-area: 1/1/4/4;
                 }
-              .row11{
+                
+              // .row11{
+                margin-top: 50px;
               
               .container1{
                 // grid-area: 2/2/3/4;
-                  margin: 30px;
-                  width: 300px;
-                  height: 180px;
-                  .buttonbig2{
-                    width: 200px;
-                    height: 70px;
-                  }
+                  // margin: 30px;
+                  margin-top: 70px;
+                  // width: 300px;
+                  // height: 180px;
+                  // .buttonbig2{
+                  //   // width: 200px;
+                  //   // height: 70px;
+                  // z-index: 10;
+                  // }
               }
               .container2{
-                  margin: 30px;
+                  // margin: 30px;
                   // grid-area: 3/2/4/4;
-                  width: 300px;
-                  height: 180px;
-                  .buttonbig3{
-                    width: 200px;
-                    height: 70px;
-                  }
+                  margin-top: 70px;
+                  // width: 300px;
+                  // height: 180px;
+                  // .buttonbig3{
+                  //   // width: 200px;
+                  //   // height: 70px;
+                  // }
               }
               .container{
-                margin: 30px;
+                // margin: 30px;
                 // grid-area: 1/2/2/3;
-                width: 300px;
-                  height: 180px;
-                  .buttonbig1{
-                    width: 200px;
-                    height: 70px;
-                  }
+                margin-top: 70px;
+                // width: 300px;
+                //   height: 180px;
+                  // .buttonbig1{
+                  //   // width: 200px;
+                  //   // height: 70px;
+                  // }
               }
-            }
+            
             .para{
               // grid-area: 4/1/2/3;
               text-align: left;
-              font-size: large;
-              // margin-top: 950px;
+              // font-size: large;
+              margin-top: 50px;
               // margin-left: -1500px;
           }
           .para2{
@@ -291,13 +354,77 @@ $flex-dir : row;
               // grid-area: 1/1/4/5;
               font-size: medium;
               // margin-top: 950px;
+              margin-top: 50px;
           }
           }
           
           
       }
       }
-    
+    // @include respond(phone-xl){
+
+    //   .main{
+    //     .row1{
+    //         // display: flex;
+    //         justify-content: center;
+    //         align-content: center;
+    //         grid-template-columns:1fr;
+    //         .image{
+    //           grid-area: 1/1/6/4;
+    //           }
+    //           .para{
+    //             grid-area: 1/2/2/3;
+    //             text-align: left;
+    //             font-weight: 100;
+    //             font-size: large;
+    //             // margin-top: 950px;
+    //             // margin-left: -1500px;
+    //         }
+    //         .para2{
+    //             text-align: center;
+    //             grid-area: 2/2/3/3;
+    //             font-size: medium;
+    //             // margin-top: 950px;
+    //         }
+            
+            
+    //         .container1{
+    //           grid-area: 3/2/3/3;
+    //             margin: 30px;
+    //             width: 300px;
+    //             height: 180px;
+    //             .buttonbig2{
+    //               width: 200px;
+    //               height: 70px;
+    //             }
+    //         }
+    //         .container2{
+    //             margin: 30px;
+    //             grid-area: 4/2/4/3;
+    //             width: 300px;
+    //             height: 180px;
+    //             .buttonbig3{
+    //               width: 200px;
+    //               height: 70px;
+    //             }
+    //         }
+    //         .container{
+    //           margin: 30px;
+    //           grid-area: 5/2/5/3;
+    //           width: 300px;
+    //             height: 180px;
+    //             .buttonbig1{
+    //               width: 200px;
+    //               height: 70px;
+    //             }
+    //         }
+          
+    //     }
+        
+        
+    // }
+
+    // }
   //   @include respond(md-desktop)
   //   {
   //     .main{

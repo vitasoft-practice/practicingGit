@@ -27,11 +27,13 @@ const Footer: React.FC = ()=>{
                         
             
               <div>  <div className={classes.footer_part1_hours}>Hours of operation</div>
-                <div className={classes.footer_part1_p}><p >hshsgjdhbjadjnk</p>  </div>  </div> 
+                <div className={classes.footer_part1_p}><p >Mon - Fri 9AM</p>  </div>  </div> 
                 
                 
                 <div className={classes.footer_part1_bigline}></div>
-                <div className={classes.footer_part1_link}>links</div>
+                <div className={classes.footer_part1_link}>
+                    <div className={classes.footer_part1_link_info}> Information</div>
+                <div> Regulatory content</div></div>
                 
                 
                 

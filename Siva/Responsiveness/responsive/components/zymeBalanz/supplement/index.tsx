@@ -28,9 +28,8 @@ const Supplement: React.FC = ()=>{
                 <div className={classes.supplement_image}><Image alt="Nature"
                             src={image2}
                             layout="responsive"
-                            objectFit='none'
-                            width={1249}
-                            height={500}/></div>
+                            objectFit='fill'
+                            /></div>
             </div>
         </div>
     )

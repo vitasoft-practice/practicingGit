@@ -10,6 +10,10 @@ $teal-color: teal;
     &_text{
         width: 50%;
         text-align: center;
+        display:flex ;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         font-size: x-large;
         &_zymebalanz{
             margin-left: -100px;
@@ -24,11 +28,11 @@ $teal-color: teal;
         }
         &_ul4{
             display: inline-flex;
-            margin: 20px;
+            margin: 10px;
         }
         &_ul5{
             display: inline-flex;
-            margin: 20px;
+            margin: 10px;
         }
         &_button3{
             margin-left: -360px;
@@ -47,10 +51,20 @@ $teal-color: teal;
         flex-direction: column;
         
         &_image{
-            width: 80%;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
         }
         &_text{
             width: 100%;
+            &_zymebalanz{
+                margin-left: 0px;
+            }
+            &_button3{
+                margin-left: 0px;
+                margin-top: 10px;
+            }
             // font-size: large;
             
         }
@@ -62,19 +76,22 @@ $teal-color: teal;
         flex-direction: column;
         
         &_image{
-            width: 100%;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
         }
         &_text{
             width: 100%;
-            margin: 20px;
+            // margin: 20px;
             font-size: large;
             &_zymebalanz{
                 font-size: large;
                 font-weight: bold;
-                margin-left: -80px;
+                margin-left: 0px;
             }
             &_button3{
-                margin-left: -250px;
+                margin-left: 0px;
             }
         }
     }

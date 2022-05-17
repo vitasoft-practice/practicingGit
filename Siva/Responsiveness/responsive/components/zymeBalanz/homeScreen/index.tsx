@@ -2,10 +2,12 @@ import React from "react";
 import { useState } from "react";
 import classes from './homeScreen.module.scss'
 import Image from "next/image";
+// import imge1 from '../../../public/images/aaa.png'
 import imge1 from '../../../public/images/123.jpeg'
 import icon from '../../../public/images/zymelogo.png'
 import Link from 'next/link'
 import Button  from "@mui/material/Button";
+
 
 const HomeScreen: React.FC = ()=>{
     const [hamburgerOpen, setHamburgerOpen]=useState(false)
@@ -54,14 +56,17 @@ const HomeScreen: React.FC = ()=>{
                     
                 </nav>
              </header> </div>
-            <div className={classes.home_screen_main_mainimage}>  <Image
+            <div className={classes.home_screen_main_mainimage}> 
+             <Image
                 alt="Nature"
                 src={imge1}
                 layout="responsive"
-                objectFit="contain" 
-                width={3000}
-                height={2000}
+                objectFit="fill"
+                // width={1436}
+                // height={829}
+                
                 />
+        {/* <img src={imge1} alt="" /> */}
         </div>
             
             {/* <div className={classes.formicon}>

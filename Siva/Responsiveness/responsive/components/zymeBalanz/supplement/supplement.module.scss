@@ -4,32 +4,41 @@ $teal-color: teal;
 .supplement{
     display: flex;
     margin-top: 30px;
+    
     &_text{
         width: 50%;
         text-align: center;
         justify-content: center;
+        display:flex ;
+        flex-direction: column;
+        align-items: center;
         font-size: x-large;
         &_icon2{
             display: inline-flex;
-            margin-right: 20px;
+            
         }
         &_icon3{
             display: inline-flex;
-            margin-right: 32px;
+            margin-left: -12px;
+           
         }
         &_ul2{
             display: inline-flex;
-            margin: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            
         }
         &_ul3{
             display: inline-flex;
-            margin: 20px;
+            margin-left: 20px;
+            
         }
         &_supplement{
             margin-left: -130px;
         }
         &_button2{
             margin-left: -310px;
+            margin-top: 20px;
             background-color: $teal-color;
            &:hover {
             background-color: white;
@@ -49,9 +58,18 @@ $teal-color: teal;
         flex-direction: column-reverse;
         &_text{
             width: 100%;
+            &_supplement{
+                margin-left: 0px;
+            }
+            &_button2{
+                margin-left: 0;
+            }
         }
         &_image{
-            width: 100%;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
         }
     }
 }
@@ -67,30 +85,34 @@ $teal-color: teal;
             &_supplement{
                 font-size: large;
                 font-weight: bold;
+                margin-left: 0px;
                 // margin-left: -150px;
             }
             &_icon2{
                 display: inline-flex;
-                margin-right: 1px;
+                // margin-right: 1px;
             }
             &_icon3{
                 display: inline-flex;
-                margin-right: 12px;
+                // margin-right: 12px;
             }
             &_ul2{
                 display: inline-flex;
-                margin: 10px;
+                // margin: 10px;
             }
             &_ul3{
                 display: inline-flex;
-                margin: 10px;
+                // margin: 10px;
             }
             &_button2{
-                margin-left: -240px;
+                margin-left: 0px;
             }
         }
         &_image{
-            width: 100%;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
         }
     }
 

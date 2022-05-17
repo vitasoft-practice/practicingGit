@@ -9,14 +9,15 @@ import Image from "next/image";
 const LabTesting: React.FC = ()=>{
     return(
         <div>
+            <div className={classes.text1}> DESIGN YOUR HEALTH STORE</div>
             <div className={classes.labTesting}>
             
             <div className={classes.labTesting_image}>
             <Image alt="Nature"
                     src={image1}
                     layout="responsive"
-                    objectFit="contain"
-                    width={800}
+                    objectFit="fill"
+                    width={506}
                     height={334}/>
         
         </div>
