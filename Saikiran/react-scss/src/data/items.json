@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "ImgUrl":"/images/Group.svg",  
+        "name":"Unlock New Revenue Streams",
+        "caption":"Converting leads to new patients is easy with a mobile-optimized store that simplifies the ordering process." 
+    },
+    {
+			"id": 2,
+            "ImgUrl":"/images/2.svg",
+			"name": "Delightful Patient Experience" ,
+			"caption": "Offer your patients a simple, seamless digital experience right at their fingertips and boost your online reputation and improve patient retention. "
+	},
+    {
+				"id": 3,
+                "ImgUrl":"/images/3.svg", 
+				"name": "Your Branded Store-No coding required ",
+				"caption": "In just a few clicks, you can create and publish a beautiful online store you have always dreamed about.   "
+	}
+]

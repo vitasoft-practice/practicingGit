@@ -1,12 +1,15 @@
-import React from 'react'
-import "../styles/styles.css"
-
-const Nav:React.FC = () => {
-  return (
+import React from "react";
+import "../styles/styles.css";
+import logo from "../images/Combined-Shape.png";
+const Nav = () => {
+	return (
 		<nav className="navbar">
-			<a href="/" className="navbar__logo">
-				WellProz
-			</a>
+			<div>
+				<img src={logo} className="navbar__image" />
+				<a href="/" className="navbar__logo">
+					WellProz
+				</a>
+			</div>
 			<div className="navbar__bars">
 				<i className="fas fa-bars"></i>
 			</div>
@@ -20,6 +23,6 @@ const Nav:React.FC = () => {
 			</div>
 		</nav>
 	);
-}
+};
 
-export default Nav
+export default Nav;

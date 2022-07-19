@@ -9,3 +9,9 @@
         @content;
     }
 }
+@mixin large{
+    @media scereen and(max-width: 1440px){
+        @content;
+}
+}
+

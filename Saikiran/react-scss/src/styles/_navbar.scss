@@ -17,30 +17,32 @@
 	.navbar__logo {
         height: 37px;
         width: 141px;
-        left: 49.34375px;
-        top: 10.312255859375px;
-        border-radius: nullpx;
-
-        //position: absolute;
-        //left: 22.95%;
-        //right: 11.47%;
-        //top: 19.38%;
-        //bottom: 11.08%;
+        left: 49px;
+        top: 5px;
 
         font-family: 'Lucida Grande';
         font-style: normal;
         font-weight: 700;
         font-size: 31.7213px;
         line-height: 37px;
+        padding-bottom:5px;
 
         color: #000000;
 		//color: $dark;
 		cursor: pointer;
-		//text-decoration: none;
+		text-decoration: none;
 		//font-size: 2rem;
 		//margin-left: 24px;
 		//@extend %align-center;
+        
 	}
+    &__image {
+            height: 53x;
+            width: 34px;
+            left: 0px;
+            top: -0.00341796875px;
+            border-radius: 0px;
+        }
 
 	&__bars {
 		opacity: 0;
