@@ -1,0 +1,76 @@
+body {
+    position: absolute;
+}
+.page1Footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    width: 99vw;
+    height: 343px;
+}
+.leftFooter{
+    margin-top: 75px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.rightFooter{
+    margin-top: 85px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+
+@media only screen and (min-width:478px) and (max-width:1199px)  {
+    .page1Footer{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .leftFooter{
+        width: 350px;
+        font-size: 30px;
+    }
+    .rightFooter{
+        width: 275px;
+        left: 564px;
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (min-width:320px) and (max-width:478px)  {
+    .page1Footer{
+        width: 100%;
+    }
+    .leftFooter{
+        width: 375px;
+        font-size: 25px;
+    }
+    .rightFooter{
+        width: 250px;
+        left: 564px;
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width:2560px)  {
+    .page1Footer{
+        width: 100%;
+        font-size: 45px;
+    }
+    .leftFooter{
+        width: 550px;
+        font-size: 35px;
+    }
+    .rightFooter{
+        width: 400px;
+        left: 564px;
+        font-size: 18px;
+    }
+}
