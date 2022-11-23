@@ -1,6 +1,10 @@
 body {
     position: absolute;
 }
+.footerwrap{
+    display: flex;
+    justify-content: space-between;
+}
 .page1Footer{
     display: flex;
     justify-content: space-around;
@@ -33,6 +37,11 @@ body {
         width: 100%;
         margin: 0 auto;
     }
+    .footerwrap{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
     .leftFooter{
         width: 350px;
         font-size: 30px;
@@ -51,7 +60,7 @@ body {
     }
     .leftFooter{
         width: 375px;
-        font-size: 25px;
+        font-size: 35px;
     }
     .rightFooter{
         width: 250px;
@@ -60,6 +69,9 @@ body {
     }
 }
 @media only screen and (min-width: 1200px) and (max-width:2560px)  {
+    .footerwrap{
+        width: 1200px;
+    }
     .page1Footer{
         width: 100%;
         font-size: 45px;
@@ -71,6 +83,39 @@ body {
     .rightFooter{
         width: 400px;
         left: 564px;
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 2560px) {
+    .footerwrap{
+        width: 1500px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .page1Footer{
+        width: 100%;
+        font-size: 45px;
+        height: 275px;
+    }
+    .leftFooter{
+        font-size: 40px;
+        width: 750px;
+        height: 156px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+
+    }
+    .rightFooter{
+        width: 750px;
+        height: 151px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;        
         font-size: 18px;
     }
 }

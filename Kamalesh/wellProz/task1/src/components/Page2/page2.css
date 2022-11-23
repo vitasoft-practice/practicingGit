@@ -61,6 +61,11 @@
     display: block;
     border-radius: 8px;
 }
+.containerLogo{
+  text-align: center;
+  margin: auto;
+  padding-top: 15px;
+}
 @media only screen and (min-width:1920px) {
     .squareBorderLeft{
         background: #01ECA5;
@@ -123,9 +128,10 @@
         padding-bottom: 75px;
       }
       .container{
-        width: 250px;
-        height: 300px;
+        width: 270px;
+        height: 310px;
         margin: 25px;
+        
       }
       .containerHeader{
         font-weight: 900;
@@ -152,8 +158,12 @@
 }
 @media only screen and (min-width: 1200px) and (max-width:2560px)  {
     .page2{
-        width: 100vw;
+        width: 100%;
       }
+    .page2wrapper{
+      width: 1500px;
+      margin: 0 auto;
+    }
       .page2Header{
         width: 850px;
         height: 60px;
@@ -191,4 +201,50 @@
           top: 11%;
       }
     
+}
+
+@media only screen and (min-width: 2560px) {
+  .page2{
+    width: 100vw;
+  }
+  .page2wrapper{
+    width:1500px;
+    margin: auto;
+  }
+  .page2Header{
+    width: 850px;
+    height: 60px;
+    font-size: 45px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .container{
+    width: 450px;
+    height: 500px;
+    margin: 25px;
+  }
+  .containerHeader{
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .containerLogo{
+      height: 225px;
+  }
+  .squareBorderLeft{
+      background: #01ECA5;
+      left: 5%;
+      width: 88px;
+      height: 88px;
+      top: 11%;
+  }
+  .squareBorderRight{
+      background: #01ECA5;
+      right:5%;
+      width: 88px;
+      height: 88px;
+      top: 11%;
+  }
 }

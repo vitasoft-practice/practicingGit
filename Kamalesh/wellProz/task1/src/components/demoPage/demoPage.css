@@ -1,0 +1,25 @@
+.DemoPage{
+    background-color: red;
+}
+@media only screen and (min-width: 478px) and (max-width:1129px)  {
+    .DemoPage{
+        height:800px;
+    }
+    .demowrapper{
+        margin: 0 auto;
+    }
+    .demoForm{
+        width: 200px;
+        margin: 0 auto;
+        height: 300px;
+        display: inline-block;
+        background-color: green;
+    }
+    .demoInfo{
+        margin: 0 auto;
+        width: 250px;
+        display: inline-block;
+        height: 300px;
+        background: linear-gradient(0deg, #25A4E7, #25A4E7);
+    }
+}
