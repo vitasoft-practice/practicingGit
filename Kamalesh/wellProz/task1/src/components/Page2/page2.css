@@ -186,6 +186,11 @@
       .containerLogo{
           height: 225px;
       }
+      .page2Logo{
+        margin-top:15px;
+        width: 125px;
+        height: 125px;
+      }
       .squareBorderLeft{
           background: #01ECA5;
           left: 5%;

@@ -43,7 +43,7 @@ body {
         justify-content: space-around;
     }
     .leftFooter{
-        width: 350px;
+        width: 380px;
         font-size: 30px;
     }
     .rightFooter{
@@ -70,7 +70,7 @@ body {
 }
 @media only screen and (min-width: 1200px) and (max-width:2560px)  {
     .footerwrap{
-        width: 1200px;
+        width: 1100px;
     }
     .page1Footer{
         width: 100%;
