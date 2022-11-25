@@ -5,6 +5,7 @@ import womenImage from "./womenImage.png"
 import graph1 from "./graph1.png"
 import graph2 from "./graph2.png"
 import catalog from "./catalog.png"
+import Ellipse from "./Ellipse.png"
 import doctorPrescription from "./doctorPrescription.png"
 const Header = () => {
     return (
@@ -27,6 +28,7 @@ const Header = () => {
                 </div>
                 <div className="rightsidePage">
                     <div className="grid">
+                    <img src= { Ellipse } className="Ellipse" alt="" />
                     <img src= { womenImage } className="womenImage" alt="" />
                     <img src= { graph1 } className="graph1" alt="" />
                     <img src= { graph2 } className="graph2" alt="" />

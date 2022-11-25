@@ -120,6 +120,11 @@
         display: grid;
         grid-template-rows: 125px  155px 150px 125px;
         grid-template-columns: 100px 100px 100px;
+        height: 100%;
+    }
+    .Ellipse{
+        width:400px;
+        height: 600px;
     }
     .womenImage{
         grid-column-start: 1;
@@ -228,6 +233,10 @@
         display: grid;
         grid-template-rows: 100px  200px 150px 100px;
         grid-template-columns: 125px 150px 150px;
+    }
+    .Ellipse{
+        width:500px;
+        height: 600px;
     }
     .womenImage{
         grid-column-start: 1;
