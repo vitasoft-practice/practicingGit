@@ -52,26 +52,7 @@
 .firstPageContent{
     display: flex;
 }
-.womanImageWrapper{
-    display: inline-block;
-    position: relative;  
-}
-.doctorPrescriptionWrapper{
-    display: inline-block; 
-    float: right;
-}
-.catalogWrapper{
-    display: inline-block; 
 
-}
-.rightsidePage{
-    display: inline-block;
-    align-self: flex-end;
-}
-.graph1Wrapper{
-    display: inline-block;
-    float: right;
-}
 @media only screen and (min-width:320px) and (max-width:478px)  {
     .Header{
         width: 700px;
@@ -85,6 +66,112 @@
         line-height: 14px;
         width: 85px;
         height: 45px;
+    }
+    .firstPageContent{
+        height:600px;
+    }
+    .leftsidePage{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 600px;
+        padding-left: 7%;
+    }
+    .leftPageHeader{
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 65px;
+        text-transform: capitalize;
+        color: #323232;
+        padding-bottom: 5%;
+    }
+    .leftPageContent{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: capitalize;  
+        color: #000000;
+        padding-bottom: 5%;
+    }
+    .leftPageButton{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        width: 127px;
+        height: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #2ED3C5;
+        border-radius: 8px;
+        color: #FFFFFF;
+    }
+    .rightsidePage{
+        width: 50%;
+    }
+    .grid{
+        display: grid;
+        grid-template-rows: 125px  155px 150px 125px;
+        grid-template-columns: 100px 100px 100px;
+    }
+    .womenImage{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        width: 350px;
+        height:450px;
+        z-index: 2;
+    }
+    .graph1{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 1;
+        width: 155px;
+        height: 125px;
+    }
+    .doctorPrescription{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        z-index: 1;
+        padding-left: 5%;
+        padding-top: 15%;
+        width: 145px;
+        height: 225px;
+        z-index: 3;
+    }
+    .catalog{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 1;
+        padding-left: 15%;
+        padding-top: 75%;
+        width: 145px;
+        height: 125px;
+        z-index: 3;
+    }
+    .graph2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        z-index: 1;
+        width: 155px;
+        height: 125px;
+        margin-left: -45%;
     }
 }
 @media only screen and (min-width: 478px) and (max-width:1129px)  {
@@ -134,36 +221,65 @@
         border-radius: 8px;
         color: #FFFFFF;
     }
-    .womanImage{
-        width: 600px;
+    .rightsidePage{
+        width: 50%;
+    }
+    .grid{
+        display: grid;
+        grid-template-rows: 100px  200px 150px 100px;
+        grid-template-columns: 125px 150px 150px;
+    }
+    .womenImage{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        width: 500px;
         height: 500px;
         z-index: 2;
-        margin-top:-25%;
-        align-self: flex-end;
     }
     .graph1{
-        width: 175px;
-        height: 175px;
-        display: inline-block;
-        margin-left:-200px;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
         z-index: 1;
+        width: 155px;
+        height: 125px;
     }
     .doctorPrescription{
-        width: 175px;
-        height: 275px;
-        display: inline-block;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        z-index: 1;
+        padding-left: 5%;
+        padding-top: 15%;
+        width: 145px;
+        height: 225px;
         z-index: 3;
-        margin-left:-200px;
-        position: relative;
     }
-    .catalogImage{
-        width: 275px;
-        height: 275px;
-        display: inline-block;
-        z-index: 5;
-        margin-bottom:-100px;
-        margin-right: -150px;
-        position: relative;
+    .catalog{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 1;
+        padding-left: 15%;
+        padding-top: 75%;
+        width: 245px;
+        height: 225px;
+        z-index: 3;
+    }
+    .graph2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        z-index: 1;
+        width: 155px;
+        height: 125px;
+        margin-left: -25%;
     }
 }
 @media only screen and (min-width: 1200px) and (max-width:2560px)  {
@@ -222,18 +338,60 @@
         border-radius: 8px;
         color: #FFFFFF;
     }
-    .womanImage{
-        width: 600px;
+    .grid{
+        display: grid;
+        grid-template-rows: 100px 100px 100px 150px 100px;
+        grid-template-columns: 125px 125px 200px 250px;
+    }
+    .womenImage{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        width: 700px;
         height: 500px;
         z-index: 2;
-        margin-top:-25%;
     }
     .graph1{
-        width: 175px;
-        height: 175px;
-        display: inline-block;
-        margin-left:-45%;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
         z-index: 1;
+        width: 155px;
+        height: 125px;
+    }
+    .doctorPrescription{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        z-index: 1;
+        padding-left: 5%;
+        padding-top: 15%;
+        width: 145px;
+        height: 225px;
+        z-index: 3;
+    }
+    .catalog{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        z-index: 1;
+        width: 245px;
+        height: 225px;
+        z-index: 3;
+    }
+    .graph2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        z-index: 1;
+        width: 255px;
+        height: 125px;
+        margin-left: -25%;
     }
     
 }

@@ -3,6 +3,7 @@ import logo from "./HeaderLogo.png"
 import "./header.css"
 import womenImage from "./womenImage.png"
 import graph1 from "./graph1.png"
+import graph2 from "./graph2.png"
 import catalog from "./catalog.png"
 import doctorPrescription from "./doctorPrescription.png"
 const Header = () => {
@@ -25,16 +26,12 @@ const Header = () => {
                     <div className="leftPageButton">Try it Free</div>
                 </div>
                 <div className="rightsidePage">
-                    <div className="graph1Wrapper">
-                        <img src= { graph1 } className="graph1" alt="" />
-                    </div>
-                    <div className="womanImageWrapper">
-                    <div className="catalogWrapper"><img src= { catalog } className="catalogImage" alt="" /></div>
-                        <img src= { womenImage } className="womanImage" alt="" />
-                        <div className="doctorPrescriptionWrapper">
-                        <img src= { doctorPrescription } className="doctorPrescription" alt="" />
-                    </div>
-                        
+                    <div className="grid">
+                    <img src= { womenImage } className="womenImage" alt="" />
+                    <img src= { graph1 } className="graph1" alt="" />
+                    <img src= { graph2 } className="graph2" alt="" />
+                    <img src= { doctorPrescription } className="doctorPrescription" alt="" />
+                    <img src= { catalog } className="catalog" alt="" />
                     </div>
                 </div>
                     
