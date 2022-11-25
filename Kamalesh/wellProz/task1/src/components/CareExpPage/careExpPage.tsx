@@ -17,7 +17,7 @@ const CareExpPAge = () => {
     const [imageSrc,setimageSrc]= useState(firstImage);
     function scrollPicture(){
         console.log("//",window.scrollY)
-        if(window.scrollY >= 1100 && window.scrollY <=1200){
+        if(window.scrollY >= 1300 && window.scrollY <=1400){
             setscrolledFirst(true)
             setscrolledSec(false)
             setscrolledThird(false)
@@ -25,7 +25,7 @@ const CareExpPAge = () => {
             setscrolledType('firstImage')
             setimageSrc(firstImage)
         }
-        else if(window.scrollY >= 1200 && window.scrollY <=1300){
+        else if(window.scrollY >= 1400 && window.scrollY <=1500){
             setscrolledFirst(false)
             setscrolledSec(true)
             setscrolledThird(false)
@@ -33,7 +33,7 @@ const CareExpPAge = () => {
             setscrolledType('secondImage')
             setimageSrc(secondImage)
         }
-        else if(window.scrollY >= 1300){
+        else if(window.scrollY >= 1500){
             setscrolledFirst(false)
             setscrolledSec(false)
             setscrolledThird(true)
