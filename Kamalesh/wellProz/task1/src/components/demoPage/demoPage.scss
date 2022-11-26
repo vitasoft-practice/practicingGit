@@ -1,0 +1,393 @@
+$demo-button-color:#2ED3C5;
+$request-background: linear-gradient(93.03deg, #20B2E3 -27.2%, #0ED9D4 135.73%);
+$form-background: #F9FBFC;
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    
+}
+.DemoPage{
+    background-color: #FBFBFB;
+}
+.topParent{
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 478px) and (max-width:1129px)  {
+    .subParent{
+        padding-top: 10%;
+    }
+    .DemoPage{
+        height:800px;
+    }
+    .demowrapper{
+        margin: 0 auto;
+    }
+    .demoForm{
+        margin-left: 7%;
+        width: 413px;
+        position: relative; 
+        height: 550px;
+        display: inline-block;
+        background-color: $form-background;
+        z-index: 15;
+        border-radius: 30px;
+        margin-right:-15%;
+    }
+    .demoFormWrapper{
+        position: relative; 
+        float: left;
+        @include flexCenter();
+        padding-left: 10%;
+        padding-top: 10%;
+    }
+    .demoHeader{
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+        color: #000000;
+        padding-bottom: 15px;
+    }
+    .demoUserInput input{
+        width:320px;
+        height: 42.5px;
+        border: 1px solid #F0F4F7;
+        background: #F0F4F7;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    ::placeholder { 
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        color: #000000;    
+        opacity: 0.4;
+        padding: 25px;
+    }
+    .demoRequest{
+        width: 324.18px;
+        height: 42px;
+        left: 112.2px;
+        top: 4071px;
+        background: $request-background;
+        border-radius: 8px;
+        @include flexCenter();
+        text-align: center;
+        align-items: center;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;     
+        color: #FFFFFF;
+    }
+    .demoInfo{
+        width: 660px;
+        display: inline-block;
+        height: 575px;
+        background: linear-gradient(0deg, #25A4E7, #25A4E7);
+        z-index: -10;
+        border-radius: 30px;
+    }
+    .demoInfowrapper{
+        width: 300px;
+        float: right;
+        align-items: center;
+        margin-top: 20%;
+        margin-right: 15%;
+    }
+    .demoInfoHeader{
+        width: 300px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+    }
+    .demoInfoContent{
+        padding-top: 10%;
+        width: 275px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+        padding-bottom: 10%;
+    }
+    .demoButton{
+        width: 125px;
+        height: 43px;
+        background: $demo-button-color;
+        border-radius: 8px;
+        @include flexCenter();
+        align-items: center;
+        color: #FFFFFF;
+    }
+    .WellProzSpan{
+        background-color: #FF9C33;
+        margin: 1px;
+        opacity: 0.7;
+    }
+}
+@media only screen and (min-width:320px) and (max-width:478px)  {
+    .subParent{
+        padding-top: 10%;
+    }
+    .DemoPage{
+        height:800px;
+    }
+    .demowrapper{
+        margin: 0 auto;
+    }
+    .demoForm{
+        margin-left: 7%;
+        width: 275px;
+        position: relative; 
+        height: 350px;
+        display: inline-block;
+        background-color: $form-background;
+        z-index: 15;
+        border-radius: 30px;
+        margin-right:-15%;
+    }
+    .demoInfo{
+        width: 400px;
+        display: inline-block;
+        height: 375px;
+        background: linear-gradient(0deg, #25A4E7, #25A4E7);
+        z-index: -10;
+        border-radius: 30px;
+    }
+    .demoFormWrapper{
+        position: relative; 
+        float: left;
+        @include flexCenter();
+        padding-left: 10%;
+        padding-top: 10%;
+    }
+    .demoHeader{
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+        color: #000000;
+        padding-bottom: 15px;
+    }
+    .demoUserInput input{
+        width:180px;
+        height: 22.5px;
+        border: 1px solid #F0F4F7;
+        background: #F0F4F7;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    ::placeholder { 
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        color: #000000;    
+        opacity: 0.4;
+        padding: 25px;
+    }
+    .demoRequest{
+        width: 180px;
+        height: 25px;
+        background: $request-background;
+        border-radius: 8px;
+        @include flexCenter();
+        text-align: center;
+        align-items: center;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;     
+        color: #FFFFFF;
+        margin-top: 15px;
+    }
+    
+    .demoInfowrapper{
+        width: 200px;
+        float: right;
+        align-items: center;
+        margin-top: 20%;
+        margin-right: 15%;
+    }
+    .demoInfoHeader{
+        width: 175px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 20px;
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+    }
+    .demoInfoContent{
+        padding-top: 10%;
+        width: 175px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+        padding-bottom: 10%;
+    }
+    .demoButton{
+        width: 125px;
+        height: 43px;
+        background: $demo-button-color;
+        border-radius: 8px;
+        @include flexCenter();
+        align-items: center;
+        color: #FFFFFF;
+    }
+    .WellProzSpan{
+        background-color: #FF9C33;
+        margin: 1px;
+        opacity: 0.7;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width:2560px)  {
+    .subParent{
+        padding-top: 10%;
+    }
+    .DemoPage{
+        height:800px;
+    }
+    .demowrapper{
+        margin: 0 auto;
+    }
+    .demoForm{
+        margin-left: 7%;
+        width: 513px;
+        position: relative; 
+        height: 650px;
+        display: inline-block;
+        background-color: $form-background;
+        z-index: 15;
+        border-radius: 30px;
+        margin-right:-15%;
+    }
+    .demoInfo{
+        width: 760px;
+        display: inline-block;
+        height: 675px;
+        background: linear-gradient(0deg, #25A4E7, #25A4E7);
+        z-index: -10;
+        border-radius: 30px;
+    }
+    .demoFormWrapper{
+        position: relative; 
+        float: left;
+        @include flexCenter();
+        padding-left: 10%;
+        padding-top: 10%;
+    }
+    .demoHeader{
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 62px;
+        color: #000000;
+        padding-bottom: 25px;
+    }
+    .demoUserInput input{
+        width:420px;
+        height: 57.5px;
+        border: 1px solid #F0F4F7;
+        background: #F0F4F7;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    ::placeholder { 
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        color: #000000;    
+        opacity: 0.4;
+        padding: 25px;
+    }
+    .demoRequest{
+        width: 420.18px;
+        height: 57px;
+        background: $request-background;
+        border-radius: 8px;
+        @include flexCenter();
+        text-align: center;
+        align-items: center;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;     
+        color: #FFFFFF;
+        margin-top: 5%;
+    }
+    .demoInfowrapper{
+        width: 400px;
+        float: right;
+        align-items: center;
+        margin-top: 20%;
+        margin-right: 15%;
+    }
+    .demoInfoHeader{
+        width: 400px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 60px;
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+    }
+    .demoInfoContent{
+        padding-top: 10%;
+        width: 375px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 30px;
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+        padding-bottom: 10%;
+    }
+    .demoButton{
+        width: 125px;
+        height: 43px;
+        background: $demo-button-color;
+        border-radius: 8px;
+        @include flexCenter();
+        align-items: center;
+        color: #FFFFFF;
+    }
+    .WellProzSpan{
+        background-color: #FF9C33;
+        margin: 1px;
+        opacity: 0.7;
+    }
+}

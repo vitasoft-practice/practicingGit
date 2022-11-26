@@ -1,0 +1,200 @@
+$care-page-background: #E5E5E5;
+$care-page-font-color: #000000;
+@mixin scrolledBorder {
+    padding-left:10px;
+    border-left:4px solid $care-page-font-color;
+}
+@mixin Imageanimation{
+    animation: fadeIn 2s;
+    animation-iteration-count: infinite;
+}
+.careExpwrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.firstOption.active{
+    @include scrolledBorder();
+}
+.secondOption.active{
+    @include scrolledBorder();
+}
+.thirdOption.active{
+    @include scrolledBorder();
+}
+.fadeactive{
+    @include Imageanimation();
+}
+.firstImage{
+    @include Imageanimation();
+}
+.secondImage{
+    @include Imageanimation();
+}
+.thirdImage{
+    @include Imageanimation();
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media only screen and (min-width:320px) and (max-width:478px)  {
+    .CareExpPAge{
+        height: 816px;
+        background-color: $care-page-background;;
+    }
+    .careExpwrapper{
+        margin: 0 auto;
+        padding-top: 75px;
+    }
+    .LeftExp{
+        width: 45%;
+    }
+    .RightExp{
+        width: 40%;
+        min-height: 700px;
+    }
+    .careImageClass{
+        float: right;
+        width: 300px;
+        height: 425px;
+    }
+    .mainHeader{
+        width: 375px;
+        height: 120px;     
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 60px;
+        letter-spacing: -0.5px;
+        text-transform: capitalize;
+        color: $care-page-font-color;
+    }
+    .expContent{
+        width: 375px;
+        height: 116px;    
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 180%;        
+    }
+    .secondHeader{
+        padding: 15px 0px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 16px;
+        text-transform: capitalize;
+    }
+}
+@media only screen and (min-width: 478px) and (max-width:1129px)  {
+    .CareExpPAge{
+        height: 816px;
+        background-color: $care-page-background;;
+    }
+    .careExpwrapper{
+        margin: 0 auto;
+        padding-top: 75px;
+    }
+    .LeftExp{
+        width: 50%;
+    }
+    .RightExp{
+        width: 45%;
+        min-height: 700px;
+    }
+    .careImageClass{
+        float: right;
+        width: 450px;
+        height: 575px;
+    }
+    .mainHeader{
+        width: 517px;
+        height: 120px;     
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: -0.5px;
+        text-transform: capitalize;
+        color: $care-page-font-color;
+    }
+    .expContent{
+        width: 440px;
+        height: 116px;
+        left: 815px;
+        top: 2261px;    
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;        
+    }
+    .secondHeader{
+        padding: 15px 0px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 16px;
+        text-transform: capitalize;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width:2560px)  {
+    .CareExpPAge{
+        height: 816px;
+        background-color: $care-page-background;
+    }
+    .careExpwrapper{
+        margin: 0 auto;
+        padding-top: 75px;
+    }
+    .LeftExp{
+        width: 50%;
+    }
+    .RightExp{
+        width: 45%;
+        min-height: 700px;
+    }
+    .careImageClass{
+        float: right;
+        width: 450px;
+        height: 575px;
+    }
+    .mainHeader{
+        width: 517px;
+        height: 120px;     
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: -0.5px;
+        text-transform: capitalize;
+        color: $care-page-font-color;
+    }
+    .expContent{
+        width: 440px;
+        height: 116px;
+        left: 815px;
+        top: 2261px;    
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;        
+    }
+    .secondHeader{
+        padding: 15px 0px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 16px;
+        text-transform: capitalize;
+    }
+}
