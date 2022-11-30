@@ -1,0 +1,42 @@
+.signUpHeader{
+    font-size: 40px;
+    width: 250px;
+    color: greenyellow;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.signUpwrapper{
+    height: 500px;
+    width: 500px;
+    margin: 15px auto;
+    align-items: center;
+    background-color: black;
+    border-radius: 30px;
+}
+.signUpForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signupInput{
+    padding: 15px;
+    margin: 15px;
+    width:320px;
+    height: 42.5px;
+    border: 1px solid #F0F4F7;
+    background: #F0F4F7;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.signupInput:focus,
+.signupInput:active{
+    border: 5px solid #68b2ea;
+    outline:none;
+}
+.errorMessage{
+    width:320px;
+    float: left;
+    color: red;
+    margin: 0;
+}

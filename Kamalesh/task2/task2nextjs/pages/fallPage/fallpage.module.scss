@@ -1,0 +1,426 @@
+$ButtonFont-color: #FFFFFF;
+$left-header-color: #323232;
+$header-button-color: #2ED3C5;
+
+@mixin  flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Header{
+    margin-left: 67px;
+    margin-right: 67px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.Logo{
+    margin-top: 20px;
+    margin-right: 5px;
+    width: 34.75px;
+    height: 53.21px;
+}
+.companyName{
+    margin-top: 30px;
+    font-family: 'Lucida Grande';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31.7213px;
+    line-height: 37px;
+}
+.leftH{
+    display: flex;
+}
+.rightH{
+    display: flex;
+}
+.signIn{
+    margin: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+.signUp{
+    @include flexCenter();
+    margin: 15px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    width: 127px;
+    height: 53px;
+    background: $header-button-color;
+    border-radius: 8px;
+    color: $ButtonFont-color;
+}
+.firstPageContent{
+    display: flex;
+}
+
+@media only screen and (min-width:320px) and (max-width:478px)  {
+    .Fallpage{
+        width: 600px;
+    }
+    .signIn{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .signUp{
+        font-size: 14px;
+        line-height: 14px;
+        width: 85px;
+        height: 45px;
+    }
+    .firstPageContent{
+        height:600px;
+    }
+    .leftsidePage{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 600px;
+        padding-left: 7%;
+    }
+    .leftPageHeader{
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 35px;
+        text-transform: capitalize;
+        color: $left-header-color;
+        padding-bottom: 5%;
+    }
+    .leftPageContent{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: capitalize;  
+        color: #000000;
+        padding-bottom: 5%;
+    }
+    .leftPageButton{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        width: 127px;
+        height: 53px;
+        @include flexCenter();
+        background: $header-button-color;
+        border-radius: 8px;
+        color: $ButtonFont-color;
+    }
+    .rightsidePage{
+        width: 50%;
+    }
+    .grid{
+        display: grid;
+        grid-template-rows: 125px  155px 150px 125px;
+        grid-template-columns: 100px 100px 100px;
+        height: 100%;
+    }
+    .Ellipse{
+        width:400px;
+        height: 600px;
+    }
+    .womenImage{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        width: 350px;
+        height:450px;
+        z-index: 2;
+    }
+    .graph1{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 1;
+        width: 155px;
+        height: 125px;
+    }
+    .doctorPrescription{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        z-index: 1;
+        padding-left: 5%;
+        padding-top: 15%;
+        width: 145px;
+        height: 225px;
+        z-index: 3;
+    }
+    .catalog{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 1;
+        padding-left: 15%;
+        padding-top: 75%;
+        width: 145px;
+        height: 125px;
+        z-index: 3;
+    }
+    .graph2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        z-index: 1;
+        width: 155px;
+        height: 125px;
+        margin-left: -45%;
+    }
+}
+@media only screen and (min-width: 478px) and (max-width:1129px)  {
+    .Fallpage{
+        width:1100px;
+    }
+    .firstPageContent{
+        height:600px;
+    }
+    .leftsidePage{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 600px;
+        padding-left: 7%;
+    }
+    .leftPageHeader{
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 65px;
+        text-transform: capitalize;
+        color: $left-header-color;
+        padding-bottom: 5%;
+    }
+    .leftPageContent{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: capitalize;  
+        color: #000000;
+        padding-bottom: 5%;
+    }
+    .leftPageButton{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        width: 127px;
+        height: 53px;
+        @include flexCenter();
+        background: $header-button-color;
+        border-radius: 8px;
+        color: $ButtonFont-color;
+    }
+    .rightsidePage{
+        width: 50%;
+    }
+    .grid{
+        display: grid;
+        grid-template-rows: 100px  200px 150px 100px;
+        grid-template-columns: 125px 150px 150px;
+    }
+    .Ellipse{
+        width:500px;
+        height: 600px;
+    }
+    .womenImage{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        width: 500px;
+        height: 500px;
+        z-index: 2;
+    }
+    .graph1{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 1;
+        width: 155px;
+        height: 125px;
+    }
+    .doctorPrescription{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        z-index: 1;
+        padding-left: 5%;
+        padding-top: 15%;
+        width: 145px;
+        height: 225px;
+        z-index: 3;
+    }
+    .catalog{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 1;
+        padding-left: 15%;
+        padding-top: 75%;
+        width: 245px;
+        height: 225px;
+        z-index: 3;
+    }
+    .graph2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        z-index: 1;
+        width: 155px;
+        height: 125px;
+        margin-left: -25%;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width:2560px)  {
+    .Fallpage{
+        width: 1100px;
+        margin: auto;
+    }
+    .firstPageContent{
+        height:600px;
+        width: 1100px;
+        margin: auto;
+    }
+    .leftsidePage{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 600px;
+    }
+    .rightsidePage{
+        width: 55%;
+        float: right;
+    }
+    .leftPageHeader{
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 65px;
+        text-transform: capitalize;
+        color: $left-header-color;
+        padding-bottom: 5%;
+    }
+    .leftPageContent{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: capitalize;  
+        color: #000000;
+        padding-bottom: 5%;
+    }
+    .leftPageButton{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        width: 127px;
+        height: 53px;
+        @include flexCenter();
+        background: $header-button-color;
+        border-radius: 8px;
+        color: $ButtonFont-color;
+    }
+    .grid{
+        display: grid;
+        grid-template-rows: 100px 100px 100px 150px 100px;
+        grid-template-columns: 125px 125px 200px 250px;
+    }
+    .womenImage{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        width: 700px;
+        height: 500px;
+        z-index: 2;
+    }
+    .graph1{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 1;
+        width: 155px;
+        height: 125px;
+    }
+    .doctorPrescription{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        z-index: 1;
+        padding-left: 5%;
+        padding-top: 15%;
+        width: 145px;
+        height: 225px;
+        z-index: 3;
+    }
+    .catalog{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        z-index: 1;
+        width: 245px;
+        height: 225px;
+        z-index: 3;
+    }
+    .graph2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        z-index: 1;
+        width: 255px;
+        height: 125px;
+        margin-left: -25%;
+    }
+    
+}
+@media only screen and (min-width: 2560px) {
+    .Header{
+        width: 1500px;
+        margin: auto;
+    }
+    .signIn{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .signUp{
+        font-size: 18px;
+        line-height: 20px;
+        width: 100px;
+        height: 60px;
+    }
+}

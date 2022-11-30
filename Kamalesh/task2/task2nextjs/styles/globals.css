@@ -20,6 +20,7 @@ a {
   justify-content: space-between;
   background-color: black;
   color: azure;
+  width: 100vw;
 }
 .rightNav{
   display: flex;
@@ -33,6 +34,7 @@ a {
     color: azure;
     font-size: 24px;
     padding: 15px;
+    width: 600px;
   }
   .rightNav{
     width: 200px;
@@ -47,6 +49,7 @@ a {
     color: azure;
     font-size: 30px;
     padding: 20px;
+    width: 1100px;
   }
   .rightNav{
     width: 250px;
