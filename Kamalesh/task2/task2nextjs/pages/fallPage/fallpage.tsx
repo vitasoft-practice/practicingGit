@@ -1,6 +1,5 @@
 import Image from "next/image"
-import React from "react"
-import styles from  "./fallPage.module.scss"
+import styles from  "./FallPage.module.scss"
 import womenImage from "./womenImage.png"
 import graph1 from "./graph1.png"
 import graph2 from "./graph2.png"

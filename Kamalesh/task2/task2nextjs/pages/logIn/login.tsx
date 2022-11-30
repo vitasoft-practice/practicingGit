@@ -5,7 +5,11 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import styles from "./loginStyle.module.scss"
 import Button from '@mui/material/Button';
+import { useDispatch } from 'react-redux'
+import { populateUserDetail } from "../../slices/userDetail"
+import { RootState } from "../../store";
 export default function LogIn() {
+  const dispatch = useDispatch();
   const router =useRouter();
     const formik = useFormik({
         initialValues: {
@@ -17,22 +21,21 @@ export default function LogIn() {
             password: yup.string().min(4,"password must be atleast 4 characters long").required("password required")
         }),
         onSubmit: async (values) => {
-          
-          try {
-            const res = await axios.post('http://localhost:8000/login', {
-              username: values.email,
-              password: values.password
-            })
-            if(res && res.data.message === "Authenticated"){
-              router.push("../dashboard/dashboard")
-            }
-          } catch (err) {
-            alert("unauthorized users")
-          }
-          //
-        //const response = await fetch('../api/login')
-        //const resData = await response.json()
-        //console.log("/////////////////////",resData)
+        const response = await fetch('../api/login',{
+          method:'POST',
+          body: JSON.stringify({
+            username: values.email,
+            password: values.password
+          })
+        })
+        const resData = await response.json()
+        if(resData && resData.message === "Authenticated"){
+          //await dispatch(populateUserDetail(resData.data))
+          router.push("../dashboard/dashboard")
+        }
+        else if(resData.message === "unauthorized"){
+          alert("unauthorized users")
+        }
         },
       });
     return (

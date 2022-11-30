@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import styles from  "./fallPage.module.scss"
 import NavBar from '../components/navbar/navbar'
 import Fallpage from './fallPage/fallpage'
 export default function Home() {
