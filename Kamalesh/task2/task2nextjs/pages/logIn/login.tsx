@@ -1,13 +1,11 @@
 import NavBar from "../../components/navbar/navbar"
 import * as yup from "yup"
 import { useFormik } from "formik"
-import axios from "axios";
 import { useRouter } from "next/router";
 import styles from "./loginStyle.module.scss"
 import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux'
 import { populateUserDetail } from "../../slices/userDetail"
-import { RootState } from "../../store";
 export default function LogIn() {
   const dispatch = useDispatch();
   const router =useRouter();
@@ -30,8 +28,8 @@ export default function LogIn() {
         })
         const resData = await response.json()
         if(resData && resData.message === "Authenticated"){
-          //await dispatch(populateUserDetail(resData.data))
-          router.push("../dashboard/dashboard")
+          await dispatch(populateUserDetail(resData))
+          router.push("../dashboard/")
         }
         else if(resData.message === "unauthorized"){
           alert("unauthorized users")
