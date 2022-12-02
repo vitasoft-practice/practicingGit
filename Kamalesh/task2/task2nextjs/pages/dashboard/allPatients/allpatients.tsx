@@ -22,12 +22,12 @@ export default function NavBar({AllPatients}) {
     const router =useRouter();
     return (
       <div className="AllPatients">
-        <TableContainer sx={{ maxWidth: 650,margin: "0 auto" }} component={Paper}>
+        <TableContainer sx={{ width: "70%",margin: "0 auto" }} component={Paper}>
       <Table  aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell sx={{ fontWeight:700,borderBottom:5 }}>First Name</TableCell>
-            <TableCell sx={{ fontWeight:700,borderBottom:5 }} align="right">Last Name</TableCell>
+            <TableCell sx={{ fontWeight:700,borderBottom:5 }} align="left">Last Name</TableCell>
             <TableCell sx={{ fontWeight:700,borderBottom:5 }} align="left">email</TableCell>
             <TableCell sx={{ fontWeight:700,borderBottom:5 }} align="right">country</TableCell>
           </TableRow>

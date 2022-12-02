@@ -34,7 +34,8 @@ a {
     color: azure;
     font-size: 24px;
     padding: 15px;
-    width: 600px;
+    width: 400px;
+    margin: 14px auto;
   }
   .rightNav{
     width: 200px;
@@ -49,7 +50,7 @@ a {
     color: azure;
     font-size: 30px;
     padding: 20px;
-    width: 1100px;
+    width: 100%;
   }
   .rightNav{
     width: 250px;
@@ -70,4 +71,20 @@ a {
     justify-content: space-around;
   }
   
+}
+@media only screen and (min-width: 1200px) and (max-width:2560px)  {
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: azure;
+    font-size: 40px;
+    padding: 30px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .rightNav{
+    width: 250px;
+    justify-content: space-around;
+  }
 }

@@ -1,0 +1,30 @@
+@media only screen and (min-width: 320px) and (max-width: 478px) {
+    .topbutton{
+        width: 320px;
+        margin: 0 auto;
+    }
+    .patientdoctorTable{
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 478px) and (max-width:1129px)  {
+    .topbutton{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .patientdoctorTable{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width:2560px)  {
+    .topbutton{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .patientdoctorTable{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}

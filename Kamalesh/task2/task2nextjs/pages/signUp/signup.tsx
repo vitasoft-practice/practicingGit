@@ -55,8 +55,10 @@ export default function SignUp() {
                 <Button sx={{
                   color: 'white',
                   background: 'black',
-                  width: '80%',
-                  marginTop: "10%",
+                  width: '50%',
+                  marginTop: "5%",
+                  padding:"1%",
+                  marginBottom:"5%",
                   '&:hover': {
                     background: 'linear-gradient(93.03deg, #20B2E3 -27.2%, #0ED9D4 135.73%)',
                     color: '#3c52b2',

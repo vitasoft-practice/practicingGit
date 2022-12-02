@@ -35,8 +35,45 @@
     outline:none;
 }
 .errorMessage{
-    width:320px;
+    width:50%;
     float: left;
     color: red;
     margin: 0;
+}
+@media only screen and (min-width:320px) and (max-width:478px)  {
+    .signUpwrapper{
+        width:400px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 478px) and (max-width:1129px) {
+    .signUpwrapper{
+        height: 700px;
+        width: 80%;
+    }
+    .signupInput{
+        padding: 15px;
+        margin: 25px;
+        width:50%;
+        height: 30px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width:2560px)  {
+    .signUpwrapper{
+        height: 800px;
+        width: 70%;
+    }
+    .signUpHeader{
+        width: 500px;
+        font-size: 70px;
+    }
+    .signupInput{
+        padding: 15px;
+        margin: 25px;
+        width:50%;
+        height: 60px;
+    }
+    .errorMessage{
+        font-size: 28px;
+    }
 }

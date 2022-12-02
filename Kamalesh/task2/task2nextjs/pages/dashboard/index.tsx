@@ -11,6 +11,7 @@ import Paper from '@mui/material/Paper';
 import { useState , useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
+import styles from  "./doctorPatient.module.scss"
 //export async function getServerSideProps(context){
 //  const { params } = context
 //  console.log(")((&^^%%%",params)
@@ -24,19 +25,33 @@ import { useRouter } from "next/router";
 //}
 export default function Dashboard() {
     const router =useRouter();
-    const [patients , setPatients ] = useState([{}])
-    const doctor = useSelector((state) => state.user)
+    const [patients , setPatients ] = useState([{
+      Firstname:"",
+      Middlename:"",
+      Lastname:"",
+      height:0,
+      weight:0,
+      phoneNumber:'',
+      email:'',
+      country:'',
+      Address:'',
+      _id:'',
+      zipcode:'',
+      state:''
+    }])
+    const doctor = useSelector((state:any) => state.user)
     const doctorId = doctor.user.doctorId
     useEffect(() =>{
       async function getPatientData() {
         const resData = await axios.get(`http://localhost:8000/patient/${doctorId}`)
+        console.log("particular doctor patients:", resData.data)
         setPatients(resData.data)
       }
       getPatientData()
     },[])
     return (
-      <div className="signUp">
-        <div style={{width : "650px",margin : "0 auto"}}>
+      <div className="doctorPatient">
+        <div className={styles.topbutton}>
         <Button onClick={() =>{
            router.push(`../dashboard/allPatients/allpatients`)
         }} sx={{
@@ -50,12 +65,12 @@ export default function Dashboard() {
                   }
                   }}>All patients</Button>
         </div>
-      <TableContainer sx={{ maxWidth: 650,margin: "0 auto" }} component={Paper}>
+      <TableContainer className={styles.patientdoctorTable} component={Paper}>
       <Table  aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell sx={{ fontWeight:700,borderBottom:5 }}>First Name</TableCell>
-            <TableCell sx={{ fontWeight:700,borderBottom:5 }} align="right">Last Name</TableCell>
+            <TableCell sx={{ fontWeight:700,borderBottom:5 }} align="left">Last Name</TableCell>
             <TableCell sx={{ fontWeight:700,borderBottom:5 }} align="left">email</TableCell>
             <TableCell sx={{ fontWeight:700,borderBottom:5 }} align="right">country</TableCell>
           </TableRow>

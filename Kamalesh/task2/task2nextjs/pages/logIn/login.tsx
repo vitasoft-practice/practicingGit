@@ -37,8 +37,9 @@ export default function LogIn() {
         },
       });
     return (
-      <div className={styles.LoginPage}>
+      <div>
         <NavBar />
+        <div className={styles.LoginPage}>
         <div className={styles.LoginWrapper}>
           <div className={styles.Login_header}>Log in Up</div>
               <form onSubmit={formik.handleSubmit} className={styles.loginForm}>
@@ -53,14 +54,17 @@ export default function LogIn() {
                   <Button sx={{
                   color: 'white',
                   background: 'black',
-                  width: '80%',
-                  marginTop: "20%",
+                  width: '50%',
+                  marginTop: "10%",
+                  padding:"1%",
+                  marginBottom:"5%",
                   '&:hover': {
                     background: 'linear-gradient(93.03deg, #20B2E3 -27.2%, #0ED9D4 135.73%)',
                     color: '#3c52b2',
                   }
                   }} type="submit">Submit</Button>
               </form>
+          </div>
           </div>
         </div>
       
