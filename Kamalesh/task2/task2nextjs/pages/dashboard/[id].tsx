@@ -5,20 +5,7 @@ import styles from  "./singlePatient.module.scss"
 export default function NavBar() {
     const router = useRouter()
     const patientId = router.query.id
-    const [patientDetail,setPatientDetail] = useState([{
-      Firstname:"",
-      Middlename:"",
-      Lastname:"",
-      height:0,
-      weight:0,
-      phoneNumber:'',
-      email:'',
-      country:'',
-      Address:'',
-      _id:'',
-      zipcode:'',
-      state:''
-    }])
+    const [patientDetail,setPatientDetail] = useState([{}])
     useEffect(() => {
 
         async function getSinglePatientData() {
@@ -35,7 +22,7 @@ export default function NavBar() {
     },[])
     return (
       <div className="hello">
-        {patientDetail.map((row) => (
+        {patientDetail.map((row:any) => (
           <div key={row._id} className={styles.mainContainer}>
             
             <div className={styles.infoContainer}>

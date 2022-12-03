@@ -18,12 +18,12 @@ export async function getServerSideProps(){
     }
   }
 }
-export default function NavBar({AllPatients}) {
+export default function NavBar({AllPatients} : any) {
     const router =useRouter();
     return (
       <div className="AllPatients">
         <TableContainer sx={{ width: "70%",margin: "0 auto" }} component={Paper}>
-      <Table  aria-label="simple table">
+      <Table  aria-label="simple table" id="allPatientsTable">
         <TableHead>
           <TableRow>
             <TableCell sx={{ fontWeight:700,borderBottom:5 }}>First Name</TableCell>
@@ -33,7 +33,7 @@ export default function NavBar({AllPatients}) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {AllPatients.map((row) => (
+          {AllPatients.map((row:any) => (
             <TableRow
               key={row._id}
               sx={{ '&:last-child td, &:last-child th': { borderBottom: 5 }}}

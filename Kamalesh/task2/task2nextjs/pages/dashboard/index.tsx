@@ -25,20 +25,7 @@ import styles from  "./doctorPatient.module.scss"
 //}
 export default function Dashboard() {
     const router =useRouter();
-    const [patients , setPatients ] = useState([{
-      Firstname:"",
-      Middlename:"",
-      Lastname:"",
-      height:0,
-      weight:0,
-      phoneNumber:'',
-      email:'',
-      country:'',
-      Address:'',
-      _id:'',
-      zipcode:'',
-      state:''
-    }])
+    const [patients , setPatients ] = useState([{}])
     const doctor = useSelector((state:any) => state.user)
     const doctorId = doctor.user.doctorId
     useEffect(() =>{
@@ -66,7 +53,7 @@ export default function Dashboard() {
                   }}>All patients</Button>
         </div>
       <TableContainer className={styles.patientdoctorTable} component={Paper}>
-      <Table  aria-label="simple table">
+      <Table  aria-label="simple table" id="doctorPatientsTable">
         <TableHead>
           <TableRow>
             <TableCell sx={{ fontWeight:700,borderBottom:5 }}>First Name</TableCell>
@@ -76,7 +63,7 @@ export default function Dashboard() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {patients.map((row) => (
+          {patients.map((row:any) => (
             <TableRow
               key={row._id}
               sx={{ '&:last-child td, &:last-child th': { borderBottom: 5 }}}

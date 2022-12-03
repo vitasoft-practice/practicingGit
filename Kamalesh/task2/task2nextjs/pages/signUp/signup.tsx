@@ -43,16 +43,16 @@ export default function SignUp() {
                 <input className={styles.signupInput} id="email" name="email" placeholder="email" onChange={formik.handleChange}
                 value={formik.values.email} onBlur={formik.handleBlur}>
                 </input>
-                {formik.touched.email && formik.errors.email ? <p className={styles.errorMessage}>{formik.errors.email}</p> : null}
+                {formik.touched.email && formik.errors.email ? <p id="emailError" className={styles.errorMessage}>{formik.errors.email}</p> : null}
                 <input className={styles.signupInput} id="username" name="username" placeholder="username" onChange={formik.handleChange}
                 value={formik.values.username} onBlur={formik.handleBlur}>
                 </input>
-                {formik.touched.username && formik.errors.username ? <p className={styles.errorMessage}>{formik.errors.username}</p> : null}
+                {formik.touched.username && formik.errors.username ? <p id="usernameError" className={styles.errorMessage}>{formik.errors.username}</p> : null}
                 <input className={styles.signupInput} type="password" id="password" name="password" placeholder="password" onChange={formik.handleChange}
                 value={formik.values.password} onBlur={formik.handleBlur}>
                 </input>
-                {formik.touched.password && formik.errors.password ? <p className={styles.errorMessage}>{formik.errors.password}</p> : null}
-                <Button sx={{
+                {formik.touched.password && formik.errors.password ? <p id="passwordError" className={styles.errorMessage}>{formik.errors.password}</p> : null}
+                <Button id="signupButton" sx={{
                   color: 'white',
                   background: 'black',
                   width: '50%',

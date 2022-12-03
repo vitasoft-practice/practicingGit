@@ -1,3 +1,5 @@
+import { any } from "cypress/types/bluebird"
+
 describe('checking login page', () => {
     it('should return nav bar and login page contents', () => {
       cy.visit('http://localhost:3000/logIn/login')
@@ -27,7 +29,15 @@ describe('checking login page', () => {
       //checking login function
       cy.get("#email[placeholder*='email']").type("mageshmohan@gmail.com")
       cy.get("#password[placeholder*='password']").type("987654")
+      cy.intercept("POST",'http://localhost:3000/api/login').as('loginCall')
       cy.get(".LoginButton").click()
+      
+      cy.get('@loginCall').should((loginObj : any) => {
+        cy.log(loginObj.response)
+        expect(loginObj.response.statusCode).to.eq(200)
+        expect(loginObj.response.statusMessage).to.eq("OK")
+      })
+      
       cy.url().should('include', '/dashboard')
     })
   })
