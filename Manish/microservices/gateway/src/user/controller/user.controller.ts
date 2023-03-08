@@ -1,0 +1,26 @@
+import { Controller, Inject, Get, Post, Body, Param } from '@nestjs/common';
+import { ClientProxy } from '@nestjs/microservices';
+import { UserDto } from './user.dto';
+
+@Controller('user')
+export class UserController {
+  constructor(@Inject('USER_SERVICE') private readonly client: ClientProxy) { }
+  async onApplicationBootstrap() {
+    await this.client.connect();
+  }
+
+  @Get()
+  getHello() {
+    return 'Hello Microservices';
+  }
+
+  @Post()
+  async create(@Body() user: UserDto) {
+    return this.client.send({ role: 'user', cmd: 'create' }, user);
+  }
+
+  @Get('/:userId')
+  async getById(@Param('userId') userId: string) {
+    return this.client.send({ role: 'user', cmd: 'get-by-id' }, userId);
+  }
+}
