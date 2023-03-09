@@ -1,7 +1,9 @@
+
 import { Controller, Inject, Get, Post, Body, Param } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
-import { UserDto } from './user.dto';
-
+import { UserDto, UserLoginDto } from './user.dto';
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('User')
 @Controller('user')
 export class UserController {
   constructor(@Inject('USER_SERVICE') private readonly client: ClientProxy) { }
@@ -19,7 +21,13 @@ export class UserController {
     return this.client.send({ role: 'user', cmd: 'create' }, user);
   }
 
-  @Get('/:userId')
+  @Post('/login')
+  async login(@Body() user: UserLoginDto) {
+    return this.client.send({ role: 'user', cmd: 'login' }, user);
+    //return user;
+  }
+
+  @Get('/get/:userId')
   async getById(@Param('userId') userId: string) {
     return this.client.send({ role: 'user', cmd: 'get-by-id' }, userId);
   }

@@ -1,6 +1,7 @@
 import { UserService } from './../db/user.service';
 import { Controller, Get } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
+import { UserLoginDto } from './user.dto';
 
 
 @Controller('user')
@@ -15,6 +16,12 @@ export class UserController {
   @MessagePattern({ role: 'user', cmd: 'create' })
   create(userDto: any) {
     return this.userService.create(userDto);
+  }
+
+
+  @MessagePattern({ role: 'user', cmd: 'login' })
+  login(userLoginDto: UserLoginDto) {
+    return this.userService.login(userLoginDto);
   }
 
   @MessagePattern({ role: 'user', cmd: 'get-by-id' })
