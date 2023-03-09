@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Get, Inject } from '@nestjs/common';
+import { Body, Controller, Get, Inject, Post, Patch } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices/client';
+import { Userdto } from './user.dto';
 @Controller()
 export class AppController {
   constructor(
@@ -12,6 +13,21 @@ export class AppController {
   }
   @Get()
   create() {
-    return this.client.send({ role: 'test', cmd: 'create' }, '<<===  this is the value im passing ===>> ');
+    return this.client.send(
+      { role: 'test', cmd: 'create' },
+      '<<===  this is the value im passing ===>> ',
+    );
+  }
+
+  @Post()
+  AddUser(@Body() userDto: Userdto) {
+    console.log('create data:', userDto);
+    return this.client.send('addUser', userDto);
+  }
+
+  @Patch()
+  updateUserAddress(@Body() userDto: Userdto) {
+    console.log('edit data:', userDto);
+    return this.client.send('updateUser', userDto);
   }
 }
