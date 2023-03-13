@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package patient;
+
+service PatientService {
+ rpc SaveUserInfo (PatientInfo) returns (PatientInfo) {}
+  rpc VerifyDetials (PatientVerify) returns (PatientInfo) {}
+  
+}
+
+message PatientVerify {
+  string first_name  = 1;
+  string last_name  = 2;
+  string dob  =3;
+}
+message Address {
+    string street = 1;
+    string city = 2;
+    string state = 3;
+    int32 zipcode = 4;
+}
+enum Gender {
+    GENDER_MALE = 0;
+    GENDER_FEMALE = 1;
+}
+
+message PatientInfo {
+  string patientId = 1;
+  string first_name = 2;
+  string last_name = 3;
+  int32 dob = 5;
+  Gender gender = 6;
+  Address address = 7;
+
+}
