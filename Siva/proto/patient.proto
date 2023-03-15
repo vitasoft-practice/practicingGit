@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message Patient{
+    int32 id=1;
+    string address = 2;
+    int32 balanceAmount= 3;
+}
+message Patients{
+    repeated Patient patients=1;
+}

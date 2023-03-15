@@ -1,7 +1,7 @@
-import { Controller, Get, Inject, Post } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Body, Controller, Get, Inject, Param, Post } from '@nestjs/common';
+// import { AppService } from './app.service';
 import { ClientProxy } from '@nestjs/microservices';
-
+import { LoginDto, SignupDto } from './app.dto';
 @Controller()
 export class AppController {
   // constructor(private readonly appService: AppService) {}
@@ -19,5 +19,19 @@ export class AppController {
   @Post('/update')
   update() {
     return this.client.send({ cmd: 'update' }, 'sivakumar');
+  }
+  @Post('/login')
+  loginPhlebotomist(@Body() loginDto: LoginDto) {
+    return this.client.send({ cmd: 'login' }, loginDto);
+  }
+
+  @Post('/signup')
+  signupPhlebotomist(@Body() signupDto: SignupDto) {
+    return this.client.send({ cmd: 'signup' }, signupDto);
+  }
+
+  @Get('/delete/:username')
+  deletePhlebotomist(@Param('username') username: string) {
+    return this.client.send({ cmd: 'delete' }, username);
   }
 }
