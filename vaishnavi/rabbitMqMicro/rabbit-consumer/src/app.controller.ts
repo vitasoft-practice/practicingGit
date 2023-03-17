@@ -12,6 +12,8 @@ const listOfUsers = [
     address: 'trl',
   },
 ];
+
+
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
