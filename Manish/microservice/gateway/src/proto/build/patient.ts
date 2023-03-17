@@ -1,13 +1,19 @@
+import { Observable } from "rxjs";
+
 export interface PatientVerify {
-    first_name: string;
-    last_name: string;
+    firstName: string;
+    lastName: string;
     dob: string;
 }
-export enum GenderE {
-    MALE = 'male',
-    FEMALE = 'female'
+export interface GetRequest {
+    patientId: string;
 }
-interface Address {
+
+export enum Gender {
+    MALE = "MALE",
+    FEMALE = "FEMALE",
+}
+export interface Address {
     street: string;
     city: string;
     state: string;
@@ -15,14 +21,36 @@ interface Address {
 }
 export interface PatientInfo {
     patientId: string;
-    first_name: string;
-    last_name: string;
+    firstName: string;
+    lastName: string;
     dob: string;
-    gender: GenderE;
+    gender: Gender;
     address: Address;
+}
+export interface Info {
+    patientId: string;
+    firstName: string;
+    lastName: string;
+    dob: string;
+    name: string;
+    age: string;
+    gender: Gender;
+    address: Address;
+}
+export interface UpdateAddress {
+    patientId: string;
+    address: Address;
+}
 
+export interface PatientVerification {
+    patientId: string;
+    info: PatientVerify;
 }
 export interface PatientService {
-    SavePatientInfo(request: PatientInfo): Promise<PatientInfo>;
-    VerifyDetials(request: PatientVerify): Promise<PatientInfo>;
+    savePatientInfo(request: PatientInfo): Observable<PatientInfo>;
+    verifyDetial(request: PatientVerify): Promise<PatientVerify>;
+    savePatient(request: Info): Promise<Info>;
+    getPatient(request: GetRequest): Promise<Info>;
+    verifyPatient(request: PatientVerification): Observable<Info>;
+    updateAdress(request: UpdateAddress): Promise<Info>;
 }

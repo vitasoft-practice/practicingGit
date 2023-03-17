@@ -3,16 +3,25 @@ syntax = "proto3";
 package patient;
 
 service PatientService {
- rpc SaveUserInfo (PatientInfo) returns (PatientInfo) {}
-  rpc VerifyDetials (PatientVerify) returns (PatientInfo) {}
-  
+ rpc SaveUserInfo(PatientInfo) returns (PatientInfo) {}
+  rpc VerifyDetial(PatientVerify) returns (PatientVerify) {}
+  rpc SavePatient(Info) returns (Info) {}
+  rpc GetPatient(GetRequest) returns (Info) {}
+  rpc VerifyPatient(PatientVerification) returns (Info) {}
+  rpc UpdateAdress(UpdateAddress) returns (Info) {}
 }
 
 message PatientVerify {
   string first_name  = 1;
   string last_name  = 2;
-  string dob  =3;
+  string dob = 3;
 }
+
+message PatientVerification{
+  string patient_id = 1;
+  PatientVerify info = 2;
+}
+
 message Address {
     string street = 1;
     string city = 2;
@@ -20,16 +29,34 @@ message Address {
     int32 zipcode = 4;
 }
 enum Gender {
-    GENDER_MALE = 0;
-    GENDER_FEMALE = 1;
+  GENDER_MALE = 0;
+  GENDER_FEMALE = 1;
+}
+message GetRequest {
+  string patient_id = 1;
+}
+message UpdateAddress{
+  string patient_id = 1;
+  Address address = 2;
 }
 
 message PatientInfo {
-  string patientId = 1;
+  string patient_id = 1;
   string first_name = 2;
   string last_name = 3;
   int32 dob = 5;
   Gender gender = 6;
   Address address = 7;
+
+}
+message Info {
+  string patient_id = 1;
+  string first_name  = 2;
+  string last_name  = 3;
+  string dob = 4;
+  string name = 5;
+  string age = 6;
+  Gender gender = 7;
+  Address address = 8;
 
 }
