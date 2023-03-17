@@ -9,7 +9,7 @@ async function bootstrap() {
     transport: Transport.GRPC,
     options: {
       package: 'patient',
-      protoPath: join(__dirname, '_proto/patient.proto'),
+      protoPath: join(__dirname, '../src/_proto/patient.proto'),
     },
   });
   await app.listen();
