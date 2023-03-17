@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package car;
+
+message Car {
+    string regId = 1;
+    string name = 2;
+    string brand = 3;
+}
+message RemoveCarRequest{
+    string regId = 1;
+}
+
+message Cars {
+    repeated Car cars = 1;
+}
+
+
+
+service CarServiceController {
+    rpc AddCars(Car) returns (Cars) {}
+    rpc RemoveCar(RemoveCarRequest) returns (Cars) {}
+}
