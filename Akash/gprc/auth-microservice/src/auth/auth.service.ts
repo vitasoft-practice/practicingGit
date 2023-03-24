@@ -1,10 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import {
-  LoginRequestDto,
-  LoginResponseDto,
   SignupRequestDto,
   SignupResponseDto,
-} from './auth.pb';
+  LoginRequestDto,
+  LoginResponseDto,
+  VerifyJWTAuthTokenRequest,
+  LogoutResponseDto,
+  ResetPasswordRequestDto,
+  ResetPasswordResponseDto,
+  VerifyJWTAuthTokenResponse,
+  CanRoleAccessServiceRequest,
+  Project,
+} from 'src/proto-generated/auth';
 
 @Injectable()
 export class AuthService {
@@ -16,12 +23,29 @@ export class AuthService {
       message: 'successfully created the user',
     } as SignupResponseDto;
   }
-
-  async LoginService(
-    loginRequestDto: LoginRequestDto,
-  ): Promise<LoginResponseDto> {
+  async LogoutService(
+    loginRequestDto: VerifyJWTAuthTokenRequest,
+  ): Promise<LogoutResponseDto> {
     return {
-      token: 'token-generated',
-    } as LoginResponseDto;
+      logout: true,
+    } as LogoutResponseDto;
+  }
+
+  async ResetPasswordService(
+    request: ResetPasswordRequestDto,
+  ): Promise<ResetPasswordResponseDto> {
+    return {
+      success: true,
+      message: 'password reset successful',
+    } as ResetPasswordResponseDto;
+  }
+
+  async CanRoleAccessService(
+    payload: CanRoleAccessServiceRequest,
+  ): Promise<SignupResponseDto> {
+    return {
+      success: true,
+      message: 'User can access the path',
+    } as SignupResponseDto;
   }
 }

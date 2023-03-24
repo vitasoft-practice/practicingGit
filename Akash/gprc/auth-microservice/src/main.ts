@@ -3,7 +3,7 @@ import { AppModule } from './app.module';
 import { INestMicroservice } from '@nestjs/common';
 import { Transport } from '@nestjs/microservices';
 import { join } from 'path';
-import { protobufPackage } from './auth/auth.pb';
+import { protobufPackage } from './proto-generated/auth';
 
 async function bootstrap() {
   const app: INestMicroservice = await NestFactory.createMicroservice(

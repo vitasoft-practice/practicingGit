@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "generate-grpc": "grpc_tools_node_protoc --plugin=protoc-gen-ts=./node_modules/.bin/ts-protoc-gen.cmd --ts_out=grpc --proto_path=./auto *.proto"
+  },
+  "dependencies": {
+    "@nestjs/microservices": "^9.3.12",
+    "google-protobuf": "^3.21.2"
+  },
+  "devDependencies": {
+    "grpc-tools": "^1.12.4",
+    "ts-proto": "^1.79.0"
+  }
+}

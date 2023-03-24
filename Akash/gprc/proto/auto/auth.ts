@@ -1,27 +1,12 @@
 /* eslint-disable */
 import { GrpcMethod, GrpcStreamMethod } from "@nestjs/microservices";
 import { Observable } from "rxjs";
-import { Empty } from "./google/protobuf/empty.pb";
-import { BoolValue } from "./google/protobuf/wrappers.pb";
 
 export const protobufPackage = "auth";
 
 export enum Project {
   PNSS = 0,
   PWPS = 1,
-  UNRECOGNIZED = -1,
-}
-
-export enum Role {
-  ADMIN = 0,
-  USER = 1,
-  UNRECOGNIZED = -1,
-}
-
-export enum Permissions {
-  READ = 0,
-  WRITE = 1,
-  DELETE = 2,
   UNRECOGNIZED = -1,
 }
 
@@ -61,12 +46,34 @@ export interface LoginResponseDto {
   token: string;
 }
 
+export interface VerifyJWTAuthTokenRequest {
+  token: string;
+}
+
+export interface VerifyJWTAuthTokenResponse {
+  project: Project;
+  uniqueId: string;
+  displayName: string;
+  role: string[];
+  permissions: string[];
+  appSpecific: { [key: string]: string };
+}
+
+export interface VerifyJWTAuthTokenResponse_AppSpecificEntry {
+  key: string;
+  value: string;
+}
+
+export interface RefreshJWTAuthTokenResponse {
+  token: string;
+}
+
 export interface PNSSAuthServiceResponseDto {
   sampleId: number;
   customerId: number;
   patientId: number;
-  role: Role[];
-  permissions: Permissions[];
+  role: string[];
+  permissions: string[];
 }
 
 export interface ResetPasswordRequestDto {
@@ -97,6 +104,11 @@ export interface ForgotPasswordResponseDto {
   message?: string | undefined;
 }
 
+export interface CanRoleAccessServiceRequest {
+  path: string;
+  payload: VerifyJWTAuthTokenResponse | undefined;
+}
+
 export const AUTH_PACKAGE_NAME = "auth";
 
 export interface AuthServiceClient {
@@ -104,15 +116,17 @@ export interface AuthServiceClient {
 
   loginService(request: LoginRequestDto): Observable<LoginResponseDto>;
 
-  pnssAuthService(request: PNSSLoginRequestDto): Observable<PNSSAuthServiceResponseDto>;
+  verifyJwtAuthToken(request: VerifyJWTAuthTokenRequest): Observable<VerifyJWTAuthTokenResponse>;
 
-  pwpsAuthService(request: PWPSLoginRequestDto): Observable<BoolValue>;
+  refreshJwtAuthToken(request: VerifyJWTAuthTokenRequest): Observable<RefreshJWTAuthTokenResponse>;
 
   resetPasswordService(request: ResetPasswordRequestDto): Observable<ResetPasswordResponseDto>;
 
-  logoutService(request: Empty): Observable<LogoutResponseDto>;
+  logoutService(request: VerifyJWTAuthTokenRequest): Observable<LogoutResponseDto>;
 
   forgotPasswordService(request: ForgotPasswordRequestDto): Observable<ForgotPasswordResponseDto>;
+
+  canRoleAccessService(request: CanRoleAccessServiceRequest): Observable<SignupResponseDto>;
 }
 
 export interface AuthServiceController {
@@ -122,21 +136,29 @@ export interface AuthServiceController {
 
   loginService(request: LoginRequestDto): Promise<LoginResponseDto> | Observable<LoginResponseDto> | LoginResponseDto;
 
-  pnssAuthService(
-    request: PNSSLoginRequestDto,
-  ): Promise<PNSSAuthServiceResponseDto> | Observable<PNSSAuthServiceResponseDto> | PNSSAuthServiceResponseDto;
+  verifyJwtAuthToken(
+    request: VerifyJWTAuthTokenRequest,
+  ): Promise<VerifyJWTAuthTokenResponse> | Observable<VerifyJWTAuthTokenResponse> | VerifyJWTAuthTokenResponse;
 
-  pwpsAuthService(request: PWPSLoginRequestDto): Promise<BoolValue> | Observable<BoolValue> | BoolValue;
+  refreshJwtAuthToken(
+    request: VerifyJWTAuthTokenRequest,
+  ): Promise<RefreshJWTAuthTokenResponse> | Observable<RefreshJWTAuthTokenResponse> | RefreshJWTAuthTokenResponse;
 
   resetPasswordService(
     request: ResetPasswordRequestDto,
   ): Promise<ResetPasswordResponseDto> | Observable<ResetPasswordResponseDto> | ResetPasswordResponseDto;
 
-  logoutService(request: Empty): Promise<LogoutResponseDto> | Observable<LogoutResponseDto> | LogoutResponseDto;
+  logoutService(
+    request: VerifyJWTAuthTokenRequest,
+  ): Promise<LogoutResponseDto> | Observable<LogoutResponseDto> | LogoutResponseDto;
 
   forgotPasswordService(
     request: ForgotPasswordRequestDto,
   ): Promise<ForgotPasswordResponseDto> | Observable<ForgotPasswordResponseDto> | ForgotPasswordResponseDto;
+
+  canRoleAccessService(
+    request: CanRoleAccessServiceRequest,
+  ): Promise<SignupResponseDto> | Observable<SignupResponseDto> | SignupResponseDto;
 }
 
 export function AuthServiceControllerMethods() {
@@ -144,11 +166,12 @@ export function AuthServiceControllerMethods() {
     const grpcMethods: string[] = [
       "signupService",
       "loginService",
-      "pnssAuthService",
-      "pwpsAuthService",
+      "verifyJwtAuthToken",
+      "refreshJwtAuthToken",
       "resetPasswordService",
       "logoutService",
       "forgotPasswordService",
+      "canRoleAccessService",
     ];
     for (const method of grpcMethods) {
       const descriptor: any = Reflect.getOwnPropertyDescriptor(constructor.prototype, method);

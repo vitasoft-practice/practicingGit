@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package projectroles;
+
+enum Project {
+  PNSS = 0;
+  PWPS = 1;
+}
+
+message ProjectInput {
+  Project project = 1;
+}
+
+message Role {
+  string name = 1;
+  bool isExpired = 2;
+}
+
+message ProjectRoles {
+  Project project = 1;
+  repeated Role roles = 2;
+}
+
+service ProjectRolesService {
+  rpc CreateProjectRoles (ProjectRoles) returns (ProjectRoles) {}
+  rpc GetProjectRoles (ProjectInput) returns (ProjectRoles) {}
+  rpc UpdateProjectRoles (ProjectRoles) returns (ProjectRoles) {}
+  rpc DeleteProjectRoles (ProjectInput) returns (ProjectRoles) {}
+  rpc ExpireRole (ExpireRoleRequest) returns (ProjectRoles) {}
+  rpc IsRoleExpired (IsRoleExpiredRequest) returns (IsRoleExpiredResponse) {}
+}
+
+message ExpireRoleRequest {
+  Project project = 1;
+  string roleName = 2;
+}
+
+
+message IsRoleExpiredRequest {
+  Project project = 1;
+  string roleName = 2;
+}
+
+message IsRoleExpiredResponse {
+  bool isExpired = 1;
+}

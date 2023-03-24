@@ -1,7 +1,7 @@
 import { Global, Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { AuthController } from './auth.controller';
-import { AUTH_SERVICE_NAME, AUTH_PACKAGE_NAME } from './auth.pb';
+import { AUTH_SERVICE_NAME, AUTH_PACKAGE_NAME } from 'src/proto-generated/auth';
 
 @Global()
 @Module({

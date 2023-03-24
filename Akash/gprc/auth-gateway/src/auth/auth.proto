@@ -1,18 +1,17 @@
 syntax = "proto3";
 
-import "google/protobuf/wrappers.proto";
-import "google/protobuf/empty.proto";
 
 package auth;
 
 service AuthService {
   rpc SignupService(SignupRequestDto) returns (SignupResponseDto) {}
   rpc LoginService(LoginRequestDto) returns (LoginResponseDto) {}
-  rpc PNSSAuthService(PNSSLoginRequestDto) returns (PNSSAuthServiceResponseDto) {}
-  rpc PWPSAuthService(PWPSLoginRequestDto) returns (google.protobuf.BoolValue) {}
+  rpc VerifyJWTAuthToken(VerifyJWTAuthTokenRequest) returns (VerifyJWTAuthTokenResponse) {}
+  rpc RefreshJWTAuthToken(VerifyJWTAuthTokenRequest)returns (RefreshJWTAuthTokenResponse) {}
   rpc ResetPasswordService(ResetPasswordRequestDto) returns (ResetPasswordResponseDto) {}
-  rpc LogoutService(google.protobuf.Empty) returns (LogoutResponseDto) {}
+  rpc LogoutService(VerifyJWTAuthTokenRequest) returns (LogoutResponseDto) {}
   rpc ForgotPasswordService(ForgotPasswordRequestDto) returns (ForgotPasswordResponseDto) {}
+  rpc CanRoleAccessService(CanRoleAccessServiceRequest) returns (SignupResponseDto){}
 }
 
 // signup
@@ -62,23 +61,32 @@ message LoginResponseDto {
   // in PWPS add hashed ID and use instead of username
 }
 
-enum Role {
-  ADMIN = 0;
-  USER = 1;
+// Jwt
+
+message VerifyJWTAuthTokenRequest {
+  string token = 1;
 }
 
-enum Permissions {
-  READ = 0;
-  WRITE = 1;
-  DELETE = 2;
+message VerifyJWTAuthTokenResponse {
+  Project project = 1;
+  string unique_id = 2;
+  string display_name = 3;
+  repeated string role = 4;
+  repeated string permissions = 5;
+  map<string, string> app_specific = 6;
 }
+
+message RefreshJWTAuthTokenResponse {
+  string token = 1;
+}
+
 
 message PNSSAuthServiceResponseDto {
   int32 sample_id = 1;
   int32 customer_id = 2;
   int32 patient_id = 3;
-  repeated Role role = 4;
-  repeated Permissions permissions = 5;
+  repeated string role = 4;
+  repeated string permissions = 5;
 }
 
 
@@ -114,4 +122,11 @@ message ForgotPasswordRequestDto {
 message ForgotPasswordResponseDto {
   bool success = 1;
   optional string message = 2;
+}
+
+// Role Access
+
+message CanRoleAccessServiceRequest {
+  string path = 1;
+  VerifyJWTAuthTokenResponse payload = 2;
 }

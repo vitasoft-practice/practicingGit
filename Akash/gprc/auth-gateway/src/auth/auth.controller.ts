@@ -1,14 +1,19 @@
-import { Body, Controller, Inject, Post, Put } from '@nestjs/common';
+import { Body, Controller, Inject, Post, Req, UseGuards } from '@nestjs/common';
 import { Observable } from 'rxjs';
+import { ClientGrpc } from '@nestjs/microservices';
 import {
-  AUTH_SERVICE_NAME,
   AuthServiceClient,
-  LoginRequestDto,
-  LoginResponseDto,
+  AUTH_SERVICE_NAME,
   SignupRequestDto,
   SignupResponseDto,
-} from './auth.pb';
-import { ClientGrpc } from '@nestjs/microservices';
+  LoginRequestDto,
+  LoginResponseDto,
+  ResetPasswordRequestDto,
+  ResetPasswordResponseDto,
+  LogoutResponseDto,
+} from 'src/proto-generated/auth';
+import { RoleGuard } from 'src/guards/role.guard';
+import { Request } from 'express';
 
 @Controller('auth')
 export class AuthController {
@@ -33,5 +38,23 @@ export class AuthController {
     @Body() body: LoginRequestDto,
   ): Promise<Observable<LoginResponseDto>> {
     return this.svc.loginService(body);
+  }
+
+  @UseGuards(RoleGuard)
+  @Post('reset-password')
+  private async resetPassword(
+    @Body() resetPasswordRequestDto: ResetPasswordRequestDto,
+  ): Promise<Observable<ResetPasswordResponseDto>> {
+    return this.svc.resetPasswordService(resetPasswordRequestDto);
+  }
+
+  @UseGuards(RoleGuard)
+  @Post('logout')
+  private async logout(
+    @Req() request: Request,
+  ): Promise<Observable<LogoutResponseDto>> {
+    return this.svc.logoutService({
+      token: request.headers['authorization'].replace('Bearer ', ''),
+    });
   }
 }
