@@ -12,5 +12,5 @@ export const JwtPayload: VerifyJWTAuthTokenResponse = {
   },
 };
 export const jwtConstants = {
-  secret: 'ngRGIr1uCMrAo2H3anIxj5QUEzwemvas',
+  secret: '',
 };
