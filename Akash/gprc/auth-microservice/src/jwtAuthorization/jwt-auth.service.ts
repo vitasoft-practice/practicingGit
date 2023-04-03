@@ -26,11 +26,12 @@ export class JwtAuthService {
   async VerifyJwtAuthTokenService(
     payload: VerifyJWTAuthTokenRequest,
   ): Promise<VerifyJWTAuthTokenResponse> {
-    try{return this.jwtService.decode(payload.token, {
-      json: true,
-    }) as VerifyJWTAuthTokenResponse;}
-    catch(e){
-      throw new RpcException("Invalid Token")
+    try {
+      return this.jwtService.verify(
+        payload.token,
+      ) as VerifyJWTAuthTokenResponse;
+    } catch (e) {
+      throw new RpcException('Invalid Token');
     }
   }
 }
