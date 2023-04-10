@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package geocode;
+
+message Place {
+    string locality = 1;
+    string state = 2;
+    string country = 3;
+}
+
+message PlaceRequest {
+    string postcode = 1;
+}
+
+service GeoCodeController {
+    rpc GetPlace(PlaceRequest) returns (Place) {}
+}
