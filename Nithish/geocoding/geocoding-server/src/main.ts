@@ -8,7 +8,7 @@ async function bootstrap() {
     transport: Transport.GRPC,
     options: {
       package: 'geocode',
-      protoPath: join(__dirname, '../src/geocode.proto'),
+      protoPath: join(__dirname, '../geocode.proto'),
     },
   });
   await app.listen().then(() => {
