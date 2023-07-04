@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package movie;
+
+message Movie {
+    string name = 1;
+    float rating = 2;
+}
+
+message Movies {
+    repeated Movie movies = 1;
+}
+
+message RemoveMovieRequest {
+    string name = 1;
+}
+
+
+
+service MovieServiceController {
+    rpc AddMovie(Movie) returns (Movies) {}
+    rpc RemoveMovie(RemoveMovieRequest) returns (Movies) {}
+}

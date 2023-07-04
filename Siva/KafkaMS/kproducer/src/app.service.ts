@@ -1,15 +1,22 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { ClientKafka } from '@nestjs/microservices';
 import { Kafka } from 'kafkajs';
+// import { student } from './app.schema';
+// import { Model } from 'mongoose';
+// import { InjectModel } from '@nestjs/mongoose';
 
 @Injectable()
 export class AppService {
-  constructor(@Inject('HERO_SERVICE') private readonly client: ClientKafka) {}
+  constructor(
+    @Inject('HERO_SERVICE') private readonly client: ClientKafka, // @InjectModel('testing') // private apimodel: Model<student>,
+  ) {}
   async onApplicationBootstrap() {
     this.client.subscribeToResponseOf('a');
     this.client.subscribeToResponseOf('b');
     this.client.subscribeToResponseOf('add_items');
     this.client.subscribeToResponseOf('remove_items');
+    this.client.subscribeToResponseOf('find');
+    this.client.subscribeToResponseOf('delete');
     await this.client.connect();
   }
   getHello(): string {
@@ -17,6 +24,12 @@ export class AppService {
   }
   getKaf(request) {
     return this.client.send('a', request);
+  }
+  findElem(elem) {
+    return this.client.send('find', elem);
+  }
+  delete(elem) {
+    return this.client.send('delete', elem);
   }
   getKaf2() {
     return this.client.send('b', 'request');

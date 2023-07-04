@@ -10,8 +10,8 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
         name: 'TEST_SERVICE',
         transport: Transport.RMQ,
         options: {
-          urls: ['amqp://guest:guest@localhost:5672/'],
-          queue: 'testq',
+          urls: ['amqp://guest:guest@192.168.0.104:5672/'],
+          queue: 'testque',
           queueOptions: {
             durable: true,
           },

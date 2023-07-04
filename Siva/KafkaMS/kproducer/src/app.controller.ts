@@ -1,15 +1,27 @@
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 // import { ClientKafka } from '@nestjs/microservices';
 import { AppService } from './app.service';
-
+import { studentDto } from './dto/app.dto';
 @Controller('Kafka')
 export class AppController {
   constructor(private appService: AppService) {}
 
   @Post()
-  create(@Body() request) {
+  create(@Body() request: studentDto) {
     console.log('logged Post');
     return this.appService.getKaf(request);
+    // return this.client.emit('a', request);
+  }
+  @Post('/find')
+  findElem(@Body() request: studentDto) {
+    console.log('log studnt');
+    return this.appService.findElem(request);
+    // return this.client.emit('a', request);
+  }
+  @Delete('/delete/:dept')
+  delete(@Param() dept) {
+    console.log('log studnt');
+    return this.appService.delete(dept);
     // return this.client.emit('a', request);
   }
   @Get('/b')

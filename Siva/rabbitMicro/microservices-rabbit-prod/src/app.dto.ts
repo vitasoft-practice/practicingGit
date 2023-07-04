@@ -4,7 +4,7 @@ export class LoginDto {
   password: string;
 }
 export class SignupDto {
-  userName: string;
+  username: string;
   password: string;
   data: string;
 }
