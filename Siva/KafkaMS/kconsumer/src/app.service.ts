@@ -20,7 +20,7 @@ export class AppService {
   }
   async delete(message) {
     // if (message == 'vcc') {
-    return this.apimodel.deleteMany(message);
+    return this.apimodel.deleteOne(message);
     // }
     // return this.apimodel.find({});
   }

@@ -1,8 +1,17 @@
-import { Body, Controller, Get, Inject, Param, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Inject,
+  Param,
+  Post,
+  Delete,
+} from '@nestjs/common';
 // import { AppService } from './app.service';
 import { ClientProxy } from '@nestjs/microservices';
 import { LoginDto, SignupDto } from './app.dto';
 import { AppService } from './app.service';
+import { DataT } from './app.entity';
 @Controller()
 export class AppController {
   // constructor(private readonly appService: AppService) {}
@@ -18,9 +27,13 @@ export class AppController {
   create() {
     return this.client.send({ role: 'test', cmd: 'create' }, 'datarabbitmq');
   }
+  @Get('/get')
+  get() {
+    return this.client.send({ cmd: 'get' }, 'datarabbitmq');
+  }
   @Post('/update')
-  update() {
-    return this.client.send({ cmd: 'update' }, 'sivakumar');
+  update(@Body() testd: DataT) {
+    return this.client.send({ cmd: 'update' }, testd);
   }
   @Post('/login')
   loginPhlebotomist(@Body() loginDto: LoginDto) {
@@ -32,8 +45,8 @@ export class AppController {
     return this.client.send({ cmd: 'signup' }, signupDto);
   }
 
-  @Get('/delete/:username')
-  deletePhlebotomist(@Param('username') username: string) {
-    return this.client.send({ cmd: 'delete' }, username);
+  @Delete('/delete/:name')
+  deletePhlebotomist(@Param('name') name: string) {
+    return this.client.send({ cmd: 'delete' }, name);
   }
 }
