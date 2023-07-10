@@ -2,6 +2,7 @@
 export class Movie {
   name: string;
   rating: number;
+  review: string;
 }
 
 export class RemoveRequest {

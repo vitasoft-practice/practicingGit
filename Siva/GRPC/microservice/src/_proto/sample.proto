@@ -5,6 +5,7 @@ package movie;
 message Movie {
     string name = 1;
     float rating = 2;
+    string review = 3;
 }
 
 message Movies {
@@ -18,4 +19,5 @@ message RemoveMovieRequest {
 service MovieServiceController {
     rpc AddMovie(Movie) returns (Movies) {}
     rpc RemoveMovie(RemoveMovieRequest) returns (Movies) {}
+    rpc SendMovie(Movie) returns (Movies) {}
 }

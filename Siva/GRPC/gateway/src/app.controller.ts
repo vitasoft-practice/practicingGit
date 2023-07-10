@@ -10,8 +10,9 @@ import {
 import { AppService } from './app.service';
 import { microServiceOptions } from './grpc.options';
 import { Client, ClientGrpc } from '@nestjs/microservices';
-import { Movie, MovieService, RemoveRequest } from './grpc.interface';
-import { firstValueFrom, lastValueFrom } from 'rxjs';
+import { Movie, MovieService } from './grpc.interface';
+import { lastValueFrom } from 'rxjs';
+// import { firstValueFrom, lastValueFrom } from 'rxjs';
 
 @Controller('movie')
 export class MovieServiceController implements OnModuleInit {
@@ -36,6 +37,11 @@ export class MovieServiceController implements OnModuleInit {
   async addMovie(@Body() movie: Movie) {
     console.log('Movie to be Add:', movie.name);
     return this.movieService.addMovie(movie);
+  }
+  @Post('/send')
+  async sendMovie(@Body() movie: Movie) {
+    console.log('Movies to add in db:', movie.name);
+    return lastValueFrom(this.movieService.sendMovie(movie));
   }
 
   @Delete('/:name')

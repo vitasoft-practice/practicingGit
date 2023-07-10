@@ -1,12 +1,14 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, NotFoundException } from '@nestjs/common';
 import { MovieService } from './app.service';
-import { GrpcMethod } from '@nestjs/microservices';
+import { GrpcMethod, RpcException } from '@nestjs/microservices';
 import { Movie, RemoveRequest } from './_proto/movie.type';
+import { throwError } from 'rxjs';
 
 const movies = [
   {
     name: 'test',
-    rating: 9.6,
+    rating: 10,
+    review: 'good',
   },
 ];
 
@@ -21,7 +23,7 @@ export class MovieServiceController {
 
   @GrpcMethod('MovieServiceController', 'AddMovie')
   addMovie(movie: Movie) {
-    console.log('movie name:', movie.name);
+    console.log('movie name to be added:', movie.name);
     movies.push(movie);
     console.log(movies);
     return { movies };
@@ -33,6 +35,23 @@ export class MovieServiceController {
     console.log(
       this.movieService.removeMovie(movies, nameOfMovieToBeRemoved.name),
     );
+    // console.log(
+    //   'sendmsms',
+    //   this.movieService.sendMovie(movies, nameOfMovieToBeRemoved.name),
+    // );
     return this.movieService.removeMovie(movies, nameOfMovieToBeRemoved.name);
+  }
+  @GrpcMethod('MovieServiceController', 'SendMovie')
+  sendMovie(movie: Movie, exception: RpcException) {
+    movies.push(movie);
+    console.log({ movies }, 'send movies', movies);
+    return (
+      this.movieService
+        .sendMovie(movies)
+        .catch((error) => {
+          console.log(error);
+          return throwError(() => new RpcException(error.response));
+        })
+    );
   }
 }

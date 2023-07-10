@@ -15,6 +15,7 @@ async function bootstrap() {
         protoPath: 'src/_proto/sample.proto',
       },
     },
+    
   );
   app.listen().then(() => {
     console.log('Microservice is running');

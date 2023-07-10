@@ -6,6 +6,7 @@ export const protobufPackage = "movie";
 export interface Movie {
   name: string;
   rating: number;
+  review: string;
 }
 
 export interface Movies {
@@ -17,7 +18,7 @@ export interface RemoveMovieRequest {
 }
 
 function createBaseMovie(): Movie {
-  return { name: "", rating: 0 };
+  return { name: "", rating: 0, review: "" };
 }
 
 export const Movie = {
@@ -27,6 +28,9 @@ export const Movie = {
     }
     if (message.rating !== 0) {
       writer.uint32(21).float(message.rating);
+    }
+    if (message.review !== "") {
+      writer.uint32(26).string(message.review);
     }
     return writer;
   },
@@ -52,6 +56,13 @@ export const Movie = {
 
           message.rating = reader.float();
           continue;
+        case 3:
+          if (tag !== 26) {
+            break;
+          }
+
+          message.review = reader.string();
+          continue;
       }
       if ((tag & 7) === 4 || tag === 0) {
         break;
@@ -65,6 +76,7 @@ export const Movie = {
     return {
       name: isSet(object.name) ? String(object.name) : "",
       rating: isSet(object.rating) ? Number(object.rating) : 0,
+      review: isSet(object.review) ? String(object.review) : "",
     };
   },
 
@@ -72,6 +84,7 @@ export const Movie = {
     const obj: any = {};
     message.name !== undefined && (obj.name = message.name);
     message.rating !== undefined && (obj.rating = message.rating);
+    message.review !== undefined && (obj.review = message.review);
     return obj;
   },
 
@@ -83,6 +96,7 @@ export const Movie = {
     const message = createBaseMovie();
     message.name = object.name ?? "";
     message.rating = object.rating ?? 0;
+    message.review = object.review ?? "";
     return message;
   },
 };
@@ -206,6 +220,7 @@ export const RemoveMovieRequest = {
 export interface MovieServiceController {
   AddMovie(request: Movie): Promise<Movies>;
   RemoveMovie(request: RemoveMovieRequest): Promise<Movies>;
+  SendMovie(request: Movie): Promise<Movies>;
 }
 
 export const MovieServiceControllerServiceName = "movie.MovieServiceController";
@@ -217,6 +232,7 @@ export class MovieServiceControllerClientImpl implements MovieServiceController 
     this.rpc = rpc;
     this.AddMovie = this.AddMovie.bind(this);
     this.RemoveMovie = this.RemoveMovie.bind(this);
+    this.SendMovie = this.SendMovie.bind(this);
   }
   AddMovie(request: Movie): Promise<Movies> {
     const data = Movie.encode(request).finish();
@@ -227,6 +243,12 @@ export class MovieServiceControllerClientImpl implements MovieServiceController 
   RemoveMovie(request: RemoveMovieRequest): Promise<Movies> {
     const data = RemoveMovieRequest.encode(request).finish();
     const promise = this.rpc.request(this.service, "RemoveMovie", data);
+    return promise.then((data) => Movies.decode(_m0.Reader.create(data)));
+  }
+
+  SendMovie(request: Movie): Promise<Movies> {
+    const data = Movie.encode(request).finish();
+    const promise = this.rpc.request(this.service, "SendMovie", data);
     return promise.then((data) => Movies.decode(_m0.Reader.create(data)));
   }
 }

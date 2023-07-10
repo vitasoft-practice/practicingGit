@@ -1,11 +1,21 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
+import { join } from 'path';
 
 @Module({
   imports: [
     ClientsModule.register([
+      // {
+      //   name: 'TEST',
+      //   transport: Transport.GRPC,
+      //   options: {
+      //     package: 'student',
+      //     protoPath: join(__dirname, '../src/proto/student.proto'),
+      //   },
+      // },
       {
         name: 'TEST_SERVICE',
         transport: Transport.RMQ,
