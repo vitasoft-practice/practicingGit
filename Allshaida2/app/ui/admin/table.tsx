@@ -1,5 +1,5 @@
 import React from "react";
-import { Edit, Visibility, Delete } from "@mui/icons-material";
+import { UpdateAdmin, ViewAdmin, DeleteAdmin } from "@/app/ui/admin/button";
 
 export default function AdminTable() {
 return (
@@ -51,9 +51,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit />
-<Visibility />
-<Delete />
+<UpdateAdmin id="" />
+<ViewAdmin id="" />
+<DeleteAdmin id="" />
 </div>
 </td>
 </tr>
@@ -74,9 +74,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit />
-<Visibility />
-<Delete />
+<UpdateAdmin id="" />
+<ViewAdmin id="" />
+<DeleteAdmin id="" />
 </div>
 </td>
 </tr>
@@ -97,9 +97,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateAdmin id="" />
+<ViewAdmin id="" />
+<DeleteAdmin id="" />
 </div>
 </td>
 </tr>
@@ -120,9 +120,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateAdmin id="" />
+<ViewAdmin id="" />
+<DeleteAdmin id="" />
 </div>
 </td>
 </tr>
@@ -143,9 +143,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateAdmin id="" />
+<ViewAdmin id="" />
+<DeleteAdmin id="" />
 </div>
 </td>
 </tr>
@@ -166,9 +166,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateAdmin id="" />
+<ViewAdmin id="" />
+<DeleteAdmin id="" />
 </div>
 </td>
 </tr>
@@ -189,9 +189,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateAdmin id="" />
+<ViewAdmin id="" />
+<DeleteAdmin id="" />
 </div>
 </td>
 </tr>
@@ -212,9 +212,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateAdmin id="" />
+<ViewAdmin id="" />
+<DeleteAdmin id="" />
 </div>
 </td>
 </tr>
