@@ -1,7 +1,7 @@
 // import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
 import Link from "next/link";
 // import { deleteInvoice } from '@/app/lib/actions';
-import { Add } from "@mui/icons-material";
+import { Add, Delete, Edit, Visibility } from "@mui/icons-material";
 
 export function CreateCustomer() {
 return (
@@ -15,25 +15,36 @@ className="flex h-10 items-center rounded-lg bg-blue-600 px-4 text-sm font-mediu
 );
 }
 
-// export function UpdateInvoice({ id }: { id: string }) {
-//   return (
-//     <Link
-//       href={`/dashboard/invoices/${id}/edit`}
-//       className="rounded-md border p-2 hover:bg-gray-100"
-//     >
-//       <PencilIcon className="w-5" />
-//     </Link>
-//   );
-// }
+export function UpdateCustomer({ id }: { id: string }) {
+return (
+<Link
+href={`/dashboard/customer/${id}/edit`}
+className="rounded-md border p-2 hover:bg-gray-100"
+>
+<Edit className="w-5" />
+</Link>
+);
+}
 
-// export function DeleteInvoice({ id }: { id: string }) {
+export function ViewCustomer({ id }: { id: string }) {
+return (
+<Link
+href={`/dashboard/customer/${id}/view`}
+className="rounded-md border p-2 hover:bg-gray-100"
+>
+<Visibility className="w-5" />
+</Link>
+);
+}
+
+export function DeleteCustomer({ id }: { id: string }) {
 //   const deleteInvoiceWithId = deleteInvoice.bind(null, id);
-//   return (
-//     <form action={deleteInvoiceWithId}>
-//       <button className="rounded-md border p-2 hover:bg-gray-100">
-//         <span className="sr-only">Delete</span>
-//         <TrashIcon className="w-5" />
-//       </button>
-//     </form>
-//   );
-// }
+return (
+<form action={""}>
+<button className="rounded-md border p-2 hover:bg-gray-100">
+<span className="sr-only">Delete</span>
+<Delete className="w-5" />
+</button>
+</form>
+);
+}
