@@ -1,5 +1,5 @@
 import React from "react";
-import { Edit, Visibility, Delete } from "@mui/icons-material";
+import { UpdateCustomer, ViewCustomer, DeleteCustomer } from "./button";
 
 export default function CustomerTable() {
 return (
@@ -11,7 +11,7 @@ return (
 <thead className="rounded-lg text-left text-sm font-normal">
 <tr>
 <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
-Admin
+Name
 </th>
 <th scope="col" className="px-3 py-5 font-medium">
 Email
@@ -63,9 +63,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit />
-<Visibility />
-<Delete />
+<UpdateCustomer id="" />
+<ViewCustomer id="" />
+<DeleteCustomer id="" />
 </div>
 </td>
 </tr>
@@ -89,9 +89,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit />
-<Visibility />
-<Delete />
+<UpdateCustomer id="" />
+<ViewCustomer id="" />
+<DeleteCustomer id="" />
 </div>
 </td>
 </tr>
@@ -115,9 +115,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateCustomer id="" />
+<ViewCustomer id="" />
+<DeleteCustomer id="" />
 </div>
 </td>
 </tr>
@@ -141,9 +141,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateCustomer id="" />
+<ViewCustomer id="" />
+<DeleteCustomer id="" />
 </div>
 </td>
 </tr>
@@ -167,9 +167,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateCustomer id="" />
+<ViewCustomer id="" />
+<DeleteCustomer id="" />
 </div>
 </td>
 </tr>
@@ -193,9 +193,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateCustomer id="" />
+<ViewCustomer id="" />
+<DeleteCustomer id="" />
 </div>
 </td>
 </tr>
@@ -219,9 +219,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateCustomer id="" />
+<ViewCustomer id="" />
+<DeleteCustomer id="" />
 </div>
 </td>
 </tr>
@@ -245,9 +245,9 @@ className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>
 </td>
 <td className="whitespace-nowrap py-3 pl-6 pr-3">
 <div className="flex justify-end gap-3">
-<Edit className="cus" />
-<Visibility className="cus" />
-<Delete className="cus" />
+<UpdateCustomer id="" />
+<ViewCustomer id="" />
+<DeleteCustomer id="" />
 </div>
 </td>
 </tr>

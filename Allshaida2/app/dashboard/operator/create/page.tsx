@@ -14,7 +14,7 @@ return (
 <main>
 <Breadcrumbs
 breadcrumbs={[
-{ label: "Operator", href: "/dashboard/operator" },
+{ label: "Operators", href: "/dashboard/operator" },
 {
 label: "Create Operator",
 href: "/dashboard/operator/create",
