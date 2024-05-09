@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Table from "../../ui/admin/table";
 import { CreateAdmin } from "../../ui/admin/button";
+import Search from "@/app/ui/admin/search";
 export default function Admin() {
 return (
 <div className="w-full">
@@ -8,7 +9,7 @@ return (
 <h1 className={`text-2xl`}>Admins</h1>
 </div>
 <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
-{/* <Search placeholder="Search invoices..." /> */}
+<Search placeholder="Search Admins..." />
 <CreateAdmin />
 </div>
 <Suspense key={""}>
