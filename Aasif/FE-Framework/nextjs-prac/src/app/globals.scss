@@ -1,0 +1,97 @@
+@import './styles/variables';
+@import './styles/mixins';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.m-1 {
+  margin: $spacing-base;
+}
+
+.p-1 {
+  padding: $spacing-base;
+}
+
+.m-2 {
+  margin: $spacing-base * 2;
+}
+
+.mt-1 {
+  margin-top: $spacing-base;
+}
+
+.mt-2 {
+  margin-top: $spacing-base * 2;
+}
+
+.mb-2 {
+  margin-bottom: $spacing-base * 2;
+}
+
+.p-2 {
+  padding: $spacing-base * 2;
+}
+
+.w-100 {
+  width: 100%
+}
+
+.h-100 {
+  height: 100%
+}
+
+.container {
+  max-width: 1200px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.app {
+  height: 100vh;
+}
+
+.fields_wrapper {
+  margin-bottom: $spacing-base * 4;
+}
+
+.main_layout {
+  height: calc(100vh - 80px); //80px is navbar
+}

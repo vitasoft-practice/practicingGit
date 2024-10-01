@@ -1,0 +1,33 @@
+@import '@/app/styles/mixins';
+@import '@/app/styles/variables';
+
+.signup_form_container {
+    @include flex-center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.fields_wrapper {
+    max-width: 320px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 1px 0 blue;
+    background-color: rgb(65 171 190 / 10%);
+    transition: all 0.5s;
+    
+  @include minResponsive(1200px) {
+    max-width: 600px
+  }
+}
+
+.form_buttons {
+    @include flex-center;
+    justify-content: flex-end;
+    margin-top: $spacing-base * 2;
+}
+
+.form_title {
+    color: #208ec3;
+    margin-bottom: $spacing-base;
+}

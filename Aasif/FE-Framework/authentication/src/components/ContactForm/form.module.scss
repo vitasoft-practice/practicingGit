@@ -1,0 +1,50 @@
+@import '@/app/styles/mixins';
+@import '@/app/styles/variables';
+
+.signup_form_container {
+  @include flex-center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fields_wrapper {
+  max-width: 320px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 1px 0 blue;
+  background-color: rgb(65 171 190 / 10%);
+  transition: all 0.5s;
+  
+  @include minResponsive(1200px) {
+    max-width: 600px
+  }
+}
+
+.login_wrapper {
+  max-width: 300px;
+}
+
+// .signup_wrapper {
+//   // max-width: 350px;
+// }
+
+.form_buttons {
+  @include flex-center;
+  justify-content: flex-end;
+  margin-top: $spacing-base * 3;
+}
+
+.form_title {
+  color: #208ec3;
+  margin-bottom: $spacing-base;
+}
+
+.footer_option {
+  font-size: .8rem;
+  margin-top: 16px;
+  text-align: center;
+  a {
+    color: #208ec3;
+  }
+}

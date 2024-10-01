@@ -1,0 +1,120 @@
+@import '@/app/styles/mixins';
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+
+  // @include minResponsive(1200px) {
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  // }
+}
+
+.input-container-checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.input-label {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: #000000;
+  margin-bottom: 7px;
+  margin-top: 10px;
+  text-wrap: wrap;
+}
+
+.input-label-checkbox {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: #000000;
+  margin-left: 8px;
+}
+
+.input-field {
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid #a9a9a9;
+  padding-left: 10px;
+  outline: none;
+  padding-right: 8px;
+  box-sizing: border-box;
+}
+
+.input-field-error-msg {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  bottom: -30px;
+  margin-bottom: 14px;
+}
+
+.input-field-color {
+  width: 100%;
+  height: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.error-bounce {
+  animation: bounce 0.4s ease-in-out;
+  border-color: red;
+}
+
+.textarea-input {
+  height: unset;
+  padding: 10px;
+}
+
+.checkbox-container {
+  @include flex-center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  .input-field {
+    accent-color: #208ec3;
+  }
+
+  .input-label {
+    margin: 0;
+  }
+
+}
+
+.checkbox {
+  .input-field-error-msg {
+    bottom: -20px
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(.7deg);
+  }
+
+  50% {
+    transform: rotate(-.7deg);
+  }
+
+  70% {
+    transform: rotate(.7deg);
+  }
+
+  100% {
+    transform: rotate(-.7deg);
+  }
+}

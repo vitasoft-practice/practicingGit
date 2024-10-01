@@ -1,0 +1,17 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin maxResponsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin minResponsive($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}

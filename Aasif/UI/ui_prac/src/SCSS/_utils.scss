@@ -1,0 +1,6 @@
+@import './variables';
+
+.m-1 { margin: $spacing-base; }
+.p-1 { padding: $spacing-base; }
+.m-2 { margin: $spacing-base * 2; }
+.p-2 { padding: $spacing-base * 2; }
